@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "title": "Jeux classiques. Ports modernes.",
+    "subtitle": "Retrouvez vos jeux N64 préférés avec des fonctionnalités améliorées, des contrôles modernes et un développement communautaire.",
+    "cta": "Explorer les ports",
+    "badge": "Les ports PC N64 de référence",
+    "subtitleAlt": "Ports PC natifs de jeux Nintendo 64 classiques. Reconstruits à partir de zéro avec des améliorations modernes.",
+    "downloadNow": "Télécharger",
+    "getRelease": "Télécharger {{version}}"
+  },
+  "featuredGames": {
+    "title": "Ports en vedette",
+    "subtitle": "Nos ports les plus récents et les plus populaires"
+  },
+  "latestReleases": {
+    "title": "Dernières versions",
+    "subtitle": "Restez informé des dernières mises à jour",
+    "viewAll": "Voir toutes les versions",
+    "noReleases": "Pas encore de versions"
+  },
+  "news": {
+    "title": "Dernières actualités",
+    "subtitle": "Des nouvelles de tous nos projets",
+    "viewAll": "Voir toutes les actualités",
+    "from": "de {{repo}}",
+    "released": "Version {{version}} publiée"
+  },
+  "features": {
+    "title": "Pourquoi Harbour Masters ?",
+    "subtitle": "Ce qui rend nos ports spéciaux",
+    "features": [
+      {
+        "title": "Performances natives",
+        "description": "Jouez à la résolution native de votre moniteur, avec des framerates fluides et une latence minimale."
+      },
+      {
+        "title": "Améliorations modernes",
+        "description": "Des améliorations optionnelles comme l'écran large, les textures améliorées et les contrôles personnalisables."
+      },
+      {
+        "title": "Support de mods",
+        "description": "Une communauté active créant des mods, des packs de textures et des améliorations de tous genres."
+      },
+      {
+        "title": "Multi-plateforme",
+        "description": "Jouez sur Windows, macOS et Linux avec une parité complète des fonctionnalités."
+      }
+    ]
+  },
+  "whatWeOffer": {
+    "title": "Ce que nous offrons",
+    "subtitle": "Des fonctionnalités modernes pour des jeux classiques. Tout ce qu'on attend d'un port PC natif.",
+    "features": [
+      {
+        "icon": "monitor",
+        "title": "4K et ultrawide",
+        "description": "Rendu à n'importe quelle résolution. L'ultrawide et le multi-écran sont entièrement supportés par le moteur de base."
+      },
+      {
+        "icon": "zap",
+        "title": "Framerate amélioré",
+        "description": "Jouez à 60, 120, ou un framerate illimité. Notre interpolation d'images génère des images intermédiaires à partir de l'état réel du jeu."
+      },
+      {
+        "icon": "gamepad",
+        "title": "Support de manette",
+        "description": "Compatibilité complète avec les manettes Xbox, PlayStation, Switch Pro et génériques. Entièrement personnalisable."
+      },
+      {
+        "icon": "settings",
+        "title": "Confort de jeu",
+        "description": "Des dizaines d'améliorations : réglages graphiques, options HUD, caméra améliorée, et bien plus."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Prise en charge des mods",
+        "description": "Un gestionnaire de mods intégré avec une communauté active créant des packs de textures et mods de gameplay."
+      },
+      {
+        "icon": "globe",
+        "title": "Multi-plateforme",
+        "description": "Windows, Linux (y compris Steam Deck) et macOS supportés. Jouez n'importe où."
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos du projet",
+    "subtitle": "Harbour Masters est un projet communautaire qui ramène les classiques N64 sur PC.",
+    "features": [
+      {
+        "icon": "heart",
+        "title": "Fidèle à l'original",
+        "description": "L'expérience N64 complète, fidèlement portée sur PC avec un profond respect pour l'oeuvre originale."
+      },
+      {
+        "icon": "shield",
+        "title": "Gratuit et open source",
+        "description": "Totalement gratuit, pour toujours. Créé par la communauté, pour la communauté. Code source sur GitHub."
+      },
+      {
+        "icon": "globe",
+        "title": "Porté par la communauté",
+        "description": "Construit par des fans, pour des fans. Un développement ouvert avec la contribution active de la communauté mondiale."
+      },
+      {
+        "icon": "monitor",
+        "title": "Compatibilité moderne",
+        "description": "Des ports PC natifs reconstruits à partir de zéro. Pas d'émulation. Fonctionne sur du matériel moderne."
+      }
+    ]
+  },
+  "community": {
+    "title": "Rejoindre la communauté",
+    "subtitle": "Connectez-vous avec plus de 200 000 joueurs, obtenez de l'aide, partagez des mods et restez informé des dernières versions."
+  },
+  "quickStart": {
+    "title": "Démarrage rapide",
+    "subtitle": "Jouez en 3 étapes simples. Aucune expérience requise.",
+    "steps": [
+      {
+        "title": "Télécharger un port",
+        "description": "Choisissez votre jeu N64 préféré parmi nos ports disponibles. Tous sont gratuits et open source.",
+        "linkText": "Parcourir les ports"
+      },
+      {
+        "title": "Fournir votre ROM",
+        "description": "Vous aurez besoin de votre propre fichier ROM, légalement extrait. Nous ne distribuons aucun fichier de jeu.",
+        "linkText": "Comment dumper ses ROMs"
+      },
+      {
+        "title": "Jouer et profiter",
+        "description": "Lancez le port, chargez votre ROM et profitez des améliorations : 4K, 60fps et contrôles modernes.",
+        "linkText": "Guide de configuration"
+      }
+    ]
+  },
+  "legalNotice": {
+    "title": "Important : nous ne distribuons AUCUN fichier de jeu",
+    "description": "Les ports Harbour Masters sont des projets créés par des fans. Nous n'incluons, ne distribuons et n'hébergeons aucun asset de jeu protégé par le droit d'auteur, aucune ROM ni aucun contenu propriétaire de Nintendo. Pour jouer, vous devez fournir votre propre ROM légalement extraite d'une cartouche physique que vous possédez personnellement. Nous prenons la conformité légale très au sérieux."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "shipwright": {
+    "name": "Ship of Harkinian",
+    "tagline": "The Legend of Zelda: Ocarina of Time",
+    "description": "A native PC port of the N64 classic, featuring enhanced graphics, mod support, and modern controls.",
+    "features": [
+      "Native resolution and widescreen",
+      "Customizable button layouts",
+      "Analog camera control",
+      "Enhanced graphics options",
+      "Active modding community"
+    ]
+  },
+  "2ship": {
+    "name": "2ship2Harkinian",
+    "tagline": "The Legend of Zelda: Majora's Mask",
+    "description": "Experience the temporal adventure with modern enhancements and quality-of-life improvements.",
+    "features": [
+      "Stable 60 FPS gameplay",
+      "Customizable button layouts",
+      "Enhanced graphics options",
+      "Mod support and custom quests",
+      "Input lag reduction"
+    ]
+  },
+  "ghostship": {
+    "name": "Ghostship",
+    "tagline": "Super Mario 64",
+    "description": "The iconic 3D platformer brought to modern PCs with enhanced features.",
+    "features": [
+      "High framerate support",
+      "Improved camera controls",
+      "Enhanced visuals and options",
+      "Character skin support",
+      "Custom level support"
+    ]
+  },
+  "spaghetti": {
+    "name": "SpaghettiKart",
+    "tagline": "Mario Kart 64",
+    "description": "Race with friends in this classic kart racer, now with online multiplayer support.",
+    "features": [
+      "Online multiplayer",
+      "Custom track support",
+      "60 FPS gameplay",
+      "Enhanced graphics",
+      "Controller support"
+    ]
+  },
+  "starship": {
+    "name": "Starship",
+    "tagline": "Star Fox 64",
+    "description": "Barrel roll through space in this faithful port with modern enhancements.",
+    "features": [
+      "Widescreen support",
+      "Improved audio",
+      "Custom controls",
+      "Enhanced graphics",
+      "60 FPS gameplay"
+    ]
+  }
+}

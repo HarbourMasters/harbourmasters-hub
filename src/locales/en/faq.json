@@ -1,0 +1,83 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle": "Everything you need to know about our N64 PC ports",
+  "badge": "Knowledge Base",
+  "search": "Search questions...",
+  "searchResults": "Found {{count}} matching questions",
+  "noResults": "No questions found matching \"{{query}}\"",
+  "noResultsHint": "Try different keywords or browse all categories above",
+  "stillNeedHelp": "Still Need Help?",
+  "stillNeedHelpDesc": "Join our active Discord community to get help from other players and developers.",
+  "categories": {
+    "general": "General",
+    "gettingStarted": "Getting Started",
+    "technical": "Technical",
+    "legal": "Legal & Copyright"
+  },
+  "questions": {
+    "whatIs": {
+      "question": "What is Harbour Masters?",
+      "answer": "Harbour Masters is a community of developers creating native PC ports of Nintendo 64 games. We reverse-engineer classic games from scratch using our custom LibUltraShip engine, rebuilding them to run natively on modern operating systems with enhanced features."
+    },
+    "whatIsLUS": {
+      "question": "What is LibUltraShip?",
+      "answer": "LibUltraShip (LUS) is our custom reimplementation of the Nintendo 64 operating system and libraries. It allows N64 games to run natively on PC without emulation, enabling features like higher resolutions, modern controls, and mod support."
+    },
+    "romRequired": {
+      "question": "Do I need a ROM file?",
+      "answer": "Yes. Our ports require a legally dumped ROM file from your own copy of the game. We do not provide ROM files due to copyright restrictions. You must dump your own ROM from a cartridge you own using tools like a Retrode, N64 flashcart, or the GameShark Pro method."
+    },
+    "whereToGetRom": {
+      "question": "How do I dump my N64 ROM?",
+      "answer": "There are two main approaches: From an N64 cartridge using specialized hardware like a Retrode 2 or an N64 flashcart with dumping capabilities (e.g. EverDrive 64 X-Series). From a GameCube disc: if you own the GameCube compilation disc (Ocarina of Time & Master Quest, Zelda Collector's Edition, etc.), you can dump it using a softmodded Wii or Wii U, then extract the ROM using the Dolphin emulator — open the disc image in Dolphin, navigate to the Filesystem tab, find the appropriate .tgc file, and extract the .n64 ROM from within it. You can then verify your ROM using our ROM Compatibility Checker tool."
+    },
+    "legal": {
+      "question": "Are these ports legal?",
+      "answer": "Yes. Our work is 100% legal. We use clean-room reverse engineering - we analyze the compiled game code, understand what it does, and rewrite it from scratch. We never distribute any copyrighted code, assets, or ROM files. You must provide your own legally obtained ROM."
+    },
+    "free": {
+      "question": "Are these ports really free?",
+      "answer": "Yes! All our ports are completely free and open source. We believe in preserving gaming history and making these classics accessible to everyone. Donations are not accepted - we do this purely for the love of these games."
+    },
+    "whichGames": {
+      "question": "Which games are available?",
+      "answer": "We currently have ports for: Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), SpaghettiKart (Mario Kart 64), and Starship (Star Fox 64). More projects are always in development."
+    },
+    "controller": {
+      "question": "What controllers are supported?",
+      "answer": "Nearly any controller! We support Xbox, PlayStation (DS4/DualSense), Switch Pro, 8BitDo, and generic USB/BT controllers through SDL2. You can fully customize button mappings. Keyboard and mouse also work great."
+    },
+    "multiplayer": {
+      "question": "Is online multiplayer available?",
+      "answer": "Currently, only Ship of Harkinian (Ocarina of Time) supports online multiplayer, featuring randomizer and co-op modes. Check the Ship of Harkinian repository and Discord for the latest multiplayer updates."
+    },
+    "mods": {
+      "question": "Can I use mods?",
+      "answer": "Yes! Our ports support a variety of community-created mods including texture packs, gameplay enhancements, and more. Check out our Mod Library page for mods available on GameBanana, or visit our Discord for modding resources and community creations."
+    },
+    "graphics": {
+      "question": "What graphical enhancements are available?",
+      "answer": "Our ports support: native resolution scaling up to 8K, widescreen and ultrawide aspect ratios, anti-aliasing, anisotropic filtering, improved frame rates (30fps → 60fps in many games), enhanced lighting, texture filtering options, and post-processing effects."
+    },
+    "saves": {
+      "question": "Do my original N64 saves work?",
+      "answer": "No, N64 save files are not compatible. However, you can use save states and our modern save file system which offers multiple save slots per game. Some tools exist to convert certain types of saves."
+    },
+    "updates": {
+      "question": "How do I update to the latest version?",
+      "answer": "Simply download the latest release from our Downloads page or GitHub repository. Extract it to a new folder, copy your save folder from the old version, and you're good to go. Your settings and saves are preserved between versions."
+    },
+    "bugs": {
+      "question": "I found a bug, what do I do?",
+      "answer": "Please report bugs on the GitHub repository Issues page for the specific game. Before reporting, search existing issues to avoid duplicates. Include: your OS, hardware specs, steps to reproduce, and any error logs."
+    },
+    "contribute": {
+      "question": "Can I contribute to the project?",
+      "answer": "Yes! We welcome contributions. Check our GitHub repositories for open issues, especially those labeled 'good first issue'. Skills needed include C/C++ programming, OpenGL/DirectX graphics, reverse engineering, and testing. Join our Discord to chat with other developers."
+    },
+    "translation": {
+      "question": "Are other languages supported?",
+      "answer": "Many of our ports have community translations. Check individual game repositories for available language patches. The interface for this website supports English, French, German, Spanish, and Italian."
+    }
+  }
+}

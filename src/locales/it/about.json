@@ -1,0 +1,39 @@
+{
+  "badge": "La Nostra Storia",
+  "title": "Chi Siamo",
+  "subtitle": "Scopri di più su Harbour Masters 64 e LibUltraShip",
+  "whatIsHM": {
+    "title": "Cos'è Harbour Masters 64?",
+    "content": "Harbour Masters 64 è un team di sviluppatori appassionati dedicati alla preservazione e al miglioramento dei classici del Nintendo 64 attraverso port PC nativi. Costruiamo su progetti di decompilazione una volta raggiunto il completamento, ricreando il codice del gioco originale in C++ moderno e migliorandolo con nuove funzionalità."
+  },
+  "whatIsLUS": {
+    "title": "Cos'è LibUltraShip (LUS)?",
+    "content": "LibUltraShip (LUS) è la nostra ricreazione moderna dell'SDK Nintendo 64, noto come LibUltra. Fornisce la base per tutti i nostri port, gestendo grafica, audio, input e i sistemi principali del gioco. LUS ci permette di portare giochi N64 su piattaforme moderne con funzionalità migliorate e supporto multipiattaforma.",
+    "features": [
+      "Backend grafici moderni (DirectX 11, OpenGL, Metal)",
+      "Audio migliorato con suono posizionale",
+      "Gestione input flessibile per qualsiasi controller",
+      "API di modding ed estensibilità",
+      "Supporto multipiattaforma (Windows, macOS, Linux, Switch)"
+    ]
+  },
+  "ourPorts": {
+    "title": "I Nostri Port",
+    "intro": "Ogni port mantiene l'esperienza autentica aggiungendo miglioramenti moderni:",
+    "enhancements": [
+      "Risoluzione nativa e supporto widescreen",
+      "Frame rate migliorati e latenza di input ridotta",
+      "Controlli personalizzabili e mappatura pulsanti",
+      "Supporto modding e funzionalità community",
+      "Miglioramenti visivi opzionali"
+    ]
+  },
+  "team": {
+    "title": "Il Team",
+    "content": "Harbour Masters 64 è reso possibile dai contributi di sviluppatori, reverse engineer e membri della community di tutto il mondo. Unisciti al nostro Discord per connetterti con la community!"
+  },
+  "legal": {
+    "title": "Informazioni Legali",
+    "content": "I nostri port sono creati attraverso reverse engineering in camera pulita. Non distribuiamo alcun asset protetto da copyright inclusi file ROM. Gli utenti devono fornire i propri file ROM ottenuti legalmente. Nintendo 64 è un marchio registrato di Nintendo Co., Ltd. I nostri progetti non sono affiliati con o approvati da Nintendo."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "badge": "Comenzar",
+  "title": "Descargas",
+  "subtitle": "Ports PC nativos de tus clásicos de N64 favoritos. Mejorados, preservados y gratuitos.",
+  "description": "Cada port es una recompilación nativa del juego original, que ofrece gráficos mejorados, controles modernos y mejoras en la calidad de vida mientras preserva la experiencia auténtica que recuerdas.",
+  "gameDownloads": "Descargas de Juegos",
+  "gameDownloadsDescription": "Tu sistema operativo se detecta automáticamente. Haz clic en descargar para obtener la versión correcta para tu sistema.",
+  "romCheckLink": {
+    "title": "¿Es compatible tu ROM?",
+    "description": "Usa nuestra herramienta de verificación de ROM para comprobar si tu archivo ROM funciona con nuestros ports.",
+    "cta": "Verificar tu ROM"
+  },
+  "help": {
+    "title": "¿Necesitas Ayuda?",
+    "description": "Consulta nuestras FAQ para guías sobre volcar ROMs, instalación y solución de problemas.",
+    "faqLink": "Visitar las FAQ"
+  }
+}

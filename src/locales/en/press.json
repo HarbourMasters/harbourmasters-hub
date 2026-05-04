@@ -1,0 +1,23 @@
+{
+  "title": "Featured In",
+  "subtitle": "Leading gaming and tech publications have covered our work. Here's what they're saying.",
+  "readMore": "Read",
+  "viewAll": "View All Coverage",
+  "articles": [
+    {
+      "publication": "Kotaku",
+      "title": "This Zelda Ocarina of Time PC Port Is Absolutely Stunning",
+      "excerpt": "The Harbour Masters team has done incredible work bringing this classic to modern hardware with enhanced features."
+    },
+    {
+      "publication": "Eurogamer",
+      "title": "Mario 64 PC Port Adds New Features While Keeping the Soul",
+      "excerpt": "Ghostship preserves what made the original great while adding modern quality-of-life improvements."
+    },
+    {
+      "publication": "PC Gamer",
+      "title": "The Best Way to Play N64 Classics in 2024",
+      "excerpt": "With enhanced graphics, modern controls, and active development, these ports are the definitive way to experience these classics."
+    }
+  ]
+}

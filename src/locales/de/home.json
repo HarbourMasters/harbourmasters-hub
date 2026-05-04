@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "title": "Klassische Spiele. Moderne Ports.",
+    "subtitle": "Erleben Sie Ihre Lieblings-N64-Spiele mit verbesserten Funktionen, modernen Steuerungen und gemeinschaftlicher Entwicklung.",
+    "cta": "Ports Entdecken",
+    "badge": "Die Definitiven N64-PC-Ports",
+    "subtitleAlt": "Native PC-Ports klassischer Nintendo 64-Spiele. Von Grund auf neu mit modernen Verbesserungen erstellt.",
+    "downloadNow": "Herunterladen",
+    "getRelease": "Herunterladen {{version}}"
+  },
+  "featuredGames": {
+    "title": "Empfohlene Ports",
+    "subtitle": "Unsere neuesten und beliebtesten Spiel-Ports"
+  },
+  "latestReleases": {
+    "title": "Neueste Veröffentlichungen",
+    "subtitle": "Bleiben Sie mit den neuesten Versionen auf dem Laufenden",
+    "viewAll": "Alle Veröffentlichungen Anzeigen",
+    "noReleases": "Noch keine Versionen"
+  },
+  "news": {
+    "title": "Neueste Nachrichten",
+    "subtitle": "Updates aus all unseren Projekten",
+    "viewAll": "Alle Nachrichten Anzeigen",
+    "from": "von {{repo}}",
+    "released": "Version {{version}} veröffentlicht"
+  },
+  "features": {
+    "title": "Warum Harbour Masters?",
+    "subtitle": "Was unsere Ports besonders macht",
+    "features": [
+      {
+        "title": "Native Leistung",
+        "description": "Spielen in der nativen Auflösung Ihres Monitors mit flachen Bildraten und minimaler Latenz."
+      },
+      {
+        "title": "Moderne Verbesserungen",
+        "description": "Optionale Verbesserungen wie Breitbild, verbesserte Texturen und anpassbare Steuerungen."
+      },
+      {
+        "title": "Mod-Support",
+        "description": "Eine aktive Community, die Mods, Texture-Packs und Verbesserungen erstellt."
+      },
+      {
+        "title": "Plattformübergreifend",
+        "description": "Spielen Sie auf Windows, macOS und Linux mit voller Funktionsparität."
+      }
+    ]
+  },
+  "whatWeOffer": {
+    "title": "Was Wir Bieten",
+    "subtitle": "Moderne Funktionen für klassische Spiele. Alles, was Sie von einem nativen PC-Port erwarten.",
+    "features": [
+      {
+        "icon": "monitor",
+        "title": "4K & Ultra-Breit",
+        "description": "Rendert in jeder Auflösung. Ultra-Breit und Multi-Monitor vollständig vom Kern-Renderer unterstützt."
+      },
+      {
+        "icon": "zap",
+        "title": "Verbesserte Bildrate",
+        "description": "Spielen Sie mit 60, 120 oder uneingeschränkten FPS. Unsere Frame-Interpolation generiert Zwischenbilder aus dem tatsächlichen Spielzustand."
+      },
+      {
+        "icon": "gamepad",
+        "title": "Controller-Unterstützung",
+        "description": "Volle Unterstützung für Xbox, PlayStation, Switch Pro und generische Controller. Vollständig anpassbar."
+      },
+      {
+        "icon": "settings",
+        "title": "Lebensqualität",
+        "description": "Dutzende Verbesserungen: Grafikeinstellungen, HUD-Optionen, verbesserte Kamera und vieles mehr."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Mod-Support",
+        "description": "Integrierter Mod-Loader mit aktiver Community, die Texture-Packs und Gameplay-Mods erstellt."
+      },
+      {
+        "icon": "globe",
+        "title": "Plattformübergreifend",
+        "description": "Windows, Linux (einschließlich Steam Deck) und macOS unterstützt. Spielen Sie überall."
+      }
+    ]
+  },
+  "about": {
+    "title": "Über das Projekt",
+    "subtitle": "Harbour Masters ist eine Community-Anstrengung, um N64-Klassiker auf den PC zu bringen.",
+    "features": [
+      {
+        "icon": "heart",
+        "title": "Treu zum Original",
+        "description": "Das vollständige N64-Erlebnis, fidelig auf den PC portiert mit tiefem Respekt vor dem Quellmaterial."
+      },
+      {
+        "icon": "shield",
+        "title": "Kostenlos & Open Source",
+        "description": "Völlig kostenlos, für immer. Erstellt von der Community, für die Community. Quellcode auf GitHub."
+      },
+      {
+        "icon": "globe",
+        "title": "Community-Gesteuert",
+        "description": "Erstellt von Fans, für Fans. Offene Entwicklung mit aktiver Community-Beteiligung weltweit."
+      },
+      {
+        "icon": "monitor",
+        "title": "Moderne Kompatibilität",
+        "description": "Native PC-Ports von Grund auf neu erstellt. Keine Emulation erforderlich. Läuft auf moderner Hardware."
+      }
+    ]
+  },
+  "community": {
+    "title": "Der Community Beitreten",
+    "subtitle": "Verbinden Sie sich mit 200K+ Spielern, erhalten Sie Unterstützung, teilen Sie Mods und bleiben Sie über die neuesten Versionen informiert."
+  },
+  "quickStart": {
+    "title": "Schnellstart",
+    "subtitle": "Spielen Sie in 3 einfachen Schritten. Keine Erfahrung erforderlich.",
+    "steps": [
+      {
+        "title": "Einen Port Herunterladen",
+        "description": "Wählen Sie Ihr Lieblings-N64-Spiel aus unseren verfügbaren Ports. Alle sind kostenlos und Open Source.",
+        "linkText": "Ports Durchsuchen"
+      },
+      {
+        "title": "Ihre ROM Bereitstellen",
+        "description": "Sie benötigen Ihre eigene legalerweise kopierte ROM-Datei. Wir verteilen keine Spiel-Assets.",
+        "linkText": "Wie Man ROMs Kopiert"
+      },
+      {
+        "title": "Spielen & Genießen",
+        "description": "Starten Sie den Port, laden Sie Ihre ROM und genießen Sie verbesserte Funktionen wie 4K, 60fps und moderne Steuerungen.",
+        "linkText": "Einrichtungsanleitung"
+      }
+    ]
+  },
+  "legalNotice": {
+    "title": "Wichtig: Wir verteilen KEINE Spiel-Assets",
+    "description": "Harbour Masters Ports sind von Fans erstellte Projekte. Wir beinhalten, verteilen oder hosten keine urheberrechtlich geschützten Spiel-Assets, ROMs oder proprietären Nintendo-Inhalte. Um zu spielen, müssen Sie Ihre eigene legalerweise kopierte ROM von einer physischen Kartusche verwenden, die Sie persönlich besitzen. Wir nehmen die Einhaltung der Gesetze sehr ernst."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "notFound": {
+    "title": "Game Not Found",
+    "description": "The game you're looking for doesn't exist.",
+    "backToDownloads": "Back to Downloads"
+  },
+  "back": "Back",
+  "sections": {
+    "features": "Features",
+    "latestRelease": "Latest Release",
+    "olderVersions": "Older Versions",
+    "otherPorts": "Other Ports"
+  },
+  "platforms": {
+    "windows": "Windows",
+    "linux": "Linux (Steam Deck)",
+    "mac": "macOS",
+    "wiiu": "Wii U",
+    "switch": "Switch",
+    "other": "Other"
+  },
+  "viewOnGitHub": "View on GitHub",
+  "discord": "Discord",
+  "noReleases": "No releases available",
+  "noOlderVersions": "No older versions available",
+  "noDownloadStats": "No download stats available",
+  "downloads": "Downloads",
+  "changelog": "Changelog",
+  "total": "total",
+  "latest": "Latest",
+  "noReleasesYet": "No releases yet",
+  "noChangelog": "No changelog available.",
+  "downloadFile": "Download"
+}

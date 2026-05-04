@@ -1,0 +1,39 @@
+{
+  "badge": "Nuestra Historia",
+  "title": "Acerca De",
+  "subtitle": "Conoce más sobre Harbour Masters 64 y LibUltraShip",
+  "whatIsHM": {
+    "title": "¿Qué es Harbour Masters 64?",
+    "content": "Harbour Masters 64 es un equipo de desarrolladores apasionados dedicados a preservar y mejorar los clásicos de Nintendo 64 a través de ports de PC nativos. Construimos sobre proyectos de descompilación una vez que alcanzan la finalización, recreando el código del juego original en C++ moderno y mejorándolo con nuevas características."
+  },
+  "whatIsLUS": {
+    "title": "¿Qué es LibUltraShip (LUS)?",
+    "content": "LibUltraShip (LUS) es nuestra recreación moderna del SDK de Nintendo 64, conocido como LibUltra. Proporciona la base para todos nuestros ports, manejando gráficos, audio, entrada y los sistemas principales del juego. LUS nos permite llevar juegos de N64 a plataformas modernas con características mejoradas y soporte multiplataforma.",
+    "features": [
+      "Backends gráficos modernos (DirectX 11, OpenGL, Metal)",
+      "Audio mejorado con sonido posicional",
+      "Manejo de entrada flexible para cualquier controlador",
+      "API de modding y extensibilidad",
+      "Soporte multiplataforma (Windows, macOS, Linux, Switch)"
+    ]
+  },
+  "ourPorts": {
+    "title": "Nuestros Ports",
+    "intro": "Cada port mantiene la experiencia auténtica mientras agrega mejoras modernas:",
+    "enhancements": [
+      "Resolución nativa y soporte de pantalla panorámica",
+      "Tasas de cuadros mejoradas y latencia de entrada reducida",
+      "Controles personalizables y mapeo de botones",
+      "Soporte de modding y características comunitarias",
+      "Mejoras visuales opcionales"
+    ]
+  },
+  "team": {
+    "title": "El Equipo",
+    "content": "Harbour Masters 64 es posible gracias a las contribuciones de desarrolladores, ingenieros inversos y miembros de la comunidad de todo el mundo. ¡Únete a nuestro Discord para conectarte con la comunidad!"
+  },
+  "legal": {
+    "title": "Información Legal",
+    "content": "Nuestros ports se crean mediante ingeniería inversa de sala limpia. No distribuimos ningún activo con derechos de autor, incluidos archivos ROM. Los usuarios deben proporcionar sus propios archivos ROM obtenidos legalmente. Nintendo 64 es una marca comercial de Nintendo Co., Ltd. Nuestros proyectos no están afiliados ni respaldados por Nintendo."
+  }
+}

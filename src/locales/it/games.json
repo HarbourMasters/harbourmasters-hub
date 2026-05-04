@@ -1,0 +1,32 @@
+{
+  "shipwright": {
+    "name": "Shipwright",
+    "tagline": "Port PC di The Legend of Zelda: Ocarina of Time",
+    "description": "Una riscrittura moderna del classico Zelda che ha definito un genere."
+  },
+  "2ship": {
+    "name": "2ship",
+    "tagline": "Port PC di The Legend of Zelda: Majora's Mask",
+    "description": "Il mondo oscuro e unico di Majora's Mask, modernizzato."
+  },
+  "ghostship": {
+    "name": "Ghostship",
+    "tagline": "Port PC di Super Mario 64",
+    "description": "Il primo passo di Mario nel 3D come non l'hai mai visto."
+  },
+  "spaghetti": {
+    "name": "SpaghettiKart",
+    "tagline": "Port PC di Mario Kart 64",
+    "description": "Gare classiche di Mario Kart con funzionalità moderne."
+  },
+  "starship": {
+    "name": "Starship",
+    "tagline": "Port PC di Star Fox 64",
+    "description": "Vola attraverso gli angoli del sistema Lylat in HD!"
+  },
+  "lus": {
+    "name": "LibUltraShip",
+    "tagline": "Il Framework",
+    "description": "Il motore che rende possibili tutti questi port."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Questions fréquentes",
+  "subtitle": "Tout ce que vous devez savoir sur nos ports PC N64",
+  "badge": "Base de connaissances",
+  "search": "Rechercher des questions...",
+  "searchResults": "{{count}} questions trouvées",
+  "noResults": "Aucune question ne correspond à \"{{query}}\"",
+  "noResultsHint": "Essayez d'autres mots-clés ou parcourez les catégories ci-dessus",
+  "stillNeedHelp": "Besoin d'aide ?",
+  "stillNeedHelpDesc": "Rejoignez notre communauté Discord pour obtenir de l'aide auprès d'autres joueurs et développeurs.",
+  "categories": {
+    "general": "Général",
+    "gettingStarted": "Pour commencer",
+    "technical": "Technique",
+    "legal": "Juridique"
+  },
+  "questions": {
+    "whatIs": {
+      "question": "Qu'est-ce que Harbour Masters ?",
+      "answer": "Harbour Masters est une communauté de développeurs qui créent des ports PC natifs de jeux Nintendo 64. Nous faisons du reverse engineering des jeux classiques à partir de zéro grâce à notre moteur LibUltraShip, en les reconstruisant pour qu'ils tournent nativement sur les systèmes d'exploitation modernes avec des fonctionnalités améliorées."
+    },
+    "whatIsLUS": {
+      "question": "Qu'est-ce que LibUltraShip ?",
+      "answer": "LibUltraShip (LUS) est notre réimplémentation du système d'exploitation et des bibliothèques Nintendo 64. Il permet aux jeux N64 de tourner nativement sur PC sans émulation, avec des fonctionnalités comme des résolutions plus élevées, des contrôles modernes et le support des mods."
+    },
+    "romRequired": {
+      "question": "Ai-je besoin d'un fichier ROM ?",
+      "answer": "Oui. Nos ports nécessitent un fichier ROM légalement extrait de votre propre copie du jeu. Nous ne fournissons pas de fichiers ROM pour des raisons de droits d'auteur. Vous devez dumper votre propre ROM à partir d'une cartouche que vous possédez, en utilisant des outils comme un Retrode, une flashcart N64 ou la méthode GameShark Pro."
+    },
+    "whereToGetRom": {
+      "question": "Comment dumper ma ROM N64 ?",
+      "answer": "Il existe deux approches principales : Depuis une cartouche N64, avec du matériel spécialisé comme un Retrode 2 ou une flashcart N64 avec capacité de dump (ex : EverDrive 64 X-Series). Depuis un disque GameCube : si vous possédez le disque de compilation GameCube (Ocarina of Time & Master Quest, Zelda Collector's Edition, etc.), vous pouvez le dumper via une Wii ou Wii U moddée, puis extraire la ROM avec l'émulateur Dolphin — ouvrez l'image du disque dans Dolphin, allez dans l'onglet Filesystem, trouvez le fichier .tgc approprié et extrayez la ROM .n64 à l'intérieur. Vous pouvez ensuite vérifier votre ROM avec notre outil de vérification de compatibilité."
+    },
+    "legal": {
+      "question": "Ces ports sont-ils légaux ?",
+      "answer": "Oui. Notre travail est 100 % légal. Nous utilisons du reverse engineering en chambre propre — nous analysons le code compilé du jeu, nous comprenons ce qu'il fait, et nous le réécrivons à partir de zéro. Nous ne distribuons jamais de code protégé par le droit d'auteur, d'assets ou de fichiers ROM. Vous devez fournir votre propre ROM obtenue légalement."
+    },
+    "free": {
+      "question": "Ces ports sont-ils vraiment gratuits ?",
+      "answer": "Oui ! Tous nos ports sont complètement gratuits et open source. Nous croyons en la préservation du jeu vidéo et à rendre ces classiques accessibles à tous. Les dons ne sont pas acceptés — nous faisons ça purement par passion pour ces jeux."
+    },
+    "whichGames": {
+      "question": "Quels jeux sont disponibles ?",
+      "answer": "Nous avons actuellement des ports pour : Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), SpaghettiKart (Mario Kart 64) et Starship (Star Fox 64). D'autres projets sont toujours en développement."
+    },
+    "controller": {
+      "question": "Quelles manettes sont supportées ?",
+      "answer": "Pratiquement toutes ! Nous supportons les manettes Xbox, PlayStation (DS4/DualSense), Switch Pro, 8BitDo et les contrôleurs USB/Bluetooth génériques via SDL2. Le mapping des boutons est entièrement personnalisable. Le clavier et la souris fonctionnent également très bien."
+    },
+    "multiplayer": {
+      "question": "Le multijoueur en ligne est-il disponible ?",
+      "answer": "Actuellement, seul Ship of Harkinian (Ocarina of Time) prend en charge le multijoueur en ligne, avec des modes randomizer et co-op. Consultez le dépôt GitHub de Ship of Harkinian et notre Discord pour les dernières nouveautés sur le multijoueur."
+    },
+    "mods": {
+      "question": "Puis-je utiliser des mods ?",
+      "answer": "Oui ! Nos ports prennent en charge toutes sortes de mods créés par la communauté : packs de textures, améliorations de gameplay et bien plus. Consultez notre bibliothèque de mods pour les mods disponibles sur GameBanana, ou rejoignez notre Discord pour des ressources de modding et des créations communautaires."
+    },
+    "graphics": {
+      "question": "Quelles améliorations graphiques sont disponibles ?",
+      "answer": "Nos ports supportent : le rendu à la résolution native jusqu'en 8K, les formats d'image widescreen et ultrawide, l'anti-aliasing, le filtrage anisotrope, des framerates améliorés (30 fps → 60 fps dans beaucoup de jeux), un éclairage amélioré, des options de filtrage de texture et des effets de post-traitement."
+    },
+    "saves": {
+      "question": "Mes sauvegardes N64 d'origine fonctionnent-elles ?",
+      "answer": "Non, les fichiers de sauvegarde N64 ne sont pas compatibles. Cependant, vous pouvez utiliser les sauvegardes instantanées (save states) et notre système de sauvegarde moderne qui offre plusieurs emplacements par jeu. Certains outils existent pour convertir certains types de sauvegardes."
+    },
+    "updates": {
+      "question": "Comment mettre à jour vers la dernière version ?",
+      "answer": "Téléchargez simplement la dernière version depuis notre page de téléchargements ou notre dépôt GitHub. Extrayez-la dans un nouveau dossier, copiez votre dossier de sauvegardes de l'ancienne version, et c'est bon. Vos paramètres et sauvegardes sont conservés entre les versions."
+    },
+    "bugs": {
+      "question": "J'ai trouvé un bug, que dois-je faire ?",
+      "answer": "Signalez les bugs sur la page Issues du dépôt GitHub du jeu concerné. Avant de signaler, vérifiez les tickets existants pour éviter les doublons. Incluez : votre système d'exploitation, vos caractéristiques matérielles, les étapes pour reproduire le bug et les éventuels logs d'erreur."
+    },
+    "contribute": {
+      "question": "Puis-je contribuer au projet ?",
+      "answer": "Oui ! Les contributions sont les bienvenues. Consultez nos dépôts GitHub pour les issues ouvertes, en particulier celles étiquetées « good first issue ». Les compétences recherchées incluent la programmation C/C++, la programmation graphique OpenGL/DirectX, le reverse engineering et les tests. Rejoignez notre Discord pour discuter avec les autres développeurs."
+    },
+    "translation": {
+      "question": "D'autres langues sont-elles supportées ?",
+      "answer": "Beaucoup de nos ports ont des traductions communautaires. Consultez les dépôts de chaque jeu pour les patchs linguistiques disponibles. L'interface de ce site web est disponible en anglais, français, allemand, espagnol et italien."
+    }
+  }
+}

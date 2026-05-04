@@ -1,0 +1,34 @@
+{
+  "notFound": {
+    "title": "Gioco Non Trovato",
+    "description": "Il gioco che stai cercando non esiste.",
+    "backToDownloads": "Torna ai Download"
+  },
+  "back": "Indietro",
+  "sections": {
+    "features": "Caratteristiche",
+    "latestRelease": "Ultima Versione",
+    "olderVersions": "Versioni Precedenti",
+    "otherPorts": "Altri Port"
+  },
+  "platforms": {
+    "windows": "Windows",
+    "linux": "Linux (Steam Deck)",
+    "mac": "macOS",
+    "wiiu": "Wii U",
+    "switch": "Switch",
+    "other": "Altro"
+  },
+  "viewOnGitHub": "Vedi su GitHub",
+  "discord": "Discord",
+  "noReleases": "Nessuna versione disponibile",
+  "noOlderVersions": "Nessuna versione precedente disponibile",
+  "noDownloadStats": "Nessuna statistica di download disponibile",
+  "downloads": "Download",
+  "changelog": "Novità",
+  "total": "totale",
+  "latest": "Ultima",
+  "noReleasesYet": "Nessuna versione ancora disponibile",
+  "noChangelog": "Nessun changelog disponibile.",
+  "downloadFile": "Scarica"
+}
