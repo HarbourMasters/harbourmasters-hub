@@ -47,6 +47,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
 /* Theme Transitions */
 .theme-transition {
   transition: background-color var(--transition-normal),
