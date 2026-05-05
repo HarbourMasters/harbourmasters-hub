@@ -108,7 +108,7 @@ export const GAMES: Record<GameId, Game> = {
     name: 'SpaghettiKart',
     fullName: 'SpaghettiKart',
     tagline: 'Mario Kart 64',
-    description: 'Race with friends in this classic kart racer, now with online multiplayer support.',
+    description: 'Relive the classic Mario Kart 64 on PC with local multiplayer, enhanced graphics and smooth performance.',
     themeId: 'spaghetti',
     gradient: 'from-yellow-500/30 to-red-500/20',
     icon: '/icons/games/SpaghettiKart.png',
@@ -119,7 +119,7 @@ export const GAMES: Record<GameId, Game> = {
       name: 'SpaghettiKart'
     },
     features: [
-      'Online multiplayer',
+      'Local multiplayer',
       'Custom track support',
       '60 FPS gameplay',
       'Enhanced graphics',

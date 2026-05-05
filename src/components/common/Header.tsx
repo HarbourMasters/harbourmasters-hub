@@ -59,7 +59,7 @@ function Header() {
               {/* Animated Logo */}
               <Link
                 to="/"
-                className="group relative flex items-center gap-3 font-display text-xl font-bold"
+                className="group relative flex items-center gap-3 text-xl font-bold"
               >
                 {/* Logo Container with Wave Effect */}
                 <div className="relative w-12 h-12">
