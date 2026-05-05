@@ -59,7 +59,7 @@ function GameDetail() {
         </div>
         <div className="container relative pt-24 pb-16">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/')}
             className="inline-flex items-center gap-2 px-4 py-2 mb-10 rounded-lg bg-[var(--color-surface)]/80 backdrop-blur border border-[var(--color-border)] hover:border-[var(--color-primary)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text)] font-medium transition-all duration-200 hover:translate-x-[-2px]"
           >
             <ArrowLeft size={18} />
