@@ -71,11 +71,10 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
       )
       return { url: linuxAsset?.browser_download_url || null, isAvailable: !!linuxAsset }
     } else if (os === 'macos') {
-      const macAsset = assets.find(a =>
-        a.name.toLowerCase().includes('mac') ||
-        a.name.toLowerCase().includes('osx') ||
-        a.name.toLowerCase().includes('darwin')
-      )
+      const macAsset = assets.find(a => {
+        const n = a.name.toLowerCase()
+        return n.includes('macos') || n.includes('osx') || n.includes('darwin') || n.endsWith('.dmg') || /(?:^|[-_\s.])mac(?:[-_\s.]|$)/.test(n)
+      })
       return { url: macAsset?.browser_download_url || null, isAvailable: !!macAsset }
     }
 

@@ -48,7 +48,7 @@ function FAQ() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <section className="relative py-20 bg-gradient-to-br from-[var(--color-primary)]/10 to-[var(--color-accent)]/10 overflow-hidden">
+      <section className="relative pt-[var(--header-height)] pb-20 bg-gradient-to-br from-[var(--color-primary)]/10 to-[var(--color-accent)]/10 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-10 blur-[100px]"
@@ -63,10 +63,10 @@ function FAQ() {
               <BookOpen size={16} />
               <span>{t('badge')}</span>
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-4 animate-slide-up">
+            <h1 className="font-display text-4xl md:text-6xl font-bold mb-4 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               {t('title')}
             </h1>
-            <p className="text-xl text-[var(--color-text-muted)] animate-slide-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl text-[var(--color-text-muted)] opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('subtitle')}
             </p>
           </div>

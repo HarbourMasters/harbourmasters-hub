@@ -52,12 +52,12 @@ function GameDetail() {
   return (
     <div className="animate-fade-in">
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-[var(--header-height)]">
         <div className="absolute inset-0 opacity-30">
           <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient || 'from-[var(--color-primary)] to-[var(--color-accent)]'}`} />
           <div className="absolute inset-0 bg-[var(--color-background)]/60" />
         </div>
-        <div className="container relative pt-24 pb-16">
+        <div className="container relative z-10 pt-6 pb-16">
           <button
             onClick={() => navigate('/')}
             className="inline-flex items-center gap-2 px-4 py-2 mb-10 rounded-lg bg-[var(--color-surface)]/80 backdrop-blur border border-[var(--color-border)] hover:border-[var(--color-primary)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text)] font-medium transition-all duration-200 hover:translate-x-[-2px]"
@@ -144,7 +144,12 @@ type PlatformConfig = {
 const PLATFORM_ORDER: PlatformConfig[] = [
   { key: 'windows', name: 'Windows', iconKey: 'windows', filter: (name: string) => name.toLowerCase().includes('win') || name.toLowerCase().includes('windows') },
   { key: 'linux', name: 'Linux (Steam Deck)', iconKey: 'linux', filter: (name: string) => name.toLowerCase().includes('linux') || name.toLowerCase().includes('ubuntu') },
-  { key: 'mac', name: 'macOS', iconKey: 'apple', filter: (name: string) => name.toLowerCase().includes('mac') || name.toLowerCase().includes('osx') || name.toLowerCase().includes('darwin') },
+  { key: 'mac', name: 'macOS', iconKey: 'apple', filter: (name: string) => {
+    const lower = name.toLowerCase()
+    if (lower.includes('macos') || lower.includes('osx') || lower.includes('darwin') || lower.endsWith('.dmg')) return true
+    if (/(?:^|[-_\s.])mac(?:[-_\s.]|$)/.test(lower)) return true
+    return false
+  }},
   { key: 'wiiu', name: 'Wii U', iconKey: 'wii-u', filter: (name: string) => (name.toLowerCase().includes('wii') && name.toLowerCase().includes('u')) || name.toLowerCase().includes('wiiu') },
   { key: 'switch', name: 'Switch', iconKey: 'nintendo-switch', filter: (name: string) => name.toLowerCase().includes('switch') },
 ]
@@ -156,9 +161,9 @@ function DownloadButton({ asset, platform }: { asset: any, platform: PlatformCon
       href={asset.browser_download_url}
       className="flex items-center gap-3 p-3 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-colors group"
     >
-      <div className="w-10 h-10 rounded bg-[var(--color-primary)]/10 flex items-center justify-center flex-shrink-0">
+      <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/10 flex items-center justify-center flex-shrink-0">
         {platform.iconKey ? (
-          <PlatformIcon platform={platform.iconKey} size={18} className="text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)]" />
+          <PlatformIcon platform={platform.iconKey} size={22} className="text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)]" />
         ) : (
           <Gamepad2 size={18} className="text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)]" />
         )}
@@ -265,7 +270,7 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
               const count = platformStats[platform.key]
               return (
                 <div key={platform.key} className="flex items-center gap-2">
-                  <PlatformIcon platform={platform.iconKey || 'windows'} size={16} />
+                  <PlatformIcon platform={platform.iconKey || 'windows'} size={20} />
                   <span className="font-medium">{formatDownloadCount(count, '')}</span>
                 </div>
               )
@@ -503,7 +508,7 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
 
                       return visiblePlatforms.map((p) => (
                         <div key={p.key} className="flex items-center gap-1.5">
-                          <PlatformIcon platform={p.iconKey} size={14} className="text-[var(--color-text-muted)]" />
+                          <PlatformIcon platform={p.iconKey} size={18} className="text-[var(--color-text-muted)]" />
                           <span className="font-medium">{formatDownloadCount(p.count)}</span>
                         </div>
                       ))
@@ -557,7 +562,7 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
                           return (
                             <div key={platform.key} className="space-y-2">
                               <p className="text-sm text-[var(--color-text-muted)] flex items-center gap-1">
-                                <PlatformIcon platform={platform.iconKey || 'windows'} size={14} />
+                                <PlatformIcon platform={platform.iconKey || 'windows'} size={18} />
                                 {t(`gameDetail:platforms.${platform.key}`)}
                               </p>
                               {assets.map((asset) => (

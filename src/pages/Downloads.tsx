@@ -9,7 +9,7 @@ function Downloads() {
   return (
     <div className="min-h-screen">
       {/* Hero - Centered with background effects */}
-      <section className="relative py-10 md:py-14 bg-[var(--color-surface)]/30 overflow-hidden">
+      <section className="relative pt-[var(--header-height)] pb-10 md:pb-14 bg-[var(--color-surface)]/30 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--color-primary)]/5 blur-[150px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--color-accent)]/5 blur-[150px]" />
@@ -17,20 +17,20 @@ function Downloads() {
 
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Sparkles size={16} className="text-[var(--color-accent)]" />
               <span className="text-sm font-bold text-[var(--color-accent)]">
                 {t('downloads:badge')}
               </span>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight animate-slide-up">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('downloads:title')}
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-6 animate-slide-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
               {t('downloads:subtitle')}
             </p>
-            <p className="text-[var(--color-text-muted)] leading-relaxed text-lg max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '200ms' }}>
+            <p className="text-[var(--color-text-muted)] leading-relaxed text-lg max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
               {t('downloads:description')}
             </p>
           </div>

@@ -35,7 +35,7 @@ function Footer() {
   ]
 
   return (
-    <footer className={`relative overflow-hidden ${showCommunityHero ? '' : 'min-h-[400px] flex flex-col justify-center'}`}>
+    <footer className={`relative overflow-hidden mt-12 ${showCommunityHero ? '' : 'min-h-[400px] flex flex-col justify-center'}`}>
       {/* Decorative background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-surface)]/50 to-[var(--color-background)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-primary)] to-transparent opacity-30" />
@@ -46,15 +46,13 @@ function Footer() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-[var(--color-accent)]/3 blur-[120px]" />
       </div>
 
-      <div className={`container relative z-10 ${showCommunityHero ? 'py-20' : 'py-12'}`}>
-        {/* Open Source Hero Section - Bold & Prominent */}
+      <div className={`container relative z-10 ${showCommunityHero ? 'pt-24 pb-20' : 'py-12'}`}>
+        {/* Open Source Hero Section */}
         {showCommunityHero && (
         <div className="mb-16">
-          <div className="relative p-10 rounded-3xl bg-gradient-to-br from-[var(--color-primary)]/10 via-[var(--color-accent)]/5 to-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 overflow-hidden">
-            {/* Animated shine effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
+          <div className="relative rounded-3xl bg-gradient-to-br from-[var(--color-primary)]/10 via-[var(--color-accent)]/5 to-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 overflow-hidden">
 
-            <div className="relative">
+            <div className="relative p-10">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 text-sm font-bold mb-6">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -201,7 +199,7 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[var(--color-border)]">
+        <div className={`pt-8 border-t border-[var(--color-border)] ${showCommunityHero ? 'pb-4' : ''}`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
               <span>© {currentYear} Harbour Masters</span>

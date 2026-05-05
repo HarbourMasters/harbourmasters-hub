@@ -353,7 +353,7 @@ export function clearReleaseCache(): void {
 /**
  * Parse platform from asset name
  */
-export function parsePlatform(assetName: string): 'windows' | 'linux' | 'mac' | 'switch' | null {
+export function parsePlatform(assetName: string): 'windows' | 'linux' | 'mac' | 'switch' | 'wiiu' | null {
   const lower = assetName.toLowerCase();
 
   if (lower.includes('win') || lower.includes('windows')) {
@@ -362,11 +362,14 @@ export function parsePlatform(assetName: string): 'windows' | 'linux' | 'mac' | 
   if (lower.includes('linux') || lower.includes('ubuntu')) {
     return 'linux';
   }
-  if (lower.includes('mac') || lower.includes('osx') || lower.includes('darwin')) {
+  if (lower.includes('macos') || lower.includes('osx') || lower.includes('darwin') || lower.endsWith('.dmg') || /(?:^|[-_\s.])mac(?:[-_\s.]|$)/.test(lower)) {
     return 'mac';
   }
   if (lower.includes('switch')) {
     return 'switch';
+  }
+  if ((lower.includes('wii') && lower.includes('u')) || lower.includes('wiiu')) {
+    return 'wiiu';
   }
 
   return null;

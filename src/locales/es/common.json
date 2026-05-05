@@ -105,7 +105,15 @@
     "helpDesk": "Mesa de Ayuda",
     "activeStatus": "Activo",
     "gamingStatus": "Juegos",
-    "supportStatus": "Soporte"
+    "supportStatus": "Soporte",
+    "moddingStatus": "Modding",
+    "moddingDesc": "Mods Personalizados",
+    "racesStatus": "Carreras",
+    "racesDesc": "Speedrunning",
+    "communityStatus": "Comunidad",
+    "communityDesc": "Eventos y Más",
+    "safeServer": "Seguro y Moderado",
+    "boostCount": "{{count}} Boosts"
   },
   "githubStats": {
     "liveBadge": "En Vivo desde GitHub",

@@ -66,9 +66,11 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
     const name = asset.name.toLowerCase()
     if (name.includes('win') || name.includes('windows')) acc.hasWindows = true
     if (name.includes('linux') || name.includes('ubuntu')) acc.hasLinux = true
-    if (name.includes('mac') || name.includes('osx') || name.includes('darwin')) acc.hasMac = true
+    if (name.includes('macos') || name.includes('osx') || name.includes('darwin') || name.endsWith('.dmg') || /(?:^|[-_\s.])mac(?:[-_\s.]|$)/.test(name)) acc.hasMac = true
+    if (name.includes('switch')) acc.hasSwitch = true
+    if ((name.includes('wii') && name.includes('u')) || name.includes('wiiu')) acc.hasWiiU = true
     return acc
-  }, { hasWindows: false, hasLinux: false, hasMac: false }) : { hasWindows: false, hasLinux: false, hasMac: false }
+  }, { hasWindows: false, hasLinux: false, hasMac: false, hasSwitch: false, hasWiiU: false }) : { hasWindows: false, hasLinux: false, hasMac: false, hasSwitch: false, hasWiiU: false }
 
   return (
     <Link
@@ -120,21 +122,31 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
         )}
 
         {/* Platform Badges */}
-        {(platforms.hasWindows || platforms.hasLinux || platforms.hasMac) && (
+        {(platforms.hasWindows || platforms.hasLinux || platforms.hasMac || platforms.hasSwitch || platforms.hasWiiU) && (
           <div className="flex items-center gap-2 mb-4">
             {platforms.hasWindows && (
-              <div className="w-7 h-7 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
-                <PlatformIcon platform="windows" size={14} />
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
+                <PlatformIcon platform="windows" size={18} />
               </div>
             )}
             {platforms.hasLinux && (
-              <div className="w-7 h-7 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
-                <PlatformIcon platform="linux" size={14} />
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
+                <PlatformIcon platform="linux" size={18} />
               </div>
             )}
             {platforms.hasMac && (
-              <div className="w-7 h-7 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
-                <PlatformIcon platform="apple" size={14} />
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
+                <PlatformIcon platform="apple" size={18} />
+              </div>
+            )}
+            {platforms.hasSwitch && (
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
+                <PlatformIcon platform="nintendo-switch" size={18} />
+              </div>
+            )}
+            {platforms.hasWiiU && (
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-background)] border border-[var(--color-border)] flex items-center justify-center">
+                <PlatformIcon platform="wii-u" size={18} />
               </div>
             )}
           </div>

@@ -71,20 +71,20 @@ function AudioTool() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-10 md:py-14 bg-[var(--color-surface)]/30 overflow-hidden">
+      <section className="relative pt-[var(--header-height)] pb-10 md:pb-14 bg-[var(--color-surface)]/30 overflow-hidden">
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Music size={16} className="text-[var(--color-accent)]" />
               <span className="text-sm font-bold text-[var(--color-accent)]">
                 {t('audioTool.badge')}
               </span>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight animate-slide-up">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('audioTool.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-6 animate-slide-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
               {t('audioTool.subtitle')}
             </p>
           </div>

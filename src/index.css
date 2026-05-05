@@ -272,6 +272,17 @@ header {
   }
 }
 
+/* Discord glow */
+@keyframes discord-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(88, 101, 242, 0.25),
+                0 0 60px rgba(88, 101, 242, 0.1);
+  }
+}
+
 /* Glow pulse */
 @keyframes glow-pulse {
   0%, 100% {
@@ -357,6 +368,10 @@ header {
 
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-discord-glow {
+  animation: discord-glow 3s ease-in-out infinite;
 }
 
 /* Staggered Animation Delays */
