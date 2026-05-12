@@ -160,9 +160,6 @@ async function fetchFromGitHub(): Promise<{ stats: GameWithStats[]; total: numbe
     }
   }
 
-  // Sort by downloads (most popular first)
-  stats.sort((a, b) => b.stats.totalDownloads - a.stats.totalDownloads)
-
   return { stats, total }
 }
 
