@@ -18,10 +18,10 @@ function Header() {
   ]
 
   const toolsMenuItems = [
-    { path: '/tools/rom-checker', label: t('nav.tools.romChecker'), icon: FileSearch },
-    { path: '/tools/mods', label: t('nav.tools.modLibrary'), icon: Library },
-    { path: '/tools/message-editor', label: t('nav.tools.messageEditor'), icon: MessageSquare },
-    { path: '/tools/audio', label: t('nav.tools.audioTool'), icon: Music }
+    { path: '/tools/rom-checker', label: t('nav.tools.romChecker'), icon: FileSearch, disabled: false },
+    { path: '/tools/mods', label: t('nav.tools.modLibrary'), icon: Library, disabled: false },
+    { path: '/tools/message-editor', label: t('nav.tools.messageEditor'), icon: MessageSquare, disabled: true },
+    { path: '/tools/audio', label: t('nav.tools.audioTool'), icon: Music, disabled: true }
   ]
 
   const isActive = (path: string) => {
@@ -130,9 +130,27 @@ function Header() {
 
                   {/* Dropdown */}
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50">
-                    <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-xl shadow-[var(--color-primary)]/10 backdrop-blur-xl min-w-[240px] py-2">
+                    <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-xl shadow-[var(--color-primary)]/10 backdrop-blur-xl min-w-[280px] py-2">
                       {toolsMenuItems.map((item) => {
                         const Icon = item.icon
+                        if (item.disabled) {
+                          return (
+                            <div
+                              key={item.path}
+                              className="flex items-center justify-between px-4 py-3 text-[var(--color-text-muted)] opacity-50 cursor-default select-none"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)]/5 flex items-center justify-center flex-shrink-0">
+                                  <Icon size={16} className="text-[var(--color-text-muted)]" />
+                                </div>
+                                <span className="font-medium text-sm">{item.label}</span>
+                              </div>
+                              <span className="text-xs italic animate-[wave_2s_ease-in-out_infinite] origin-bottom-right">
+                                {t('nav.tools.comingSoon')}
+                              </span>
+                            </div>
+                          )
+                        }
                         return (
                           <Link
                             key={item.path}
@@ -232,6 +250,25 @@ function Header() {
                 </div>
                 {toolsMenuItems.map((item, index) => {
                   const Icon = item.icon
+                  if (item.disabled) {
+                    return (
+                      <div
+                        key={item.path}
+                        className="flex items-center justify-between px-4 py-3 rounded-lg mb-1 text-[var(--color-text-muted)] opacity-50 cursor-default select-none"
+                        style={{ animationDelay: `${(navItems.length + 1 + index) * 50}ms` }}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[var(--color-primary)]/5">
+                            <Icon size={16} className="text-[var(--color-text-muted)]" />
+                          </div>
+                          <span className="font-medium">{item.label}</span>
+                        </div>
+                        <span className="text-xs italic animate-[wave_2s_ease-in-out_infinite]">
+                          {t('nav.tools.comingSoon')}
+                        </span>
+                      </div>
+                    )
+                  }
                   return (
                     <Link
                       key={item.path}
