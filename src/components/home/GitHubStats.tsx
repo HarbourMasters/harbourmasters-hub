@@ -8,7 +8,7 @@ import { PortStatCard } from '@/components/common/PortStatCard'
 const REQUEST_DELAY = 1000; // 1 second between requests
 let lastRequestTime = 0;
 
-async function rateLimitedFetch(url: string): Promise<Response> {
+async function rateLimitedFetch(url: string, etag?: string): Promise<{ response: Response; notModified: boolean }> {
   const now = Date.now();
   const timeSinceLastRequest = now - lastRequestTime;
   if (timeSinceLastRequest < REQUEST_DELAY) {
@@ -16,13 +16,15 @@ async function rateLimitedFetch(url: string): Promise<Response> {
   }
   lastRequestTime = Date.now();
 
-  const response = await fetch(url, {
-    headers: {
-      'Accept': 'application/vnd.github.v3+json'
-    }
-  });
+  const headers: Record<string, string> = {
+    'Accept': 'application/vnd.github.v3+json'
+  };
+  if (etag) {
+    headers['If-None-Match'] = etag;
+  }
 
-  return response;
+  const response = await fetch(url, { headers });
+  return { response, notModified: response.status === 304 };
 }
 
 interface RepoStats {
@@ -59,36 +61,57 @@ interface GameWithStats {
 interface CacheData {
   stats: GameWithStats[]
   total: number
+  etags: Record<string, string>
 }
 
 const CACHE_KEY = 'github_stats_cache_v2'
-const CACHE_TTL = 15 * 60 * 1000 // 15 minutes
+const CACHE_TTL = 30 * 60 * 1000 // 30 minutes
 
-async function fetchFromGitHub(): Promise<{ stats: GameWithStats[]; total: number }> {
+async function fetchFromGitHub(cachedData?: CacheData): Promise<CacheData> {
   const stats: GameWithStats[] = []
   let total = 0
+  const newEtas: Record<string, string> = { ...cachedData?.etags }
+  const cachedStats = new Map(cachedData?.stats.map(s => [s.id, s]))
 
   for (const [id, game] of Object.entries(GAMES)) {
     try {
       const owner = game.repo?.owner ?? 'HarbourMasters'
       const name = game.repo?.name ?? game.id
       const githubUrl = `https://github.com/${owner}/${name}`
+      const repoUrl = `https://api.github.com/repos/${owner}/${name}`
+      const releasesUrl = `https://api.github.com/repos/${owner}/${name}/releases`
 
-      // Fetch repo info with rate limiting
-      const repoResponse = await rateLimitedFetch(`https://api.github.com/repos/${owner}/${name}`)
+      // Fetch repo info with ETag
+      const { response: repoResponse, notModified: repoUnchanged } = await rateLimitedFetch(repoUrl, newEtas[repoUrl])
+
+      if (repoUnchanged) {
+        // Reuse cached stats for this game — no API cost
+        const cached = cachedStats.get(id)
+        if (cached) {
+          stats.push(cached)
+          total += cached.stats.totalDownloads
+          continue
+        }
+      }
 
       if (!repoResponse.ok) {
         throw new Error(`GitHub API error: ${repoResponse.statusText}`)
       }
 
+      const repoEtag = repoResponse.headers.get('ETag')
+      if (repoEtag) newEtas[repoUrl] = repoEtag
+
       const repoData = await repoResponse.json()
 
-      // Fetch releases for download counts with rate limiting
-      const releasesResponse = await rateLimitedFetch(`https://api.github.com/repos/${owner}/${name}/releases`)
+      // Fetch releases with ETag
+      const { response: releasesResponse } = await rateLimitedFetch(releasesUrl, newEtas[releasesUrl])
 
       if (!releasesResponse.ok) {
         throw new Error(`GitHub API error: ${releasesResponse.statusText}`)
       }
+
+      const releasesEtag = releasesResponse.headers.get('ETag')
+      if (releasesEtag) newEtas[releasesUrl] = releasesEtag
 
       const releasesData = await releasesResponse.json()
 
@@ -160,7 +183,7 @@ async function fetchFromGitHub(): Promise<{ stats: GameWithStats[]; total: numbe
     }
   }
 
-  return { stats, total }
+  return { stats, total, etags: newEtas }
 }
 
 function saveToCache(data: CacheData): void {
@@ -195,6 +218,17 @@ function loadFromCache(): { data: CacheData; age: number } | null {
   }
 }
 
+function loadEtasFromCache(): Record<string, string> | undefined {
+  try {
+    const cached = localStorage.getItem(CACHE_KEY)
+    if (!cached) return undefined
+    const parsed = JSON.parse(cached)
+    return parsed.data?.etags
+  } catch {
+    return undefined
+  }
+}
+
 export function GitHubStats() {
   const { t } = useTranslation(['common'])
   const [gameStats, setGameStats] = useState<GameWithStats[]>([])
@@ -216,7 +250,7 @@ export function GitHubStats() {
 
         // Refresh in background if cache is getting stale (> 80% of TTL)
         if (cached.age > CACHE_TTL * 0.8) {
-          fetchFromGitHub().then(freshData => {
+          fetchFromGitHub(cached.data).then(freshData => {
             saveToCache(freshData)
             setGameStats(freshData.stats)
             setTotalDownloads(freshData.total)
@@ -228,10 +262,11 @@ export function GitHubStats() {
         return
       }
 
-      // No cache or expired, fetch fresh data
+      // No cache or expired, fetch fresh data (pass any stale etags for conditional requests)
       setLoading(true)
       try {
-        const freshData = await fetchFromGitHub()
+        const staleEtas = loadEtasFromCache()
+        const freshData = await fetchFromGitHub(staleEtas ? { stats: [], total: 0, etags: staleEtas } : undefined)
         saveToCache(freshData)
         setGameStats(freshData.stats)
         setTotalDownloads(freshData.total)

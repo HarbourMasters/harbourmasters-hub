@@ -1,7 +1,7 @@
 import { GitHubRelease, GitHubError, GitHubReleaseWithRepo } from '@/types/github';
 
 const GITHUB_API_BASE = 'https://api.github.com';
-const CACHE_TTL = 15 * 60 * 1000; // 15 minutes
+const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 const CACHE_KEY_PREFIX = 'github_cache_';
 const CACHE_VERSION = 'v2'; // For cache busting if needed
 
@@ -21,6 +21,7 @@ interface CacheEntry {
   data: GitHubRelease[];
   timestamp: number;
   version: string;
+  etag?: string;
 }
 
 // In-memory cache for faster access
@@ -172,10 +173,10 @@ export async function getReleases(
   useCache = true
 ): Promise<GitHubRelease[]> {
   const cacheKey = `${owner}/${repo}`;
+  const cached = useCache ? releaseCache.get(cacheKey) : undefined;
 
   // Check cache first
-  if (useCache) {
-    const cached = releaseCache.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
     if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
       console.log(`Using cached data for ${cacheKey}: ${cached.data.length} releases`);
       return cached.data;
@@ -193,6 +194,7 @@ export async function getReleases(
     const allReleases: GitHubRelease[] = [];
     let url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/releases?per_page=100`;
     let pageCount = 0;
+    let firstPageEtag: string | null = null;
 
     try {
       // Fetch all pages
@@ -203,14 +205,28 @@ export async function getReleases(
         // Rate limit: wait before making request
         await rateLimitFetch();
 
-        const response = await fetch(url, {
-          headers: {
-            'Accept': 'application/vnd.github.v3+json',
-            ...(import.meta.env.VITE_GITHUB_TOKEN && {
-              'Authorization': `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
-            })
-          }
-        });
+        // Use ETag for conditional request on first page only (subsequent pages change rarely)
+        const headers: Record<string, string> = {
+          'Accept': 'application/vnd.github.v3+json',
+        };
+        if (pageCount === 1 && cached?.etag) {
+          headers['If-None-Match'] = cached.etag;
+        }
+        if (import.meta.env.VITE_GITHUB_TOKEN) {
+          headers['Authorization'] = `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`;
+        }
+
+        const response = await fetch(url, { headers });
+
+        // 304 = data unchanged, reuse cache
+        if (response.status === 304 && cached && cached.data.length > 0) {
+          console.log(`Cache valid for ${cacheKey} (304 Not Modified)`);
+          // Bump timestamp so we don't re-check for another TTL cycle
+          const refreshed: CacheEntry = { ...cached, timestamp: Date.now() };
+          releaseCache.set(cacheKey, refreshed);
+          saveCacheToStorage(cacheKey, refreshed);
+          return cached.data;
+        }
 
         if (!response.ok) {
           // If rate limited, try to return stale cache or partial results
@@ -236,6 +252,11 @@ export async function getReleases(
         console.log(`Page ${pageCount}: fetched ${data.length} releases`);
         allReleases.push(...data);
 
+        // Capture ETag from first page for future conditional requests
+        if (pageCount === 1) {
+          firstPageEtag = response.headers.get('ETag');
+        }
+
         // Check for next page in Link header
         const linkHeader = response.headers.get('Link');
         const links = parseLinkHeader(linkHeader);
@@ -255,11 +276,12 @@ export async function getReleases(
 
       console.log(`Total releases fetched for ${cacheKey}: ${allReleases.length}`);
 
-      // Cache the result
+      // Cache the result with ETag from first page
       const entry: CacheEntry = {
         data: allReleases,
         timestamp: Date.now(),
-        version: CACHE_VERSION
+        version: CACHE_VERSION,
+        etag: firstPageEtag || undefined,
       };
       releaseCache.set(cacheKey, entry);
       saveCacheToStorage(cacheKey, entry);
