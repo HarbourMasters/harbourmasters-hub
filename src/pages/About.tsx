@@ -46,10 +46,10 @@ function About() {
               </span>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('title')}
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-[var(--color-text-muted)] opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
               {t('subtitle')}
             </p>
           </div>

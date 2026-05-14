@@ -233,10 +233,10 @@ function MessageEditor() {
               </span>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('messageEditor.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-[var(--color-text-muted)] mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
               {t('messageEditor.description')}
             </p>
           </div>
@@ -288,10 +288,10 @@ function MessageEditor() {
               </div>
             </div>
 
-            {/* Main layout: message list + editor side by side */}
-            <div className="flex gap-4 items-start">
+            {/* Main layout: message list + editor side by side on desktop, stacked on mobile */}
+            <div className="flex flex-col md:flex-row gap-4 items-start">
               {/* Message list */}
-              <div className="w-72 flex-shrink-0">
+              <div className="w-full md:w-72 flex-shrink-0">
                 <MessageList
                   messages={messages}
                   selectedId={selectedId}

@@ -77,7 +77,7 @@ export function DiscordWidget() {
       href="https://discord.gg/shipofharkinian"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block"
+      className="group relative block min-w-0"
     >
       <div className="relative border border-[var(--color-border)] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#5865F2]/50 hover:shadow-2xl hover:shadow-[#5865F2]/15 animate-discord-glow">
         {/* Splash Background */}
@@ -93,12 +93,12 @@ export function DiscordWidget() {
         {/* Content */}
         <div className="relative">
           {/* Header */}
-          <div className="p-6 border-b border-[var(--color-border)]">
+          <div className="p-4 sm:p-6 border-b border-[var(--color-border)]">
             <div className="flex items-start justify-between gap-4">
               {/* Server Icon */}
               <div className="relative shrink-0">
                 {iconUrl ? (
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-[var(--color-accent)]/30 shadow-lg">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-[var(--color-accent)]/30 shadow-lg">
                     <img
                       src={iconUrl}
                       alt={data?.name}
@@ -106,7 +106,7 @@ export function DiscordWidget() {
                     />
                   </div>
                 ) : (
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
                     <MessageSquare size={32} className="text-white" />
                   </div>
                 )}
@@ -116,7 +116,7 @@ export function DiscordWidget() {
               {/* Server Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-display font-bold text-xl truncate">{data?.name}</h3>
+                  <h3 className="font-display font-bold text-lg sm:text-xl truncate">{data?.name}</h3>
                   {data?.tag && (
                     <span className="px-2 py-0.5 rounded-md bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-bold shrink-0">
                       {data.tag}
@@ -130,7 +130,7 @@ export function DiscordWidget() {
 
               {/* Crown + boost */}
               <div className="shrink-0 text-center">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 flex items-center justify-center">
                   <Crown size={24} className="text-yellow-500" />
                 </div>
                 {data && data.premiumTier >= 3 && (
@@ -159,15 +159,15 @@ export function DiscordWidget() {
           </div>
 
         {/* Bottom Section - Member Stats */}
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           {/* Main Stats Row */}
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
-              <div className="w-12 h-12 rounded-lg bg-indigo-500/20 flex items-center justify-center">
+            <div className="flex items-center gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-indigo-500/20 flex items-center justify-center">
                 <Users size={24} className="text-indigo-400" />
               </div>
               <div>
-                <div className="text-2xl font-bold leading-none text-indigo-300">
+                <div className="text-xl sm:text-2xl font-bold leading-none text-indigo-300">
                   {formatNumber(data?.memberCount || 0)}
                 </div>
                 <div className="text-xs text-[var(--color-text-muted)]">{t('common:discord.totalMembers')}</div>
@@ -175,12 +175,12 @@ export function DiscordWidget() {
             </div>
 
             <div className="flex items-center gap-2.5 p-3 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
-              <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center relative">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-green-500/20 flex items-center justify-center relative">
                 <div className="w-4 h-4 rounded-full bg-green-500 animate-pulse" />
                 <div className="absolute inset-0 rounded-full bg-green-500/20 animate-ping" />
               </div>
               <div>
-                <div className="text-2xl font-bold leading-none text-green-300">
+                <div className="text-xl sm:text-2xl font-bold leading-none text-green-300">
                   {formatNumber(data?.onlineCount || 0)}
                 </div>
                 <div className="text-xs text-[var(--color-text-muted)]">{t('common:discord.onlineNow')}</div>
@@ -189,14 +189,14 @@ export function DiscordWidget() {
           </div>
 
           {/* Activity Indicators with hover effects */}
-          <div className="grid grid-cols-3 gap-2 mb-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3">
             {activities.map((act, i) => (
               <div
                 key={i}
                 className={`text-center p-2 rounded-lg bg-[var(--color-background)]/50 border border-transparent transition-all duration-200 ${act.hoverBorder} hover:bg-[var(--color-background)]/80 hover:scale-105 cursor-default`}
               >
-                <div className={`text-base font-bold ${act.color}`}>{act.emoji} {act.label}</div>
-                <div className="text-xs text-[var(--color-text-muted)]">{act.desc}</div>
+                <div className={`text-xs sm:text-sm font-bold truncate ${act.color}`}>{act.emoji} {act.label}</div>
+                <div className="text-[10px] sm:text-xs text-[var(--color-text-muted)] truncate">{act.desc}</div>
               </div>
             ))}
           </div>

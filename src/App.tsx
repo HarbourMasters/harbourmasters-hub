@@ -22,7 +22,7 @@ function App() {
     <ThemeProvider defaultTheme="common">
       <ScrollToTop />
       <ScrollProgress />
-      <div className="min-h-screen flex flex-col theme-transition">
+      <div className="min-h-screen flex flex-col theme-transition overflow-x-hidden">
         <Header />
         <main className="flex-1">
           <PageTransition>

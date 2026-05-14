@@ -15,7 +15,7 @@ export function HeroVideo() {
   // Fallback to text if WebM not supported
   if (!supportsWebM) {
     return (
-      <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-none tracking-tight animate-slide-up">
+      <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-none tracking-tight animate-slide-up">
         <span className="block text-[var(--color-text)]">Harbour</span>
         <span className="block gradient-text">Masters</span>
       </h1>
@@ -28,7 +28,7 @@ export function HeroVideo() {
       muted
       loop
       playsInline
-      className={`w-full max-w-2xl mx-auto transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`w-full max-w-full sm:max-w-2xl mx-auto h-auto transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       onCanPlayThrough={() => setIsLoaded(true)}
     >
       <source src="/videos/HarbourMasters64.webm" type="video/webm; codecs=vp9" />

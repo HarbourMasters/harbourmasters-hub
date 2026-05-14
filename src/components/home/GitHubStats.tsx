@@ -260,10 +260,10 @@ export function GitHubStats() {
             <TrendingUp size={16} />
             <span>{t('common:githubStats.liveBadge')}</span>
           </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {t('common:githubStats.title')}
           </h2>
-          <p className="text-xl text-[var(--color-text-muted)] max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-[var(--color-text-muted)] max-w-2xl mx-auto">
             {t('common:githubStats.subtitle')}
           </p>
         </div>
@@ -285,7 +285,7 @@ export function GitHubStats() {
               <div className="text-sm text-[var(--color-text-muted)]">{t('common:githubStats.totalDownloads')}</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-center col-span-2 md:col-span-1">
               <div className="text-3xl md:text-4xl font-bold mb-1">
                 {gameStats.length}
               </div>
@@ -323,7 +323,7 @@ export function GitHubStats() {
             href="https://github.com/HarbourMasters"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[var(--color-surface)] hover:bg-[var(--color-surface-hover)] border border-[var(--color-border)] hover:border-[var(--color-primary)] font-bold text-lg rounded-2xl transition-all duration-300 hover:scale-105 group"
+            className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-[var(--color-surface)] hover:bg-[var(--color-surface-hover)] border border-[var(--color-border)] hover:border-[var(--color-primary)] font-bold text-base sm:text-lg rounded-2xl transition-all duration-300 hover:scale-105 group"
           >
             <span>{t('common:githubStats.viewAllOnGitHub')}</span>
             <ExternalLink size={20} className="group-hover:translate-x-1 transition-transform" />

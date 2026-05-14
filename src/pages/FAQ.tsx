@@ -63,10 +63,10 @@ function FAQ() {
               <BookOpen size={16} />
               <span>{t('badge')}</span>
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-4 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-4 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               {t('title')}
             </h1>
-            <p className="text-xl text-[var(--color-text-muted)] opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
+            <p className="text-lg md:text-xl text-[var(--color-text-muted)] opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
               {t('subtitle')}
             </p>
           </div>

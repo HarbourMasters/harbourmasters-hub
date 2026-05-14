@@ -57,7 +57,7 @@ function GameDetail() {
           <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient || 'from-[var(--color-primary)] to-[var(--color-accent)]'}`} />
           <div className="absolute inset-0 bg-[var(--color-background)]/60" />
         </div>
-        <div className="container relative z-10 pt-6 pb-16">
+        <div className="container relative z-10 pt-4 sm:pt-6 pb-10 sm:pb-16">
           <button
             onClick={() => navigate('/')}
             className="inline-flex items-center gap-2 px-4 py-2 mb-10 rounded-lg bg-[var(--color-surface)]/80 backdrop-blur border border-[var(--color-border)] hover:border-[var(--color-primary)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text)] font-medium transition-all duration-200 hover:translate-x-[-2px]"
@@ -75,10 +75,10 @@ function GameDetail() {
               </div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-3">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-3">
               {game.name}
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[var(--color-text-muted)] mb-4">
               {game.tagline}
             </p>
             <p className="text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
@@ -243,9 +243,9 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
 
   return (
     <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
-          <h3 className="font-display text-2xl font-bold">{latestRelease.name || latestRelease.tag_name}</h3>
+          <h3 className="font-display text-xl sm:text-2xl font-bold">{latestRelease.name || latestRelease.tag_name}</h3>
           <p className="text-base text-[var(--color-text-muted)] flex items-center gap-2">
             <Calendar size={18} />
             {formatDate(latestRelease.published_at)}
@@ -475,15 +475,25 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
             {/* Header */}
             <button
               onClick={() => setExpandedVersion(isExpanded ? null : stat.tag)}
-              className="w-full p-5 flex items-center justify-between hover:bg-[var(--color-surface-hover)] transition-colors text-left"
+              className="w-full p-4 sm:p-5 hover:bg-[var(--color-surface-hover)] transition-colors text-left"
             >
-              <div className="flex items-center gap-4 flex-1">
-                <div className="font-mono font-bold text-lg text-[var(--color-accent)] min-w-[150px]">
-                  {stat.displayName}
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                {/* Row 1: Version name + date on mobile */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="font-mono font-bold text-base sm:text-lg text-[var(--color-accent)] truncate">
+                    {stat.displayName}
+                  </div>
+                  <div className="flex items-center gap-3 text-[var(--color-text-muted)]">
+                    <span className="text-xs sm:text-sm whitespace-nowrap">
+                      {new Date(stat.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </span>
+                    {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  </div>
                 </div>
 
+                {/* Row 2: Platform icons */}
                 {stat.total > 0 || stat.hasAssets ? (
-                  <div className="flex items-center gap-3 text-base">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-base">
                     {(() => {
                       const allPlatforms = [
                         { key: 'windows', count: stat.windows, iconKey: 'windows' },
@@ -521,17 +531,10 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
                     )}
                   </div>
                 ) : (
-                  <div className="text-base text-[var(--color-text-muted)]">
+                  <div className="text-sm text-[var(--color-text-muted)]">
                     {t('gameDetail:noDownloadStats')}
                   </div>
                 )}
-              </div>
-
-              <div className="flex items-center gap-3 text-[var(--color-text-muted)]">
-                <span className="text-sm">
-                  {new Date(stat.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-                </span>
-                {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </div>
             </button>
 

@@ -168,7 +168,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
         ) : userOS !== 'unknown' && game.releaseData?.assets ? (
           <button
             disabled
-            className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-surface-hover)] text-[var(--color-text-muted)] font-semibold rounded-xl cursor-not-allowed opacity-60"
+            className="flex items-center justify-center gap-2 w-full py-3 px-2 bg-[var(--color-surface-hover)] text-[var(--color-text-muted)] font-semibold rounded-xl cursor-not-allowed opacity-60 text-xs sm:text-sm text-center"
             title={t('common:notAvailableOnYourSystem', { os: t(`common:${userOS}`) })}
           >
             <Download size={18} />

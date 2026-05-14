@@ -42,14 +42,14 @@ function Home() {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section className="relative py-10 md:py-14 flex flex-col items-center justify-center px-6 overflow-hidden">
+      <section className="relative py-4 sm:py-10 md:py-14 flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--color-primary)]/5 blur-[150px]" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--color-accent)]/5 blur-[150px]" />
         </div>
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
+        <div className="relative z-10 text-center max-w-4xl mx-auto overflow-hidden">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
             <Sparkles size={16} className="text-[var(--color-accent)]" />
@@ -59,47 +59,47 @@ function Home() {
           </div>
 
           {/* Main Title - Video or Fallback Text */}
-          <div className="opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
+          <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
             <HeroVideo />
           </div>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-[var(--color-text-muted)] mb-12 max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '350ms', animationFillMode: 'both' }}>
+          <p className="text-base md:text-xl lg:text-2xl text-[var(--color-text-muted)] mb-6 sm:mb-12 max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '350ms', animationFillMode: 'both' }}>
             {t('home:hero.subtitleAlt')}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-slide-up" style={{ animationDelay: '500ms', animationFillMode: 'both' }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto opacity-0 animate-slide-up" style={{ animationDelay: '500ms', animationFillMode: 'both' }}>
             <Link
               to="/downloads"
-              className="group inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] text-[var(--color-background)] font-bold text-xl rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--color-primary)]/30 hover:-translate-y-1"
+              className="group inline-flex items-center gap-2 sm:gap-3 px-5 py-2.5 sm:px-10 sm:py-5 bg-[var(--color-primary)] hover:bg-[var(--color-secondary)] text-[var(--color-background)] font-bold text-sm sm:text-xl rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--color-primary)]/30 hover:-translate-y-1"
             >
-              <Download size={24} className="group-hover:animate-bounce-subtle" />
+              <Download size={18} className="group-hover:animate-bounce-subtle" />
               <span>{t('home:hero.downloadNow')}</span>
             </Link>
             <a
               href="https://github.com/HarbourMasters"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-8 py-5 border-2 border-[var(--color-border)] hover:border-[var(--color-primary)] font-bold text-xl rounded-2xl transition-all duration-300 hover:bg-[var(--color-surface-hover)] hover:-translate-y-1"
+              className="group inline-flex items-center gap-2 sm:gap-3 px-5 py-2.5 sm:px-8 sm:py-5 border-2 border-[var(--color-border)] hover:border-[var(--color-primary)] font-bold text-sm sm:text-xl rounded-2xl transition-all duration-300 hover:bg-[var(--color-surface-hover)] hover:-translate-y-1"
             >
-              <GitHubIcon size={24} className="group-hover:rotate-12 transition-transform" />
+              <GitHubIcon size={18} className="group-hover:rotate-12 transition-transform" />
               <span>GitHub</span>
-              <ExternalLink size={20} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              <ExternalLink size={14} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </a>
           </div>
 
           {/* Available Games Pills */}
-          <div className="mt-16 flex flex-nowrap items-center justify-center gap-2 opacity-0 animate-slide-up" style={{ animationDelay: '650ms', animationFillMode: 'both' }}>
+          <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-2 opacity-0 animate-slide-up" style={{ animationDelay: '650ms', animationFillMode: 'both' }}>
             {Object.values(GAMES).map((game) => (
               <Link
                 key={game.id}
                 to={`/game/${game.id}`}
-                className="group relative px-3.5 py-2 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 font-medium text-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-accent)]/20 flex items-center gap-2 whitespace-nowrap"
+                className="group relative px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 font-medium text-xs sm:text-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-accent)]/20 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap"
               >
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`} />
                 {game.icon && (
-                  <img src={game.icon} alt={game.name} className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                  <img src={game.icon} alt={game.name} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
                 )}
                 <span className="group-hover:text-[var(--color-accent)] transition-colors">{game.name}</span>
               </Link>
@@ -113,10 +113,10 @@ function Home() {
         <div className="container">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               {t('home:whatWeOffer.title')}
             </h2>
-            <p className="text-xl text-[var(--color-text-muted)] max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-[var(--color-text-muted)] max-w-2xl mx-auto">
               {t('home:whatWeOffer.subtitle')}
             </p>
           </div>
@@ -156,10 +156,10 @@ function Home() {
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 {t('home:about.title')}
               </h2>
-              <p className="text-xl text-[var(--color-text-muted)]">
+              <p className="text-base md:text-xl text-[var(--color-text-muted)]">
                 {t('home:about.subtitle')}
               </p>
             </div>
@@ -197,7 +197,7 @@ function Home() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start stagger-children">
             {/* Discord Widget */}
-            <div className="animate-on-scroll">
+            <div className="animate-on-scroll min-w-0">
               <h2 className="font-display text-3xl font-bold mb-4">{t('home:community.title')}</h2>
               <p className="text-[var(--color-text-muted)] mb-8">
                 {t('home:community.subtitle')}
@@ -206,7 +206,7 @@ function Home() {
             </div>
 
             {/* Quick Start Guide */}
-            <div className="animate-on-scroll">
+            <div className="animate-on-scroll min-w-0">
               <h2 className="font-display text-3xl font-bold mb-4">{t('home:quickStart.title')}</h2>
               <p className="text-[var(--color-text-muted)] mb-8">
                 {t('home:quickStart.subtitle')}

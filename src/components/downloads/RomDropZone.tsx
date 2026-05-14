@@ -63,7 +63,7 @@ export function RomDropZone({ verifying, progress, onFileSelect, disabled }: Rom
       onDrop={handleDrop}
       onClick={handleClick}
       className={cn(
-        'rom-drop-zone relative p-12 rounded-2xl border-2 border-dashed transition-all duration-300 cursor-pointer',
+        'rom-drop-zone relative p-8 sm:p-12 rounded-2xl border-2 border-dashed transition-all duration-300 cursor-pointer',
         'min-h-[200px] flex flex-col items-center justify-center text-center',
         !disabled && !verifying && 'hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/5',
         isDragging && 'border-[var(--color-primary)] bg-[var(--color-primary)]/10 scale-[1.02]',

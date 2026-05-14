@@ -52,7 +52,7 @@ function Footer() {
         <div className="mb-16">
           <div className="relative rounded-3xl bg-gradient-to-br from-[var(--color-primary)]/10 via-[var(--color-accent)]/5 to-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 overflow-hidden">
 
-            <div className="relative p-10">
+            <div className="relative p-6 sm:p-10">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 text-sm font-bold mb-6">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -60,7 +60,7 @@ function Footer() {
               </div>
 
               {/* Main message */}
-              <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                 {t('common:footer.builtByCommunity').split('\n').map((line, i) => (
                   <span key={i} className={i === 0 ? 'block' : 'block gradient-text'}>{line}</span>
                 ))}

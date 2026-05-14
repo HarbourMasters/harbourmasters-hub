@@ -76,19 +76,19 @@ function ChangelogViewer({ gameId }: ChangelogViewerProps) {
             {/* Header */}
             <button
               onClick={() => toggleExpand(release.id.toString())}
-              className="w-full p-6 text-left flex items-center justify-between hover:bg-[var(--color-surface-hover)] transition-colors"
+              className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 hover:bg-[var(--color-surface-hover)] transition-colors"
             >
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-1">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-1">
                   {isLatest && (
-                    <span className="px-2 py-0.5 text-xs font-medium bg-[var(--color-accent)] text-[var(--color-background)] rounded-full">
+                    <span className="px-2 py-0.5 text-xs font-medium bg-[var(--color-accent)] text-[var(--color-background)] rounded-full shrink-0">
                       {t('latest')}
                     </span>
                   )}
-                  <h3 className="font-display font-bold">
+                  <h3 className="font-display font-bold truncate">
                     {release.name || release.tag_name}
                   </h3>
-                  <span className="text-sm text-[var(--color-text-muted)] font-mono">
+                  <span className="text-sm text-[var(--color-text-muted)] font-mono shrink-0">
                     {release.tag_name}
                   </span>
                 </div>
@@ -96,9 +96,9 @@ function ChangelogViewer({ gameId }: ChangelogViewerProps) {
                   {formatDate(release.published_at)}
                 </p>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                 {release.assets.length > 0 && (
-                  <span className="text-sm text-[var(--color-text-muted)]">
+                  <span className="text-xs sm:text-sm text-[var(--color-text-muted)] hidden sm:inline">
                     {release.assets.reduce((sum, a) => sum + a.download_count, 0).toLocaleString()} {t('downloads')}
                   </span>
                 )}
