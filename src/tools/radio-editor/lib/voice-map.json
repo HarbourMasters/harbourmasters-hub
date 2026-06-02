@@ -1,0 +1,5270 @@
+{
+  "_category_Prologue": [
+    "1"
+  ],
+  "1": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3100",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_31B0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_31D0",
+      "slot": "high",
+      "tuning": 0.234375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_31F0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3210",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3230",
+      "slot": "high",
+      "tuning": 0.234375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3250",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3270",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3290",
+      "slot": "high",
+      "tuning": 0.234375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_32B0",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_32D0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_32F0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "_category_Title / Intro": [
+    "10",
+    "20",
+    "30",
+    "40",
+    "50",
+    "60"
+  ],
+  "10": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_40E0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4190",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "30": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_41B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "40": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_41D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "50": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_41F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4210",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "60": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4230",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4250",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Mission Briefing": [
+    "1200",
+    "1210",
+    "1220",
+    "1230",
+    "1240",
+    "1250",
+    "1260",
+    "1270",
+    "1280",
+    "1290",
+    "1300",
+    "1310",
+    "1320",
+    "1330",
+    "1340",
+    "1350",
+    "1360",
+    "1370",
+    "1380",
+    "1390",
+    "1400",
+    "1410",
+    "1420",
+    "1430",
+    "1440",
+    "1450",
+    "1460",
+    "1470"
+  ],
+  "1200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3310",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3330",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3350",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3370",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3390",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_33B0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_33D0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_33F0",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3410",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3430",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3450",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1260": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3470",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1270": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3490",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1280": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_34B0",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1290": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_34D0",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_34F0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3510",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3530",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1320": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3550",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3570",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3590",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1330": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_35B0",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1340": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_35D0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_35F0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1350": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3610",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1360": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3630",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3650",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1370": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3670",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1380": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3690",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_36B0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1390": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_36D0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_36F0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1400": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3710",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1410": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3730",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1420": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3750",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3770",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1430": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3790",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1440": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_37B0",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_37D0",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_37F0",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1450": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3810",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "1460": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3830",
+      "slot": "low",
+      "tuning": 0.9375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3850",
+      "slot": "normal",
+      "tuning": 0.46875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3870",
+      "slot": "high",
+      "tuning": 0.234375
+    }
+  ],
+  "1470": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_3890",
+      "slot": "normal",
+      "tuning": 0.46875
+    }
+  ],
+  "_category_Corneria": [
+    "2005",
+    "2010",
+    "2020",
+    "2030",
+    "2040",
+    "2050"
+  ],
+  "2005": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4720",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "2010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_47D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "2020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_47F0",
+      "slot": "low",
+      "tuning": 0.4375
+    }
+  ],
+  "2030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4810",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4830",
+      "slot": "high",
+      "tuning": 0.109375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4850",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "2040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4870",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4890",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "2050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_48B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_48D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Meteo": [
+    "3005",
+    "3010",
+    "3015",
+    "3020",
+    "3025",
+    "3026",
+    "3040",
+    "3041",
+    "3042",
+    "3050",
+    "3100",
+    "3110",
+    "3120",
+    "3300",
+    "3310",
+    "3315",
+    "3320",
+    "3321",
+    "3322",
+    "3330",
+    "3340",
+    "3345",
+    "3350",
+    "3360",
+    "3370",
+    "3371"
+  ],
+  "3005": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4720",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_47D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3015": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_47F0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4810",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4830",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4850",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3025": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4870",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4890",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3026": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_48B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_48D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_48F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3041": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4910",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3042": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4930",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4950",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4970",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4990",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_49B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_49D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_49F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4A10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3315": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3320": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3321": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4AB0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4AF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3322": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3330": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3340": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "3345": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4B90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3350": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3360": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4C10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3370": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4C50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "3371": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4C70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_4C90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Titania": [
+    "4010",
+    "4011",
+    "4012",
+    "4013",
+    "4020",
+    "4021",
+    "4022",
+    "4023",
+    "4024",
+    "4030",
+    "4031",
+    "4040",
+    "4050",
+    "4075",
+    "4080",
+    "4082",
+    "4083",
+    "4091",
+    "4092",
+    "4093",
+    "4094",
+    "4095",
+    "4096",
+    "4097",
+    "4098",
+    "4099"
+  ],
+  "4010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5C80",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4011": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4012": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4013": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5D70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5DB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4021": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5DD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4022": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4023": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5E10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4024": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5E30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5E50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5E70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4031": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5E90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5EB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5ED0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4075": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5EF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5F10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4082": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5F30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4083": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5F50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4091": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5F70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5F90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4092": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5FB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4093": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5FD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_5FF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4094": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6010",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "4095": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6030",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6050",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4096": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6070",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6090",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4097": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_60B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_60D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4098": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_60F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6110",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "4099": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6130",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Sector X": [
+    "5000",
+    "5010",
+    "5060",
+    "5080",
+    "5100",
+    "5110",
+    "5130",
+    "5220",
+    "5230",
+    "5300",
+    "5310",
+    "5311",
+    "5312",
+    "5313",
+    "5314",
+    "5350",
+    "5360",
+    "5380",
+    "5400",
+    "5410",
+    "5420",
+    "5430",
+    "5460",
+    "5470",
+    "5473",
+    "5474",
+    "5475",
+    "5492",
+    "5493",
+    "5494",
+    "5495",
+    "5496",
+    "5497",
+    "5498"
+  ],
+  "5000": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6880",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6930",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6950",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6970",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6990",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_69B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_69D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_69F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6A30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5311": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5312": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5313": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5314": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6B30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5350": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5360": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5380": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6B90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5400": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5410": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5420": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6C10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5430": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5460": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6C70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5470": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5473": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5474": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6CD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5475": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5492": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6D10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5493": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5494": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6D70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5495": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6DB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "5496": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6DD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5497": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "5498": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_6E10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Zoness": [
+    "6010",
+    "6011",
+    "6012",
+    "6013",
+    "6014",
+    "6020",
+    "6021",
+    "6024",
+    "6025",
+    "6026",
+    "6027",
+    "6028",
+    "6029",
+    "6036",
+    "6038",
+    "6041",
+    "6042",
+    "6045",
+    "6050",
+    "6051",
+    "6055",
+    "6066",
+    "6067",
+    "6068",
+    "6069",
+    "6071",
+    "6072",
+    "6073",
+    "6074",
+    "6075",
+    "6076",
+    "6077",
+    "6078",
+    "6079",
+    "6080",
+    "6081",
+    "6082",
+    "6090",
+    "6100",
+    "6101"
+  ],
+  "6010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7660",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6011": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7710",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7730",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6012": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7750",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7770",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7790",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6013": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_77B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6014": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_77D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_77F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7810",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6021": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7830",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7850",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7870",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6024": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7890",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_78B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6025": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_78D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6026": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_78F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6027": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7910",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7930",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6028": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7950",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7970",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6029": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7990",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_79B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6036": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_79D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_79F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6038": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6041": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7A50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6042": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6045": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6051": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7AF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6055": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6066": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6067": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6068": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7B70",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7B90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7BB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6069": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7BD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6071": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7C10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6072": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6073": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7C70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6074": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6075": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6076": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7CD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6077": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6078": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7D10",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7D50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6079": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7D70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6081": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7DB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7DD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6082": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6090": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7E10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "6100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7E30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7E50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "6101": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7E70",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7E90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_7EB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Area 6": [
+    "7005",
+    "7006",
+    "7011",
+    "7012",
+    "7013",
+    "7014",
+    "7020",
+    "7043",
+    "7050",
+    "7051",
+    "7052",
+    "7053",
+    "7054",
+    "7061",
+    "7064",
+    "7065",
+    "7066",
+    "7070",
+    "7083",
+    "7084",
+    "7085",
+    "7086",
+    "7087",
+    "7093",
+    "7094",
+    "7095",
+    "7096",
+    "7097",
+    "7098",
+    "7099",
+    "7100"
+  ],
+  "7005": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8860",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7006": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8910",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7011": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8930",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8950",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7012": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8970",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7013": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8990",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7014": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_89B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_89D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7043": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_89F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8A10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7051": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8A70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7052": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7053": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7054": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7061": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7064": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7065": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7066": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8B90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7083": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7084": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8BD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7085": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8C10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7086": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7087": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7093": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8C70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7094": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7095": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7096": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8CD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8CF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7097": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8D10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "7098": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8D50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7099": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8D70",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8DB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "7100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8DD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_8DF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Venom (Approach)": [
+    "8010",
+    "8020",
+    "8030",
+    "8040",
+    "8045",
+    "8050",
+    "8060",
+    "8070",
+    "8080",
+    "8100",
+    "8110",
+    "8120",
+    "8130",
+    "8140"
+  ],
+  "8010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_98A0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9950",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9970",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9990",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_99B0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_99D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_99F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8045": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9A90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9B70",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9B90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9BB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Venom (Star Wolf)": [
+    "8205",
+    "8210",
+    "8215",
+    "8220",
+    "8230",
+    "8240",
+    "8250",
+    "8255",
+    "8260",
+    "8265",
+    "8300",
+    "8310",
+    "8320"
+  ],
+  "8205": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9BD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9BF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9C10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9C30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8215": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9C70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9CD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9CF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8255": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9D10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8260": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8265": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9D70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9D90",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9DB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9DD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "8310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "8320": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_9E10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Fortuna": [
+    "9000",
+    "9010",
+    "9100",
+    "9110",
+    "9120",
+    "9130",
+    "9140",
+    "9150",
+    "9151",
+    "9152",
+    "9153",
+    "9160",
+    "9170",
+    "9180",
+    "9190",
+    "9200",
+    "9210",
+    "9211",
+    "9212",
+    "9213",
+    "9220",
+    "9230",
+    "9240",
+    "9250",
+    "9260",
+    "9270",
+    "9275"
+  ],
+  "9000": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A6E0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A790",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "9010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A7B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A7D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A7F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A810",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A830",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A850",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A870",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9151": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A890",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9152": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A8B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A8D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "9153": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A8F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A910",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9170": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A930",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9180": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A950",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A970",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "9190": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A990",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A9B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A9D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9211": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_A9F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9212": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AA10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9213": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AA30",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AA50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AA70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "9220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AA90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AAB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AAD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AAF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9260": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AB10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "9270": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AB30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AB50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "9275": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AB70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_AB90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Solar": [
+    "10010",
+    "10020",
+    "10040",
+    "10050",
+    "10060",
+    "10070",
+    "10080",
+    "10200",
+    "10210",
+    "10220",
+    "10230",
+    "10255",
+    "10300",
+    "10310",
+    "10320",
+    "10321",
+    "10322",
+    "10323",
+    "10324"
+  ],
+  "10010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B300",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B3B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B3D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B3F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B410",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B430",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B450",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B470",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B490",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B4B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B4D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B4F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B510",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B530",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B550",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B570",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B590",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B5B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10255": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B5D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B5F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B610",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B630",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B650",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10320": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B670",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10321": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B690",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10322": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B6B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "10323": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B6D0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B6F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B710",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "10324": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B730",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_B750",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Bolse": [
+    "11010",
+    "11020",
+    "11030",
+    "11040",
+    "11050",
+    "11060",
+    "11100",
+    "11110",
+    "11120",
+    "11130",
+    "11150",
+    "11160",
+    "11200",
+    "11210",
+    "11220",
+    "11230",
+    "11240",
+    "11241"
+  ],
+  "11010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CC20",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CCD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CCF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CD10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CD30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CD50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CD70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CD90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "11110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CDB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CDD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CDF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CE10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "11150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CE30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CE50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CE70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CE90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CEB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "11220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CED0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CEF0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "11230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CF10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "11240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CF30",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CF50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CF70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "11241": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CF90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_CFB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Sector Y": [
+    "14020",
+    "14030",
+    "14040",
+    "14045",
+    "14050",
+    "14060",
+    "14070",
+    "14080",
+    "14100",
+    "14110",
+    "14120",
+    "14130",
+    "14140",
+    "14150",
+    "14160",
+    "14170",
+    "14180",
+    "14190"
+  ],
+  "14020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D640",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D6F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "14030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D710",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D730",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14045": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D750",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D770",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D790",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "14060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D7B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D7D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "14070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D7F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D810",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D830",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D850",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D870",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D890",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D8B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D8D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D8F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D910",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "14170": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D930",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "14180": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D950",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D970",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D990",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "14190": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D9B0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D9D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_D9F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Aquas": [
+    "15010",
+    "15030",
+    "15040",
+    "15045",
+    "15050",
+    "15051",
+    "15052",
+    "15053",
+    "15054",
+    "15060",
+    "15100",
+    "15110",
+    "15120",
+    "15130",
+    "15140",
+    "15200",
+    "15210",
+    "15220",
+    "15230",
+    "15240",
+    "15250",
+    "15251",
+    "15252",
+    "15253",
+    "15254"
+  ],
+  "15010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E040",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E0F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E110",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15045": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E130",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E150",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E170",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15051": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E190",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E1B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15052": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E1D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15053": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E1F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15054": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E210",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E230",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E250",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E270",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E290",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E2B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E2D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E2F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E310",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E330",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E350",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E370",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E390",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E3B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E3D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E3F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E410",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E430",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E450",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15251": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E470",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15252": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E490",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E4B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "15253": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E4D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "15254": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E4F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_E510",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Sector Z": [
+    "16010",
+    "16020",
+    "16030",
+    "16040",
+    "16046",
+    "16047",
+    "16050",
+    "16055",
+    "16060",
+    "16080",
+    "16085",
+    "16090",
+    "16100",
+    "16110",
+    "16120",
+    "16125",
+    "16130",
+    "16135",
+    "16140",
+    "16150",
+    "16160",
+    "16165",
+    "16170",
+    "16175",
+    "16180"
+  ],
+  "16010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EDA0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EE50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EE70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EE90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EEB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16046": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EED0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16047": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EEF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EF10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EF30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16055": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EF50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EF70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EF90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EFB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16085": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EFD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16090": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_EFF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F010",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F030",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F050",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F070",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16125": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F090",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F0B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16135": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F0D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F0F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F110",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F130",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F150",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F170",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "16165": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F190",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F1B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F1D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16170": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F1F0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F210",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F230",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16175": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F250",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F270",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "16180": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_F290",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Macbeth": [
+    "17010",
+    "17020",
+    "17030",
+    "17100",
+    "17110",
+    "17120",
+    "17130",
+    "17131",
+    "17140",
+    "17150",
+    "17160",
+    "17170",
+    "17300",
+    "17310",
+    "17320",
+    "17330",
+    "17350",
+    "17360",
+    "17370",
+    "17380",
+    "17390",
+    "17400",
+    "17410",
+    "17420",
+    "17430",
+    "17440",
+    "17450",
+    "17460",
+    "17470",
+    "17471",
+    "17472",
+    "17473",
+    "17474",
+    "17475",
+    "17476"
+  ],
+  "17010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_108C0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10970",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10990",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17110": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A50",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17131": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17170": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17300": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B90",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17310": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17320": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17330": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17350": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17360": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17370": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17380": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17390": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17400": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17410": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17420": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17430": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17440": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17450": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17460": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17470": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17471": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17472": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10EB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10ED0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17473": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10EF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17474": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10F10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "17475": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10F30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10F50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "17476": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10F70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Katina": [
+    "18000",
+    "18005",
+    "18006",
+    "18007",
+    "18010",
+    "18015",
+    "18018",
+    "18020",
+    "18021",
+    "18022",
+    "18025",
+    "18030",
+    "18031",
+    "18035",
+    "18040",
+    "18045",
+    "18050",
+    "18055",
+    "18060",
+    "18065",
+    "18066",
+    "18070",
+    "18075",
+    "18080",
+    "18085",
+    "18090",
+    "18095",
+    "18100",
+    "18105",
+    "18120",
+    "18130",
+    "18140",
+    "18150"
+  ],
+  "18000": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_108C0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10970",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18005": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10990",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109B0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18006": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18007": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_109F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18015": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18018": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A50",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10A90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18021": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18022": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18025": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18031": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10B90",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18035": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18045": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18055": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18065": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18066": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18075": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18085": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18090": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18095": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10DF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18100": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18105": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18120": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10E90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18130": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10EB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10ED0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "18140": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10EF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "18150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_10F10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Venom 2 (Bolse Breakup)": [
+    "19010"
+  ],
+  "19010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_117E0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11890",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_Venom 2 (Andross)": [
+    "19200",
+    "19205",
+    "19210",
+    "19220",
+    "19230",
+    "19240",
+    "19250",
+    "19325",
+    "19330",
+    "19335",
+    "19340",
+    "19350",
+    "19355",
+    "19360",
+    "19370",
+    "19400",
+    "19410",
+    "19420",
+    "19430",
+    "19440",
+    "19450",
+    "19451",
+    "19452",
+    "19453",
+    "19454",
+    "19455",
+    "19456",
+    "19457",
+    "19458",
+    "19459",
+    "19460",
+    "19461"
+  ],
+  "19200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_118B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19205": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_118D0",
+      "slot": "low",
+      "tuning": 0.4375
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_118F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11910",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11930",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11950",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11970",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11990",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19240": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_119B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_119D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_119F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19325": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11A10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11A30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19330": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19335": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11A70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19340": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19350": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19355": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11AD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19360": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19370": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11B10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19400": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19410": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11B50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11B70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19420": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11B90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19430": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19440": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19450": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11C10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11C30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19451": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19452": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11C70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19453": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19454": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11CB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11CD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "19455": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19456": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11D10",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19457": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11D30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19458": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19459": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11D70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19460": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11D90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "19461": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11DB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_11DD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "_category_In-Game / General": [
+    "20010",
+    "20011",
+    "20012",
+    "20013",
+    "20014",
+    "20015",
+    "20016",
+    "20017",
+    "20018",
+    "20019",
+    "20020",
+    "20030",
+    "20040",
+    "20050",
+    "20060",
+    "20070",
+    "20080",
+    "20084",
+    "20085",
+    "20090",
+    "20091",
+    "20092",
+    "20150",
+    "20160",
+    "20170",
+    "20180",
+    "20190",
+    "20200",
+    "20210",
+    "20220",
+    "20221",
+    "20222",
+    "20230",
+    "20235",
+    "20236",
+    "20237",
+    "20238",
+    "20239",
+    "20250"
+  ],
+  "20010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12600",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20011": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_126B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20012": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_126D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_126F0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20013": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12710",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20014": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12730",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12750",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20015": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12770",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20016": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12790",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20017": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_127B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20018": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_127D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20019": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_127F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12810",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12830",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12850",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20040": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12870",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12890",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_128B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_128D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_128F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12910",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20084": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12930",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12950",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20085": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12970",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20090": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12990",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20091": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_129B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_129D0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20092": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_129F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12A10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20150": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12A30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20160": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12A50",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12A70",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20170": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12A90",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20180": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12AB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12AD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20190": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12AF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12B10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20200": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12B30",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12B50",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20210": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12B70",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12B90",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20220": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12BB0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12BD0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20221": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12BF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12C10",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20222": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12C30",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20230": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12C50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20235": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12C70",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20236": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12C90",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12CB0",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20237": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12CD0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20238": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12CF0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "20239": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12D10",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12D30",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "20250": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_12D50",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "_category_Expanding Route Select": [
+    "21010",
+    "21020",
+    "21030",
+    "21050",
+    "21060",
+    "21070",
+    "21071",
+    "21072",
+    "21073",
+    "21080",
+    "21081",
+    "21082",
+    "21083",
+    "21090",
+    "21091",
+    "21092",
+    "21093"
+  ],
+  "21010": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_136A0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21020": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13750",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21030": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13770",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21050": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13790",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21060": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_137B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21070": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_137D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21071": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_137F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21072": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13810",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13830",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "21073": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13850",
+      "slot": "normal",
+      "tuning": 0.21875
+    },
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13870",
+      "slot": "high",
+      "tuning": 0.109375
+    }
+  ],
+  "21080": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13890",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21081": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_138B0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21082": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_138D0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21083": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_138F0",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21090": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13910",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21091": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13930",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21092": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13950",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ],
+  "21093": [
+    {
+      "path": "ast_audio/ast_audio_v1_sample_13970",
+      "slot": "normal",
+      "tuning": 0.21875
+    }
+  ]
+}

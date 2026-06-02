@@ -16,6 +16,7 @@ const ModLibrary = lazy(() => import('./pages/ModLibrary'))
 const GameDetail = lazy(() => import('./pages/GameDetail'))
 const MessageEditor = lazy(() => import('./pages/MessageEditor'))
 const AudioTool = lazy(() => import('./pages/AudioTool'))
+const RadioEditor = lazy(() => import('./pages/RadioEditor'))
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/tools/mods" element={<ModLibrary />} />
                 <Route path="/tools/message-editor" element={<MessageEditor />} />
                 <Route path="/tools/audio" element={<AudioTool />} />
+                <Route path="/tools/radio-editor" element={<RadioEditor />} />
                 <Route path="/game/:gameId" element={<GameDetail />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/about" element={<About />} />
