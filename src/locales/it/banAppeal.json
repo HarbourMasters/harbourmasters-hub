@@ -1,0 +1,16 @@
+{
+  "badge": "Discord",
+  "title": "Contestare un ban",
+  "subtitle": "Invia una richiesta di revisione per il ban dal server Discord di Harbour Masters.",
+  "discordUsername": "Nome utente Discord",
+  "discordUsernamePlaceholder": "es. nomeutente o 123456789012345678",
+  "discordUsernameHelp": "Inserisci il tuo nome utente Discord esattamente come appare nel profilo, senza soprannomi del server. È accettato anche il tuo ID utente Discord.",
+  "reason": "Motivi della contestazione",
+  "reasonPlaceholder": "Spiega perché ritieni che il ban debba essere riconsiderato...",
+  "reasonHelp": "Fornisci tutti i dettagli che potrebbero supportare la tua richiesta.",
+  "privacyNote": "I ban legati alla pirateria sono permanenti e non sono negoziabili.",
+  "submitButton": "Invia richiesta",
+  "submitting": "Invio in corso...",
+  "successTitle": "Richiesta inviata",
+  "successMessage": "Grazie per la tua richiesta. Il nostro team la esaminerà durante il prossimo ciclo di revisione e ti aggiorneremo."
+}

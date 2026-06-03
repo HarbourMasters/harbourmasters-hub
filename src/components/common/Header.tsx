@@ -14,7 +14,8 @@ function Header() {
     { path: '/', label: t('nav.home') },
     { path: '/downloads', label: t('nav.downloads') },
     { path: '/faq', label: t('nav.faq') },
-    { path: '/about', label: t('nav.about') }
+    { path: '/about', label: t('nav.about') },
+    { path: '/ban-appeal', label: t('nav.banAppeal') }
   ]
 
   const toolsMenuItems = [
