@@ -16,6 +16,7 @@ const ModLibrary = lazy(() => import('./pages/ModLibrary'))
 const GameDetail = lazy(() => import('./pages/GameDetail'))
 const MessageEditor = lazy(() => import('./pages/MessageEditor'))
 const AudioTool = lazy(() => import('./pages/AudioTool'))
+const BanAppeal = lazy(() => import('./pages/BanAppeal'))
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/game/:gameId" element={<GameDetail />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/ban-appeal" element={<BanAppeal />} />
               </Routes>
             </Suspense>
           </PageTransition>
