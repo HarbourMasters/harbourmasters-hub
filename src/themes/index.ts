@@ -18,10 +18,10 @@ export const themes: Record<ThemeId, Theme> = {
 };
 
 export const gameThemes: Record<string, ThemeId> = {
-  shipwright: 'shipwright',
-  '2ship': '2ship',
+  shipofharkinian: 'shipwright',
+  '2ship2harkinian': '2ship',
   ghostship: 'ghostship',
-  spaghetti: 'spaghetti',
+  spaghettikart: 'spaghetti',
   starship: 'starship'
 };
 

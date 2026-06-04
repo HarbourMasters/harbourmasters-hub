@@ -64,7 +64,7 @@ interface CacheData {
   etags: Record<string, string>
 }
 
-const CACHE_KEY = 'github_stats_cache_v2'
+const CACHE_KEY = 'github_stats_cache_v3'
 const CACHE_TTL = 30 * 60 * 1000 // 30 minutes
 
 async function fetchFromGitHub(cachedData?: CacheData): Promise<CacheData> {

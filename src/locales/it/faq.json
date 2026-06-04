@@ -41,7 +41,7 @@
     },
     "whichGames": {
       "question": "Quali giochi sono disponibili?",
-      "answer": "Attualmente abbiamo port per: Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), SpaghettiKart (Mario Kart 64), e Starship (Star Fox 64). Altri progetti sono sempre in sviluppo."
+      "answer": "Attualmente abbiamo port per: Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), Spaghetti Kart (Mario Kart 64), e Starship (Star Fox 64). Altri progetti sono sempre in sviluppo."
     },
     "controller": {
       "question": "Quali controller sono supportati?",

@@ -1,8 +1,8 @@
 import { Game, GameId } from '@/types/game';
 
 export const GAMES: Record<GameId, Game> = {
-  shipwright: {
-    id: 'shipwright',
+  shipofharkinian: {
+    id: 'shipofharkinian',
     name: 'Ship of Harkinian',
     fullName: 'Ship of Harkinian',
     tagline: 'The Legend of Zelda: Ocarina of Time',
@@ -35,8 +35,8 @@ export const GAMES: Record<GameId, Game> = {
       slug: 'soh'
     }
   },
-  '2ship': {
-    id: '2ship',
+  '2ship2harkinian': {
+    id: '2ship2harkinian',
     name: '2ship2Harkinian',
     fullName: '2ship2Hakinian',
     tagline: 'The Legend of Zelda: Majora\'s Mask',
@@ -103,10 +103,10 @@ export const GAMES: Record<GameId, Game> = {
       slug: 'ghostship'
     }
   },
-  spaghetti: {
-    id: 'spaghetti',
-    name: 'SpaghettiKart',
-    fullName: 'SpaghettiKart',
+  spaghettikart: {
+    id: 'spaghettikart',
+    name: 'Spaghetti Kart',
+    fullName: 'Spaghetti Kart',
     tagline: 'Mario Kart 64',
     description: 'Relive the classic Mario Kart 64 on PC with local multiplayer, enhanced graphics and smooth performance.',
     themeId: 'spaghetti',
