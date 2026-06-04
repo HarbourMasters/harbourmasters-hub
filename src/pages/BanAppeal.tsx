@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Shield, Send, CheckCircle, AlertTriangle, Loader2 } from 'lucide-react'
+import { Shield, Send, CheckCircle, AlertTriangle, Loader2, OctagonAlert } from 'lucide-react'
 
 const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfeTOuk9tezoqyByLtn5aFQw9UT609snfWJcvPMUEDFIX1f4g/formResponse'
 
@@ -74,16 +74,16 @@ function BanAppeal() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 animate-on-scroll">
                 {/* Piracy Warning */}
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-[var(--color-warning)]/5 border border-[var(--color-warning)]/20">
-                  <AlertTriangle size={20} className="text-[var(--color-warning)] flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-[var(--color-text-muted)]">
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-red-500/5 border border-red-500/30">
+                  <OctagonAlert size={20} className="text-red-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-lg text-red-400 font-medium">
                     {t('privacyNote')}
                   </p>
                 </div>
 
                 {/* Discord Username */}
                 <div className="space-y-2">
-                  <label htmlFor="discord-username" className="block text-sm font-semibold text-[var(--color-text)]">
+                  <label htmlFor="discord-username" className="block text-lg font-semibold text-[var(--color-text)]">
                     {t('discordUsername')} <span className="text-[var(--color-accent)]">*</span>
                   </label>
                   <input
@@ -94,14 +94,19 @@ function BanAppeal() {
                     placeholder={t('discordUsernamePlaceholder')}
                     className="w-full px-4 py-3 bg-[var(--color-background)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/50"
                   />
-                  <p className="text-xs text-[var(--color-text-muted)]">
-                    {t('discordUsernameHelp')}
-                  </p>
+                  <div className="flex items-start gap-3 p-3 rounded-xl bg-[var(--color-warning)]/5 border border-[var(--color-warning)]/20">
+                    <AlertTriangle size={18} className="text-[var(--color-warning)] flex-shrink-0 mt-0.5" />
+                    <p className="text-base text-[var(--color-text-muted)]">
+                      {t('discordUsernameHelp')}
+                      <br />
+                      {t('discordUsernameHelpAlt')}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Reason */}
                 <div className="space-y-2">
-                  <label htmlFor="reason" className="block text-sm font-semibold text-[var(--color-text)]">
+                  <label htmlFor="reason" className="block text-lg font-semibold text-[var(--color-text)]">
                     {t('reason')} <span className="text-[var(--color-accent)]">*</span>
                   </label>
                   <textarea
@@ -112,7 +117,7 @@ function BanAppeal() {
                     placeholder={t('reasonPlaceholder')}
                     className="w-full px-4 py-3 bg-[var(--color-background)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/50 resize-y"
                   />
-                  <p className="text-xs text-[var(--color-text-muted)]">
+                  <p className="text-base text-[var(--color-text-muted)]">
                     {t('reasonHelp')}
                   </p>
                 </div>
