@@ -447,7 +447,8 @@ header {
 /* Card Hover Effect */
 .card-hover {
   transition: transform var(--transition-slow),
-              box-shadow var(--transition-slow);
+              box-shadow var(--transition-slow),
+              border-color var(--transition-slow);
 }
 
 .card-hover:hover {

@@ -343,7 +343,7 @@ export function GitHubStats() {
 
         {/* Port Cards - The Main Feature */}
         {loading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="p-6 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] animate-pulse">
                 <div className="h-20 w-20 bg-[var(--color-border)] rounded-2xl mb-4 mx-auto" />
@@ -357,7 +357,7 @@ export function GitHubStats() {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gameStats.map((game, index) => (
               <PortStatCard key={game.id} game={game} index={index} />
             ))}

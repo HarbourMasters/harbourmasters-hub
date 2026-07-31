@@ -26,7 +26,6 @@ export interface Game {
   description: string;
   themeId: ThemeId;
   gradient?: string;
-  cardColor?: string;
   icon?: string;
   stars?: string;
   latestVersion?: string;
