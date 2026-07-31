@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { GameIcon } from './GameIcon'
 import { detectOS, type DetectedOS } from '@/utils/platform'
+import { getTheme, getGameTheme } from '@/themes'
+import { getGame } from '@/data/games'
 
 interface GitHubRelease {
   tag_name: string
@@ -48,6 +50,12 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
 
   const userOS = detectOS()
 
+  // Signature colour for this card: the game's explicit cardColour if set, else
+  // its theme accent. Drives the hover border/glow and the icon background so
+  // each port reads as a distinct colour (e.g. Starship deep blue, Lighthouse orange).
+  const cardTheme = getTheme(getGameTheme(game.id))
+  const cardColor = getGame(game.id)?.cardColor ?? cardTheme.colors.accent
+
   function getDownloadUrl(os: DetectedOS): { url: string | null; isAvailable: boolean } {
     if (!game.releaseData?.assets) {
       return { url: null, isAvailable: false }
@@ -90,24 +98,31 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
 
   return (
     <div
-      className="group relative flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-[var(--color-accent)]/15 animate-on-scroll"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className="group relative flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--card-accent)] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-[var(--card-accent)]/15 animate-on-scroll"
+      style={{ '--card-accent': cardColor, animationDelay: `${index * 100}ms` } as React.CSSProperties}
     >
       {/* Gradient Background Effect */}
-      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`} />
+      <div
+        className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"
+        style={{ background: 'linear-gradient(135deg, oklch(from var(--card-accent) l c h / 0.25), oklch(from var(--card-accent) l c h / 0.12))' }}
+      />
 
       {/* Game Icon */}
-      <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${game.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+      <div
+        className="w-20 h-20 mx-auto mb-4 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
+        style={{ background: 'linear-gradient(135deg, oklch(from var(--card-accent) l c h / 0.45), oklch(from var(--card-accent) l c h / 0.20))' }}
+      >
         <GameIcon game={{ id: game.id, name: game.name, icon: game.githubUrl.includes('Shipwright') ? '/icons/games/ShipOfHarkinian.png' :
                                 game.githubUrl.includes('2ship') ? '/icons/games/2Ship2Hakinian.png' :
                                 game.githubUrl.includes('Ghostship') ? '/icons/games/Ghostship.png' :
                                 game.githubUrl.includes('Spaghetti') ? '/icons/games/SpaghettiKart.png' :
-                                game.githubUrl.includes('Starship') ? '/icons/games/Starship.png' : undefined } as any} className="w-12 h-12" />
+                                game.githubUrl.includes('Starship') ? '/icons/games/Starship.png' :
+                                game.githubUrl.includes('Lighthouse') ? '/icons/games/Lighthouse.png' : undefined } as any} className="w-12 h-12" />
       </div>
 
       {/* Game Name & Tagline */}
       <div className="text-center mb-6">
-        <h3 className="font-display font-bold text-lg mb-1 group-hover:text-[var(--color-accent)] transition-colors">
+        <h3 className="font-display font-bold text-lg mb-1 group-hover:text-[var(--card-accent)] transition-colors">
           {game.name}
         </h3>
         <p className="text-xs text-[var(--color-text-muted)] line-clamp-2">{game.tagline}</p>

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ExternalLink, TrendingUp } from 'lucide-react'
 import { GAMES } from '@/data/games'
 import { PortStatCard } from '@/components/common/PortStatCard'
+import { getReleases } from '@/utils/github-api'
 
 // Rate limiting: space out GitHub API calls
 const REQUEST_DELAY = 1000; // 1 second between requests
@@ -120,19 +121,30 @@ async function fetchFromGitHub(cachedData?: CacheData): Promise<CacheData> {
       let latestReleaseUrl = githubUrl
       let releaseData: GitHubRelease | undefined = undefined
 
-      if (Array.isArray(releasesData) && releasesData.length > 0) {
-        latestRelease = releasesData[0].tag_name || game.latestVersion || 'N/A'
-        latestReleaseUrl = releasesData[0].html_url || `${githubUrl}/releases/latest`
+      let releases = Array.isArray(releasesData) ? releasesData : []
+      // Fallback: some repos (e.g. Starship) return an empty /releases list even
+      // though the releases exist. The shared getReleases() reconstructs them from /tags.
+      if (releases.length === 0) {
+        try {
+          releases = await getReleases(owner, name)
+        } catch {
+          releases = []
+        }
+      }
+
+      if (releases.length > 0) {
+        latestRelease = releases[0].tag_name || game.latestVersion || 'N/A'
+        latestReleaseUrl = releases[0].html_url || `${githubUrl}/releases/latest`
 
         // Store release data for download button
         releaseData = {
-          tag_name: releasesData[0].tag_name,
-          html_url: releasesData[0].html_url,
-          assets: releasesData[0].assets || []
+          tag_name: releases[0].tag_name,
+          html_url: releases[0].html_url,
+          assets: releases[0].assets || []
         }
 
         // Sum downloads from ALL releases (each asset's download_count is cumulative)
-        for (const release of releasesData) {
+        for (const release of releases) {
           if (release.assets) {
             for (const asset of release.assets) {
               totalDownloads += asset.download_count || 0
@@ -331,8 +343,8 @@ export function GitHubStats() {
 
         {/* Port Cards - The Main Feature */}
         {loading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {[...Array(5)].map((_, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+            {[...Array(6)].map((_, i) => (
               <div key={i} className="p-6 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] animate-pulse">
                 <div className="h-20 w-20 bg-[var(--color-border)] rounded-2xl mb-4 mx-auto" />
                 <div className="h-6 w-32 bg-[var(--color-border)] rounded mx-auto mb-3" />
@@ -345,7 +357,7 @@ export function GitHubStats() {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {gameStats.map((game, index) => (
               <PortStatCard key={game.id} game={game} index={index} />
             ))}

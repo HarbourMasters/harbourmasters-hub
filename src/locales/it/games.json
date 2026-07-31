@@ -24,6 +24,11 @@
     "tagline": "Port PC di Star Fox 64",
     "description": "Vola attraverso gli angoli del sistema Lylat in HD!"
   },
+  "lighthouse": {
+    "name": "Lighthouse",
+    "tagline": "Port PC di Banjo-Kazooie",
+    "description": "Un port per PC dell'amato platform di Rare, con miglioramenti moderni, alti framerate e supporto per le mod."
+  },
   "lus": {
     "name": "LibUltraShip",
     "tagline": "Il Framework",

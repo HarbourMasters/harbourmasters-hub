@@ -58,5 +58,17 @@
       "Enhanced graphics",
       "60 FPS gameplay"
     ]
+  },
+  "lighthouse": {
+    "name": "Lighthouse",
+    "tagline": "Banjo-Kazooie",
+    "description": "A native PC port of the beloved Rare platformer, with modern enhancements, high framerates, and mod support.",
+    "features": [
+      "Native PC port with modern enhancements",
+      "High framerate support",
+      "Widescreen and enhanced graphics",
+      "Mod support",
+      "Modern controls"
+    ]
   }
 }

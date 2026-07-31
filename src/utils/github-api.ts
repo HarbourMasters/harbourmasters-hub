@@ -3,7 +3,7 @@ import { GitHubRelease, GitHubError, GitHubReleaseWithRepo } from '@/types/githu
 const GITHUB_API_BASE = 'https://api.github.com';
 const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 const CACHE_KEY_PREFIX = 'github_cache_';
-const CACHE_VERSION = 'v2'; // For cache busting if needed
+const CACHE_VERSION = 'v3'; // For cache busting if needed
 
 // Rate limiting: space out requests to avoid hitting GitHub's rate limit
 const REQUEST_DELAY = 1000; // 1 second between requests
@@ -165,6 +165,86 @@ function parseLinkHeader(linkHeader: string | null): Record<string, string> {
 }
 
 /**
+ * Fallback: reconstruct a repo's releases from its tags.
+ *
+ * Some repos (e.g. Starship) return an empty array from `/releases` even though
+ * the releases still exist. The `/releases/tags/{tag}` endpoint still serves the
+ * full release (assets + notes) for each tag, so we walk the tag list and fetch
+ * each one. Tags with no associated release are synthesized as minimal entries
+ * so the version history still lists them (no assets, no changelog).
+ */
+export async function getReleasesViaTags(
+  owner: string,
+  repo: string
+): Promise<GitHubRelease[]> {
+  const headers: Record<string, string> = {
+    'Accept': 'application/vnd.github.v3+json',
+  };
+  if (import.meta.env.VITE_GITHUB_TOKEN) {
+    headers['Authorization'] = `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`;
+  }
+
+  const MAX_TAGS = 30;
+  const tagsUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/tags?per_page=${MAX_TAGS}`;
+
+  try {
+    await rateLimitFetch();
+    const tagsResponse = await fetch(tagsUrl, { headers });
+
+    if (!tagsResponse.ok) {
+      console.warn(`[tags fallback] Failed to list tags for ${owner}/${repo}: ${tagsResponse.status}`);
+      return [];
+    }
+
+    const tags: Array<{ name: string }> = await tagsResponse.json();
+    const releases: GitHubRelease[] = [];
+
+    for (const tag of tags) {
+      await rateLimitFetch();
+      const tagReleaseUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/releases/tags/${encodeURIComponent(tag.name)}`;
+
+      let tagResponse: Response;
+      try {
+        tagResponse = await fetch(tagReleaseUrl, { headers });
+      } catch {
+        continue;
+      }
+
+      if (tagResponse.ok) {
+        releases.push(await tagResponse.json());
+      } else if (tagResponse.status === 404) {
+        // Tag exists but has no published release — synthesize a minimal one.
+        releases.push({
+          url: tagReleaseUrl,
+          id: 0,
+          html_url: `https://github.com/${owner}/${repo}/releases/tag/${encodeURIComponent(tag.name)}`,
+          tag_name: tag.name,
+          name: tag.name,
+          draft: false,
+          prerelease: /alfa|alpha|beta|rc|pre/i.test(tag.name),
+          created_at: '',
+          published_at: '',
+          author: { login: '', id: 0, node_id: '', avatar_url: '', html_url: '', type: '' },
+          body: '',
+          assets: []
+        });
+      } else if (tagResponse.status === 403 || tagResponse.status === 429) {
+        // Rate limited mid-reconstruction — return what we have so far.
+        console.warn(`[tags fallback] Rate limited while reconstructing ${owner}/${repo}; returning ${releases.length} releases`);
+        break;
+      }
+      // Other non-ok statuses: skip this tag and continue.
+    }
+
+    console.log(`[tags fallback] Reconstructed ${releases.length} releases for ${owner}/${repo} from tags`);
+    return releases;
+  } catch (error) {
+    console.warn(`[tags fallback] Error reconstructing releases for ${owner}/${repo}:`, error);
+    return [];
+  }
+}
+
+/**
  * Get ALL releases for a repository (handles pagination)
  */
 export async function getReleases(
@@ -175,12 +255,11 @@ export async function getReleases(
   const cacheKey = `${owner}/${repo}`;
   const cached = useCache ? releaseCache.get(cacheKey) : undefined;
 
-  // Check cache first
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-      console.log(`Using cached data for ${cacheKey}: ${cached.data.length} releases`);
-      return cached.data;
-    }
+  // Check cache first. An empty cached payload is treated as a miss so the
+  // /tags fallback can run for repos whose /releases list is broken (e.g. Starship).
+  if (cached && cached.data.length > 0 && Date.now() - cached.timestamp < CACHE_TTL) {
+    console.log(`Using cached data for ${cacheKey}: ${cached.data.length} releases`);
+    return cached.data;
   }
 
   // Check if there's already a pending request for this repo
@@ -274,25 +353,58 @@ export async function getReleases(
         }
       }
 
-      console.log(`Total releases fetched for ${cacheKey}: ${allReleases.length}`);
+      // Fallback: if /releases returned nothing, reconstruct from /tags.
+      // (Some repos return an empty list even though the releases still exist.)
+      let releases = allReleases;
+      let cacheEtag: string | null = firstPageEtag;
+      if (allReleases.length === 0) {
+        console.log(`No releases listed for ${cacheKey}; falling back to /tags`);
+        releases = await getReleasesViaTags(owner, repo);
+        // Don't pin the (empty) releases ETag, so the tag-derived data refreshes
+        // on the next TTL cycle instead of being served indefinitely via 304.
+        cacheEtag = null;
+      }
+
+      console.log(`Total releases for ${cacheKey}: ${releases.length}`);
 
       // Cache the result with ETag from first page
       const entry: CacheEntry = {
-        data: allReleases,
+        data: releases,
         timestamp: Date.now(),
         version: CACHE_VERSION,
-        etag: firstPageEtag || undefined,
+        etag: cacheEtag || undefined,
       };
       releaseCache.set(cacheKey, entry);
       saveCacheToStorage(cacheKey, entry);
 
-      return allReleases;
+      return releases;
     } catch (error) {
       // On any error, try to return cached data as fallback
       const cached = releaseCache.get(cacheKey);
       if (cached && cached.data.length > 0) {
         console.warn(`Error fetching ${cacheKey}, using cached data (${cached.data.length} releases):`, error);
         return cached.data;
+      }
+
+      // Last resort: if /releases failed outright (and we weren't rate limited),
+      // try reconstructing from /tags before giving up.
+      const isRateLimit = error instanceof GitHubAPIError && error.isRateLimit;
+      if (!isRateLimit) {
+        try {
+          const viaTags = await getReleasesViaTags(owner, repo);
+          if (viaTags.length > 0) {
+            const fallbackEntry: CacheEntry = {
+              data: viaTags,
+              timestamp: Date.now(),
+              version: CACHE_VERSION,
+            };
+            releaseCache.set(cacheKey, fallbackEntry);
+            saveCacheToStorage(cacheKey, fallbackEntry);
+            return viaTags;
+          }
+        } catch {
+          // fall through to rethrow the original error
+        }
       }
 
       if (error instanceof GitHubAPIError) {

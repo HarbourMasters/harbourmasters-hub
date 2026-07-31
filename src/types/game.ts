@@ -26,6 +26,7 @@ export interface Game {
   description: string;
   themeId: ThemeId;
   gradient?: string;
+  cardColor?: string;
   icon?: string;
   stars?: string;
   latestVersion?: string;
@@ -50,4 +51,4 @@ export interface Game {
   version?: string;
 }
 
-export type GameId = 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship';
+export type GameId = 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse';
