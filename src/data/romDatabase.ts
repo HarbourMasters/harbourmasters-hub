@@ -5,7 +5,7 @@
 
 export interface RomDatabaseEntry {
   sha1: string
-  game: 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship'
+  game: 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse'
   version: string
   fullName: string
   region: string
@@ -378,6 +378,46 @@ export const ROM_DATABASE: RomDatabaseEntry[] = [
     formats: ['cart'],
     specialNotes: 'Supports EU/JP voice replacement when used with US ROM'
   },
+
+  // ============================================================================
+  // LIGHTHOUSE (Banjo-Kazooie) - 4 cartridge versions
+  // ============================================================================
+  {
+    sha1: '1FE1632098865F639E22C11B9A81EE8F29C75D7A',
+    game: 'lighthouse',
+    version: 'US 1.0',
+    fullName: 'Banjo-Kazooie (USA)',
+    region: 'NTSC-U',
+    supported: true,
+    formats: ['cart']
+  },
+  {
+    sha1: 'DED6EE166E740AD1BC810FD678A84B48E245AB80',
+    game: 'lighthouse',
+    version: 'US 1.1',
+    fullName: 'Banjo-Kazooie (USA) (Rev 1)',
+    region: 'NTSC-U',
+    supported: true,
+    formats: ['cart']
+  },
+  {
+    sha1: '90726D7E7CD5BF6CDFD38F45C9ACBF4D45BD9FD8',
+    game: 'lighthouse',
+    version: 'JP 1.0',
+    fullName: 'Banjo-Kazooie (Japan)',
+    region: 'NTSC-J',
+    supported: true,
+    formats: ['cart']
+  },
+  {
+    sha1: 'BB359A75941DF74BF7290212C89FBC6E2C5601FE',
+    game: 'lighthouse',
+    version: 'PAL 1.0',
+    fullName: 'Banjo-Kazooie (Europe) (En,Fr,De)',
+    region: 'PAL',
+    supported: true,
+    formats: ['cart']
+  },
 ]
 
 /**
@@ -417,4 +457,5 @@ export const GAME_DISPLAY_NAMES: Record<string, string> = {
   'ghostship': 'Ghostship',
   'spaghettikart': 'Spaghetti Kart',
   'starship': 'Starship',
+  'lighthouse': 'Lighthouse',
 }
