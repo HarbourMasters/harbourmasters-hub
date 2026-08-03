@@ -6,12 +6,45 @@ import { getGame, GAMES } from '@/data/games'
 import { useReleases } from '@/hooks/useGitHub'
 import type { GameId } from '@/types/game'
 import { ArrowLeft, ExternalLink, ChevronDown, ChevronUp, TrendingUp, Download, Gamepad2, Calendar } from 'lucide-react'
-import { formatDate, formatDownloadCount } from '@/utils/formatters'
+import { formatDate, formatNumber } from '@/utils/formatters'
 import { parseChangelog, ChangelogContent, ParsedChangelog } from '@/utils/changelogParser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { PlatformIcon } from '@/utils/platformIcons'
 import { GameIcon } from '@/components/common/GameIcon'
+import { HoverPopover } from '@/components/common/HoverPopover'
+import { DownloadBarsChart } from '@/components/common/DownloadBarsChart'
+import { summarizeReleaseDownloads, buildVersionBars, type AssetPlatform, type ReleaseDownloadSummary } from '@/utils/releaseStats'
+
+function DownloadHoverNumber({
+  value,
+  matrix,
+  highlightTag,
+  os,
+  zeroDisplay = '—',
+  className = 'font-medium',
+  align = 'center',
+}: {
+  value: number
+  matrix: ReleaseDownloadSummary[]
+  highlightTag: string
+  os?: AssetPlatform
+  zeroDisplay?: string
+  className?: string
+  align?: 'center' | 'start' | 'end'
+}) {
+  const { t } = useTranslation(['common', 'gameDetail'])
+  const osName = os ? t(`gameDetail:platforms.${os}`) : undefined
+  const title = os && osName ? t('gameDetail:chart.byVersionOs', { os: osName }) : t('gameDetail:chart.byVersion')
+  const bars = buildVersionBars(matrix, { os, highlightTag })
+  const caption = matrix.length > bars.length ? t('gameDetail:chart.showing', { n: bars.length }) : undefined
+
+  return (
+    <HoverPopover title={title} align={align} content={<DownloadBarsChart title={title} bars={bars} caption={caption} />}>
+      <span className={className}>{formatNumber(value, zeroDisplay)}</span>
+    </HoverPopover>
+  )
+}
 
 function GameDetail() {
   const { gameId } = useParams<{ gameId: string }>()
@@ -215,6 +248,7 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
   }
 
   const latestRelease = releases[0]
+  const versionMatrix = releases.map(summarizeReleaseDownloads)
 
   const platformStats: Record<string, number> = { windows: 0, linux: 0, mac: 0, wiiu: 0, switch: 0 }
   let totalDownloads = 0
@@ -271,14 +305,27 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
               return (
                 <div key={platform.key} className="flex items-center gap-2">
                   <PlatformIcon platform={platform.iconKey || 'windows'} size={20} />
-                  <span className="font-medium">{formatDownloadCount(count, '')}</span>
+                  <DownloadHoverNumber
+                    value={count}
+                    matrix={versionMatrix}
+                    os={platform.key as AssetPlatform}
+                    highlightTag={latestRelease.tag_name}
+                    zeroDisplay=""
+                  />
                 </div>
               )
             })}
             {totalDownloads > 0 && (
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-accent)] font-bold ml-auto">
                 <TrendingUp size={16} />
-                <span>{formatDownloadCount(totalDownloads)} {t('gameDetail:total')}</span>
+                <DownloadHoverNumber
+                  value={totalDownloads}
+                  matrix={versionMatrix}
+                  highlightTag={latestRelease.tag_name}
+                  className=""
+                  align="end"
+                />
+                <span>{t('gameDetail:total')}</span>
               </div>
             )}
           </div>
@@ -406,6 +453,8 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
     )
   }
 
+  const versionMatrix = releases.map(summarizeReleaseDownloads)
+
   const versionStats: VersionStats[] = releases.slice(1).map(release => {
     const platformDownloads: Record<string, number> = { windows: 0, linux: 0, mac: 0, wiiu: 0, switch: 0 }
     let totalDownloads = 0
@@ -519,14 +568,25 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
                       return visiblePlatforms.map((p) => (
                         <div key={p.key} className="flex items-center gap-1.5">
                           <PlatformIcon platform={p.iconKey} size={18} className="text-[var(--color-text-muted)]" />
-                          <span className="font-medium">{formatDownloadCount(p.count)}</span>
+                          <DownloadHoverNumber
+                            value={p.count}
+                            matrix={versionMatrix}
+                            os={p.key as AssetPlatform}
+                            highlightTag={stat.tag}
+                          />
                         </div>
                       ))
                     })()}
                     {stat.total > 0 && (
                       <div className="flex items-center gap-2 px-3 py-1 rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-accent)] font-bold">
                         <TrendingUp size={14} />
-                        <span>{formatDownloadCount(stat.total)}</span>
+                        <DownloadHoverNumber
+                          value={stat.total}
+                          matrix={versionMatrix}
+                          highlightTag={stat.tag}
+                          className=""
+                          align="end"
+                        />
                       </div>
                     )}
                   </div>

@@ -322,6 +322,12 @@ header {
   75% { transform: translateY(2px); }
 }
 
+/* Bar chart grow-in (download stats hover chart) */
+@keyframes bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
 /* ============================================
    UTILITY CLASSES
 ============================================ */
@@ -401,6 +407,12 @@ header {
 .stagger-6 { animation-delay: 250ms; }
 .stagger-7 { animation-delay: 300ms; }
 .stagger-8 { animation-delay: 350ms; }
+
+/* Bar chart grow-in — apply to the bar fill; stagger via inline animationDelay */
+.animate-bar-grow {
+  transform-origin: left;
+  animation: bar-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
 
 /* ============================================
    SCROLL ANIMATIONS

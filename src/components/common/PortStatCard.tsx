@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { GameIcon } from './GameIcon'
 import { detectOS, type DetectedOS } from '@/utils/platform'
 import { getTheme, getGameTheme } from '@/themes'
+import { formatNumber, formatNumberCompact } from '@/utils/formatters'
 
 interface GitHubRelease {
   tag_name: string
@@ -38,14 +39,23 @@ interface PortStatCardProps {
   index: number
 }
 
+/**
+ * Stat value: shows the full grouped number when the card is wide enough,
+ * and falls back to a compact 3.2K / 12.3K form when the card is narrow.
+ * The card root is a Tailwind `@container`, so the @min-[280px] variant
+ * tracks the card's own width — not the viewport.
+ */
+function StatValue({ value }: { value: number }) {
+  return (
+    <span className="font-bold tabular-nums">
+      <span className="hidden @min-[280px]:inline">{formatNumber(value)}</span>
+      <span className="@min-[280px]:hidden">{formatNumberCompact(value)}</span>
+    </span>
+  )
+}
+
 export const PortStatCard = React.memo(function PortStatCard({ game, index }: PortStatCardProps) {
   const { t } = useTranslation(['common', 'home'])
-
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M+`
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K+`
-    return num.toLocaleString()
-  }
 
   const userOS = detectOS()
 
@@ -95,7 +105,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
 
   return (
     <div
-      className="group relative flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--card-accent)] card-hover animate-on-scroll"
+      className="group relative @container flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--card-accent)] card-hover animate-on-scroll"
       style={{ '--card-primary': cardTheme.colors.primary, '--card-accent': cardTheme.colors.accent, animationDelay: `${index * 100}ms` } as React.CSSProperties}
     >
       {/* Gradient Background Effect */}
@@ -126,7 +136,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
             <Star size={16} />
             <span className="text-[var(--color-text-muted)]">{t('common:stars')}</span>
           </div>
-          <span className="font-bold">{formatNumber(game.stats.stars)}</span>
+          <StatValue value={game.stats.stars} />
         </div>
 
         <div className="flex items-center justify-between text-sm p-2 rounded-xl bg-[var(--color-background)]/50">
@@ -134,7 +144,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
             <Download size={16} />
             <span className="text-[var(--color-text-muted)]">{t('common:downloads')}</span>
           </div>
-          <span className="font-bold">{formatNumber(game.stats.totalDownloads)}</span>
+          <StatValue value={game.stats.totalDownloads} />
         </div>
 
         {game.stats.forks > 0 && (
@@ -143,7 +153,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
               <GitFork size={16} />
               <span className="text-[var(--color-text-muted)]">{t('common:forks')}</span>
             </div>
-            <span className="font-bold">{formatNumber(game.stats.forks)}</span>
+            <StatValue value={game.stats.forks} />
           </div>
         )}
 

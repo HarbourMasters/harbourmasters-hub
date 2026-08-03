@@ -19,6 +19,11 @@
     "switch": "Switch",
     "other": "Other"
   },
+  "chart": {
+    "byVersion": "Downloads by version",
+    "byVersionOs": "{{os}} downloads by version",
+    "showing": "Showing latest {{n}}"
+  },
   "viewOnGitHub": "View on GitHub",
   "discord": "Discord",
   "noReleases": "No releases available",

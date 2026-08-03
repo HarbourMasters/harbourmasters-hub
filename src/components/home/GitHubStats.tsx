@@ -4,6 +4,7 @@ import { ExternalLink, TrendingUp } from 'lucide-react'
 import { GAMES } from '@/data/games'
 import { PortStatCard } from '@/components/common/PortStatCard'
 import { getReleases } from '@/utils/github-api'
+import { formatNumber } from '@/utils/formatters'
 
 // Rate limiting: space out GitHub API calls
 const REQUEST_DELAY = 1000; // 1 second between requests
@@ -292,12 +293,6 @@ export function GitHubStats() {
     loadData()
   }, [])
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M+`
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K+`
-    return num.toLocaleString()
-  }
-
   return (
     <section className="py-20 bg-[var(--color-surface)]/30">
       <div className="container">
@@ -320,7 +315,7 @@ export function GitHubStats() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto">
             <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">
-                {gameStats.reduce((sum, g) => sum + g.stats.stars, 0).toLocaleString()}
+                {formatNumber(gameStats.reduce((sum, g) => sum + g.stats.stars, 0))}
               </div>
               <div className="text-sm text-[var(--color-text-muted)]">{t('common:githubStats.githubStars')}</div>
             </div>
