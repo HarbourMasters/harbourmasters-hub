@@ -1,37 +1,33 @@
-import { useEffect, useState } from 'react'
+import { useRef } from 'react'
+import { useInViewVideo } from '@/hooks/useInViewVideo'
 
+/**
+ * Hero wordmark. The animated WebM is the primary visual; a static poster
+ * (the settled wordmark frame) is preloaded in index.html
+ * The poster also covers browsers that can't play VP9 WebM (they simply see the
+ * static wordmark), so there's no longer a runtime canPlayType fallback swap.
+ */
 export function HeroVideo() {
-  const [supportsWebM, setSupportsWebM] = useState(false)
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Check if browser supports WebM with alpha channel (VP9)
-    const video = document.createElement('video')
-    const canPlayVP9 = video.canPlayType('video/webm; codecs="vp9"')
-    const canPlayVP8 = video.canPlayType('video/webm; codecs="vp8"')
-    setSupportsWebM(canPlayVP9 === 'probably' || canPlayVP9 === 'maybe' || canPlayVP8 === 'probably' || canPlayVP8 === 'maybe')
-  }, [])
-
-  // Fallback to text if WebM not supported
-  if (!supportsWebM) {
-    return (
-      <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-none tracking-tight animate-slide-up">
-        <span className="block text-[var(--color-text)]">Harbour</span>
-        <span className="block gradient-text">Masters</span>
-      </h1>
-    )
-  }
+  const videoRef = useRef<HTMLVideoElement>(null)
+  useInViewVideo(videoRef, { immediate: true })
 
   return (
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className={`w-full max-w-full sm:max-w-2xl mx-auto h-auto transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      onCanPlayThrough={() => setIsLoaded(true)}
-    >
-      <source src="/videos/HarbourMasters64.webm" type="video/webm; codecs=vp9" />
-    </video>
+    <>
+      {/* Accessible page heading — the wordmark is decorative video; this gives
+          the page a real <h1> for assistive tech and SEO regardless of video. */}
+      <h1 className="sr-only">Harbour Masters 64</h1>
+      <video
+        ref={videoRef}
+        poster="/videos/HarbourMasters64-poster.webp"
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        className="w-full max-w-full sm:max-w-2xl mx-auto aspect-[1626/206]"
+      >
+        <source src="/videos/HarbourMasters64.webm" type="video/webm; codecs=vp9" />
+      </video>
+    </>
   )
 }

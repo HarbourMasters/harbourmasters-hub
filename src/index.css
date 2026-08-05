@@ -1,5 +1,62 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/outfit-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/outfit-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/outfit-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/outfit-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700.woff2') format('woff2');
+}
+
 /* Theme CSS Variables - will be dynamically updated */
 @theme {
   /* Maritime Base Theme */
@@ -328,6 +385,34 @@ header {
   to { transform: scaleX(1); }
 }
 
+/* ---- Locked / upcoming-port card animations ---- */
+
+/* "In Progress" label — idle pulse */
+@keyframes in-progress {
+  0%, 100% { opacity: 0.65; transform: translateY(0); }
+  50%      { opacity: 1;    transform: translateY(-2px); }
+}
+
+/* "In Progress" label — intensified after a click */
+@keyframes in-progress-intense {
+  0%, 100% { opacity: 0.9; transform: translateY(-1px) scale(1.02); filter: drop-shadow(0 0 4px currentColor); }
+  50%      { opacity: 1;   transform: translateY(-3px) scale(1.06); filter: drop-shadow(0 0 10px currentColor); }
+}
+
+/* Chain links breathing in/out */
+@keyframes chain-breathe {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.7; }
+}
+
+/* Central padlock — idle with an occasional rattle */
+@keyframes lock-rattle {
+  0%, 92%, 100% { transform: rotate(0deg); }
+  94% { transform: rotate(-4deg); }
+  96% { transform: rotate(4deg); }
+  98% { transform: rotate(-2deg); }
+}
+
 /* ============================================
    UTILITY CLASSES
 ============================================ */
@@ -414,6 +499,20 @@ header {
   animation: bar-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* ---- Locked / upcoming-port card utilities ---- */
+.animate-in-progress {
+  animation: in-progress 2.4s ease-in-out infinite;
+}
+.animate-in-progress-intense {
+  animation: in-progress-intense 0.6s ease-in-out infinite;
+}
+.animate-chain-breathe {
+  animation: chain-breathe 3s ease-in-out infinite;
+}
+.animate-lock-rattle {
+  animation: lock-rattle 4s ease-in-out infinite;
+}
+
 /* ============================================
    SCROLL ANIMATIONS
 ============================================ */
@@ -441,17 +540,25 @@ header {
   padding: 0 1rem;
 }
 
-/* Glass Effect */
+/* Glass Effect — more opaque fallback when backdrop-filter is unsupported
+   (older/low-end devices), translucent frosted look where it is. */
 .glass {
-  background: oklch(from var(--color-surface) l c h / 0.85);
+  background: oklch(from var(--color-surface) l c h / 0.96);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border: 1px solid oklch(from var(--color-border) l c h / 0.5);
   will-change: transform;
+}
+@supports ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
+  .glass {
+    background: oklch(from var(--color-surface) l c h / 0.85);
+  }
 }
 
 /* Glass Enhanced (more blur) */
 .glass-enhanced {
   background: oklch(from var(--color-surface) l c h / 0.6);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid oklch(from var(--color-border) l c h / 0.3);
 }
@@ -620,10 +727,6 @@ header {
   .container {
     padding: 0 1.5rem;
   }
-
-  .glass {
-    backdrop-filter: blur(8px);
-  }
 }
 
 /* ============================================
@@ -643,3 +746,25 @@ header {
     scroll-behavior: auto;
   }
 }
+
+.fi {
+  position: relative;
+  display: inline-block;
+  width: 1.333333em;
+  line-height: 1em;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.fi::before {
+  content: "\00a0";
+}
+.fi-us { background-image: url('/flags/us.svg'); }
+.fi-fr { background-image: url('/flags/fr.svg'); }
+.fi-de { background-image: url('/flags/de.svg'); }
+.fi-es { background-image: url('/flags/es.svg'); }
+.fi-it { background-image: url('/flags/it.svg'); }
+.fi-jp { background-image: url('/flags/jp.svg'); }
+.fi-eu { background-image: url('/flags/eu.svg'); }
+.fi-cn { background-image: url('/flags/cn.svg'); }
+.fi-un { background-image: url('/flags/un.svg'); }

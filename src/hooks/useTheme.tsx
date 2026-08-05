@@ -16,6 +16,65 @@ interface ThemeProviderProps {
   defaultTheme?: ThemeId;
 }
 
+/**
+ * Per-theme web fonts are lazy-loaded from Google Fonts only when a non-default
+ * theme is activated, so the default (Maritime) route ships just the self-hosted
+ * Outfit + Inter and never touches fonts.googleapis.com. The default theme's
+ * font names are filtered out here so we don't double-fetch them.
+ */
+const SELF_HOSTED = new Set(['outfit', 'inter']);
+const GENERIC = new Set([
+  'system-ui', 'sans-serif', 'serif', 'monospace', 'cursive',
+  'georgia', 'times new roman', 'arial black', 'comic sans ms',
+]);
+// Google renamed some families; normalize so the request resolves.
+const FAMILY_ALIAS: Record<string, string> = { 'fredoka one': 'Fredoka' };
+
+function googleFontFamilies(theme: Theme): string[] {
+  const names = [theme.fonts.display, theme.fonts.body]
+    .flatMap((s) => (s.match(/'([^']+)'/g) || []).map((m) => m.slice(1, -1)))
+    .map((n) => FAMILY_ALIAS[n.toLowerCase()] ?? n);
+  return [...new Set(names)].filter((n) => {
+    const lower = n.toLowerCase();
+    return !GENERIC.has(lower) && !SELF_HOSTED.has(lower);
+  });
+}
+
+function ensureThemeFonts(theme: Theme) {
+  const families = googleFontFamilies(theme);
+  let link = document.getElementById('theme-fonts') as HTMLLinkElement | null;
+  if (families.length === 0) {
+    // Default theme — remove any theme-font link so we rely on self-hosted fonts only.
+    if (link) link.remove();
+    return;
+  }
+  const href =
+    'https://fonts.googleapis.com/css2?' +
+    families.map((f) => `family=${encodeURIComponent(f)}:wght@400;500;600;700`).join('&') +
+    '&display=swap';
+
+  if (!link) {
+    // Preconnect once, lazily, only when a themed font is actually needed.
+    for (const origin of ['https://fonts.googleapis.com', 'https://fonts.gstatic.com']) {
+      if (!document.querySelector(`link[rel="preconnect"][href="${origin}"]`)) {
+        const pc = document.createElement('link');
+        pc.rel = 'preconnect';
+        pc.href = origin;
+        if (origin.includes('gstatic')) pc.crossOrigin = '';
+        document.head.appendChild(pc);
+      }
+    }
+    link = document.createElement('link');
+    link.id = 'theme-fonts';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }
+  if (link.dataset.href !== href) {
+    link.dataset.href = href;
+    link.href = href;
+  }
+}
+
 export function ThemeProvider({ children, defaultTheme = 'common' }: ThemeProviderProps) {
   const [themeId, setThemeId] = useState<ThemeId>(defaultTheme);
   const [theme, setThemeState] = useState<Theme>(getTheme(defaultTheme));
@@ -48,6 +107,7 @@ export function ThemeProvider({ children, defaultTheme = 'common' }: ThemeProvid
     // Fonts
     root.style.setProperty('--font-display', theme.fonts.display);
     root.style.setProperty('--font-body', theme.fonts.body);
+    ensureThemeFonts(theme);
 
     // Border radius
     if (theme.borderRadius) {

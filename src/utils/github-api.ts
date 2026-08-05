@@ -5,17 +5,9 @@ const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 const CACHE_KEY_PREFIX = 'github_cache_';
 const CACHE_VERSION = 'v3'; // For cache busting if needed
 
-// Rate limiting: space out requests to avoid hitting GitHub's rate limit
-const REQUEST_DELAY = 1000; // 1 second between requests
-let lastRequestTime = 0;
-async function rateLimitFetch(): Promise<void> {
-  const now = Date.now();
-  const timeSinceLastRequest = now - lastRequestTime;
-  if (timeSinceLastRequest < REQUEST_DELAY) {
-    await new Promise(resolve => setTimeout(resolve, REQUEST_DELAY - timeSinceLastRequest));
-  }
-  lastRequestTime = Date.now();
-}
+// NOTE: the previous per-request 1s throttle was removed. GitHub enforces its
+// rate limit via response headers (60/hr unauthenticated, 5000/hr with a token),
+// not by us sleeping — so the delay only made the UI slower without helping.
 
 interface CacheEntry {
   data: GitHubRelease[];
@@ -188,7 +180,6 @@ export async function getReleasesViaTags(
   const tagsUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/tags?per_page=${MAX_TAGS}`;
 
   try {
-    await rateLimitFetch();
     const tagsResponse = await fetch(tagsUrl, { headers });
 
     if (!tagsResponse.ok) {
@@ -197,45 +188,42 @@ export async function getReleasesViaTags(
     }
 
     const tags: Array<{ name: string }> = await tagsResponse.json();
-    const releases: GitHubRelease[] = [];
 
-    for (const tag of tags) {
-      await rateLimitFetch();
-      const tagReleaseUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/releases/tags/${encodeURIComponent(tag.name)}`;
+    // Fetch every tag's release in parallel — this is what used to take ~30s
+    // (30 sequential 1s-throttled requests). 403/429 and other failures yield
+    // null and are filtered out, so we return whatever we reconstructed.
+    const results = await Promise.all(
+      tags.map(async (tag) => {
+        const tagReleaseUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/releases/tags/${encodeURIComponent(tag.name)}`;
+        try {
+          const tagResponse = await fetch(tagReleaseUrl, { headers });
+          if (tagResponse.ok) return (await tagResponse.json()) as GitHubRelease;
+          if (tagResponse.status === 404) {
+            // Tag exists but has no published release — synthesize a minimal one.
+            return {
+              url: tagReleaseUrl,
+              id: 0,
+              html_url: `https://github.com/${owner}/${repo}/releases/tag/${encodeURIComponent(tag.name)}`,
+              tag_name: tag.name,
+              name: tag.name,
+              draft: false,
+              prerelease: /alfa|alpha|beta|rc|pre/i.test(tag.name),
+              created_at: '',
+              published_at: '',
+              author: { login: '', id: 0, node_id: '', avatar_url: '', html_url: '', type: '' },
+              body: '',
+              assets: []
+            } as GitHubRelease;
+          }
+          // 403/429 (rate limited) or other non-ok status: skip this tag.
+          return null;
+        } catch {
+          return null;
+        }
+      }),
+    );
 
-      let tagResponse: Response;
-      try {
-        tagResponse = await fetch(tagReleaseUrl, { headers });
-      } catch {
-        continue;
-      }
-
-      if (tagResponse.ok) {
-        releases.push(await tagResponse.json());
-      } else if (tagResponse.status === 404) {
-        // Tag exists but has no published release — synthesize a minimal one.
-        releases.push({
-          url: tagReleaseUrl,
-          id: 0,
-          html_url: `https://github.com/${owner}/${repo}/releases/tag/${encodeURIComponent(tag.name)}`,
-          tag_name: tag.name,
-          name: tag.name,
-          draft: false,
-          prerelease: /alfa|alpha|beta|rc|pre/i.test(tag.name),
-          created_at: '',
-          published_at: '',
-          author: { login: '', id: 0, node_id: '', avatar_url: '', html_url: '', type: '' },
-          body: '',
-          assets: []
-        });
-      } else if (tagResponse.status === 403 || tagResponse.status === 429) {
-        // Rate limited mid-reconstruction — return what we have so far.
-        console.warn(`[tags fallback] Rate limited while reconstructing ${owner}/${repo}; returning ${releases.length} releases`);
-        break;
-      }
-      // Other non-ok statuses: skip this tag and continue.
-    }
-
+    const releases = results.filter((r): r is GitHubRelease => r !== null);
     console.log(`[tags fallback] Reconstructed ${releases.length} releases for ${owner}/${repo} from tags`);
     return releases;
   } catch (error) {
@@ -280,9 +268,6 @@ export async function getReleases(
       while (url) {
         pageCount++;
         console.log(`Fetching page ${pageCount} for ${cacheKey}...`);
-
-        // Rate limit: wait before making request
-        await rateLimitFetch();
 
         // Use ETag for conditional request on first page only (subsequent pages change rarely)
         const headers: Record<string, string> = {
@@ -346,11 +331,6 @@ export async function getReleases(
         console.log(`Parsed links:`, links);
 
         url = links.next || '';
-
-        // Small delay between pages to be extra safe with rate limits
-        if (url) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
       }
 
       // Fallback: if /releases returned nothing, reconstruct from /tags.

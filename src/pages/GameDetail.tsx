@@ -8,12 +8,11 @@ import type { GameId } from '@/types/game'
 import { ArrowLeft, ExternalLink, ChevronDown, ChevronUp, TrendingUp, Download, Gamepad2, Calendar } from 'lucide-react'
 import { formatDate, formatNumber } from '@/utils/formatters'
 import { parseChangelog, ChangelogContent, ParsedChangelog } from '@/utils/changelogParser'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { PlatformIcon } from '@/utils/platformIcons'
 import { GameIcon } from '@/components/common/GameIcon'
 import { HoverPopover } from '@/components/common/HoverPopover'
 import { DownloadBarsChart } from '@/components/common/DownloadBarsChart'
+import { GitHubIcon } from '@/components/common/GitHubIcon'
 import { summarizeReleaseDownloads, buildVersionBars, type AssetPlatform, type ReleaseDownloadSummary } from '@/utils/releaseStats'
 
 function DownloadHoverNumber({
@@ -291,7 +290,7 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-surface-hover)] rounded-lg text-base hover:bg-[var(--color-primary)] hover:text-[var(--color-background)] transition-colors"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <GitHubIcon />
           {t('gameDetail:viewOnGitHub')}
         </a>
       </div>
@@ -664,7 +663,7 @@ function OlderVersionsList({ gameId, repoUrl }: { gameId: string; repoUrl: strin
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-base text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
                 >
-                  <FontAwesomeIcon icon={faGithub} />
+                  <GitHubIcon />
                   {t('gameDetail:viewOnGitHub')}
                   <ExternalLink size={14} />
                 </a>

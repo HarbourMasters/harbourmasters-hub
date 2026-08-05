@@ -2,6 +2,8 @@
   "name": "Harbour Masters 64",
   "short_name": "HM64",
   "description": "Native PC ports of classic N64 games",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",

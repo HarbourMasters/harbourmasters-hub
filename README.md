@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/videos/HarbourMasters64.apng" alt="Harbour Masters 64" width="100%" />
+  <img src="assets/HarbourMasters64.apng" alt="Harbour Masters 64" width="100%" />
 </p>
 
 <h1 align="center">Harbour Masters 64 — Web Hub</h1>

@@ -58,8 +58,10 @@ function Home() {
             </span>
           </div>
 
-          {/* Main Title - Video or Fallback Text */}
-          <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
+          {/* Main Title - shown immediately (no opacity-0 entrance) so the
+              preloaded poster becomes the LCP element at first paint. The
+              surrounding badge/subtitle/CTAs still animate in. */}
+          <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl mx-auto">
             <HeroVideo />
           </div>
 
@@ -99,7 +101,7 @@ function Home() {
               >
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`} />
                 {game.icon && (
-                  <img src={game.icon} alt={game.name} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+                  <img src={game.icon} alt={game.name} width={20} height={20} loading="lazy" decoding="async" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
                 )}
                 <span className="group-hover:text-[var(--color-accent)] transition-colors">{game.name}</span>
               </Link>

@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Harbour Masters 64 - N64 PC Ports</title>
     <meta name="description" content="Harbour Masters 64 - Native PC ports of classic N64 games including Ship of Harkinian, 2ship2Harkinian, Ghostship, SpaghettiKart, and Starship." />
     <meta name="keywords" content="N64, Nintendo 64, PC port, decompilation, Ship of Harkinian, Ocarina of Time, Majora's Mask, Super Mario 64, Mario Kart 64, Star Fox 64, LibUltraShip" />
     <meta name="theme-color" content="#0a0a1a" />
+    <meta name="author" content="Harbour Masters" />
+    <link rel="canonical" href="https://harbourmasters.com/" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Harbour Masters 64" />
     <meta property="og:description" content="Native PC ports of classic N64 games" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://harbourmasters.com" />
-    <title>Harbour Masters 64 - N64 PC Ports</title>
+    <meta property="og:site_name" content="Harbour Masters 64" />
+    <meta property="og:image" content="https://harbourmasters.com/og-image.png" />
+    <meta property="og:image:alt" content="Harbour Masters 64 — native PC ports of classic N64 games" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harbour Masters 64" />
+    <meta name="twitter:description" content="Native PC ports of classic N64 games" />
+    <meta name="twitter:image" content="https://harbourmasters.com/og-image.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,9 +35,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Google Fonts - loaded dynamically based on theme -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload the LCP element (hero wordmark poster) -->
+    <link rel="preload" as="image" href="/videos/HarbourMasters64-poster.webp" fetchpriority="high" />
+
+    <!-- Preload the default-theme display + body fonts (self-hosted woff2) -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/outfit-700.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-400.woff2" crossorigin />
   </head>
   <body>
     <div id="root"></div>

@@ -124,7 +124,9 @@
     "githubStars": "Stelle GitHub",
     "totalDownloads": "Download Totali",
     "activePorts": "Port Attivi",
-    "viewAllOnGitHub": "Vedi Tutto su GitHub"
+    "viewAllOnGitHub": "Vedi Tutto su GitHub",
+    "inProgress": "In corso",
+    "locked": "Bloccato — in arrivo"
   },
   "romDatabase": {
     "format": "Formato",

@@ -24,11 +24,17 @@ function App() {
       <ScrollToTop />
       <ScrollProgress />
       <div className="min-h-screen flex flex-col theme-transition overflow-x-hidden">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[var(--color-primary)] focus:text-[var(--color-background)] focus:font-bold focus:shadow-lg"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" tabIndex={-1}>
           <PageTransition>
             <Suspense fallback={
-              <div className="flex items-center justify-center min-h-[60vh]">
+              <div className="flex items-center justify-center min-h-[calc(100dvh-2rem)]">
                 <div className="w-8 h-8 border-2 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin" />
               </div>
             }>
