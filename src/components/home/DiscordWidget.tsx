@@ -26,13 +26,13 @@ export function DiscordWidget() {
       .then(res => res.json())
       .then(json => {
         setData({
-          name: json.guild?.name || 'Harbour Masters 64',
+          name: json.guild?.name || 'Harbour Masters',
           memberCount: json.approximate_member_count || 0,
           onlineCount: json.approximate_presence_count || 0,
           description: json.guild?.description || '',
           icon: json.guild?.icon || '',
           banner: json.guild?.banner || '',
-          tag: json.profile?.tag || 'HM64',
+          tag: json.profile?.tag || 'HM',
           premiumTier: json.profile?.premium_tier || 0,
           premiumSubscriptionCount: json.profile?.premium_subscription_count || 0,
           verificationLevel: json.guild?.verification_level || 0,

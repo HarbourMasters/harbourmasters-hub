@@ -1,6 +1,6 @@
 {
-  "siteName": "Harbour Masters 64",
-  "tagline": "Native PC-Ports klassischer N64-Spiele",
+  "siteName": "Harbour Masters",
+  "tagline": "Native PC-Ports klassischer N64- und GameCube-Spiele",
   "back": "Zurück",
   "forks": "Forks",
   "stars": "Sterne",
@@ -71,7 +71,7 @@
     "copied": "Kopiert!"
   },
   "footer": {
-    "tagline": "Klassische N64-Spiele auf modernen Plattformen",
+    "tagline": "Klassische N64- und GameCube-Spiele auf modernen Plattformen",
     "links": {
       "github": "GitHub-Organisation",
       "discord": "Discord",
@@ -82,7 +82,7 @@
       "terms": "Nutzungsbedingungen",
       "disclaimer": "Haftungsausschluss"
     },
-    "copyright": "© {{year}} Harbour Masters 64. Alle Rechte vorbehalten.",
+    "copyright": "© {{year}} Harbour Masters. Alle Rechte vorbehalten.",
     "quickLinks": "Schnelllinks",
     "connect": "Verbinden",
     "openSource": "Open Source",
@@ -91,8 +91,8 @@
     "freeOpenSourceBadge": "100% Kostenlos & Open Source",
     "builtByCommunity": "Erstellt von der Community,\nFür die Community",
     "viewSourceOnGitHub": "Quellcode auf GitHub Anzeigen",
-    "definitiveN64Ports": "Definitive N64-PC-Ports",
-    "nativePortsDescription": "Native PC-Ports klassischer Nintendo 64-Spiele, von Grund auf neu mit modernen Verbesserungen erstellt.\nKeine Emulation erforderlich — reine, native Leistung.",
+    "definitiveN64Ports": "Definitive N64- und GameCube-PC-Ports",
+    "nativePortsDescription": "Native PC-Ports klassischer Nintendo 64- und GameCube-Spiele, von Grund auf neu mit modernen Verbesserungen erstellt.\nKeine Emulation erforderlich — reine, native Leistung.",
     "githubStars": "GitHub-Sterne",
     "madeWithLove": "Gemacht mit ❤️ von der Community",
     "mitLicense": "MIT-Lizenz"

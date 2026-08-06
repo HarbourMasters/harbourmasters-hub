@@ -1,14 +1,14 @@
 {
   "badge": "Our Story",
   "title": "About",
-  "subtitle": "Learn about Harbour Masters 64 and LibUltraShip",
+  "subtitle": "Learn about Harbour Masters and LibUltraShip",
   "whatIsHM": {
-    "title": "What is Harbour Masters 64?",
-    "content": "Harbour Masters 64 is a team of passionate developers dedicated to preserving and enhancing classic Nintendo 64 games through native PC ports. We build upon decompilation projects once they reach completion, recreating the original game code in modern C++ and enhancing it with new features."
+    "title": "What is Harbour Masters?",
+    "content": "Harbour Masters is a team of passionate developers dedicated to preserving and enhancing classic Nintendo 64 and GameCube games through native PC ports. We build upon decompilation projects once they reach completion, recreating the original game code in modern C++ and enhancing it with new features."
   },
   "whatIsLUS": {
     "title": "What is LibUltraShip (LUS)?",
-    "content": "LibUltraShip (LUS) is our modern recreation of the Nintendo 64 SDK, known as LibUltra. It provides the foundation for all our ports, handling graphics, audio, input, and core game systems. LUS enables us to bring N64 games to modern platforms with enhanced features and cross-platform support.",
+    "content": "LibUltraShip (LUS) is our modern recreation of the Nintendo 64 SDK, known as LibUltra. It provides the foundation for all our ports, handling graphics, audio, input, and core game systems. LUS now supports both Nintendo 64 and GameCube-era games, bringing them to modern platforms with enhanced features and cross-platform support.",
     "features": [
       "Modern graphics backends (DirectX 11, OpenGL, Metal)",
       "Enhanced audio with positional sound",
@@ -30,7 +30,7 @@
   },
   "team": {
     "title": "The Team",
-    "content": "Harbour Masters 64 is made possible by contributions from developers, reverse engineers, and community members around the world. Join our Discord to connect with the community!"
+    "content": "Harbour Masters is made possible by contributions from developers, reverse engineers, and community members around the world. Join our Discord to connect with the community!"
   },
   "legal": {
     "title": "Legal Information",

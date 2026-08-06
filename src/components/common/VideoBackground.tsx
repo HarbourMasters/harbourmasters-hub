@@ -15,7 +15,7 @@ export function HeroVideo() {
     <>
       {/* Accessible page heading — the wordmark is decorative video; this gives
           the page a real <h1> for assistive tech and SEO regardless of video. */}
-      <h1 className="sr-only">Harbour Masters 64</h1>
+      <h1 className="sr-only">Harbour Masters</h1>
       <video
         ref={videoRef}
         poster="/videos/HarbourMasters64-poster.webp"

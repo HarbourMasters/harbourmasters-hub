@@ -1,5 +1,5 @@
 /**
- * ROM Hash Database for Harbour Masters 64 ports
+ * ROM Hash Database for Harbour Masters ports
  * Contains known ROM versions and their compatibility status
  */
 

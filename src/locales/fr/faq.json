@@ -1,6 +1,6 @@
 {
   "title": "Questions fréquentes",
-  "subtitle": "Tout ce que vous devez savoir sur nos ports PC N64",
+  "subtitle": "Tout ce que vous devez savoir sur nos ports PC N64 et GameCube",
   "badge": "Base de connaissances",
   "search": "Rechercher des questions...",
   "searchResults": "{{count}} questions trouvées",
@@ -17,11 +17,11 @@
   "questions": {
     "whatIs": {
       "question": "Qu'est-ce que Harbour Masters ?",
-      "answer": "Harbour Masters est une communauté de développeurs qui créent des ports PC natifs de jeux Nintendo 64. Nous faisons du reverse engineering des jeux classiques à partir de zéro grâce à notre moteur LibUltraShip, en les reconstruisant pour qu'ils tournent nativement sur les systèmes d'exploitation modernes avec des fonctionnalités améliorées."
+      "answer": "Harbour Masters est une communauté de développeurs qui créent des ports PC natifs de jeux Nintendo 64 et GameCube. Nous faisons du reverse engineering des jeux classiques à partir de zéro grâce à notre moteur LibUltraShip, en les reconstruisant pour qu'ils tournent nativement sur les systèmes d'exploitation modernes avec des fonctionnalités améliorées."
     },
     "whatIsLUS": {
       "question": "Qu'est-ce que LibUltraShip ?",
-      "answer": "LibUltraShip (LUS) est notre réimplémentation du système d'exploitation et des bibliothèques Nintendo 64. Il permet aux jeux N64 de tourner nativement sur PC sans émulation, avec des fonctionnalités comme des résolutions plus élevées, des contrôles modernes et le support des mods."
+      "answer": "LibUltraShip (LUS) est notre réimplémentation du système d'exploitation et des bibliothèques Nintendo 64. Il permet désormais aux jeux Nintendo 64 et GameCube de tourner nativement sur PC sans émulation, avec des fonctionnalités comme des résolutions plus élevées, des contrôles modernes et le support des mods."
     },
     "romRequired": {
       "question": "Ai-je besoin d'un fichier ROM ?",
@@ -39,9 +39,21 @@
       "question": "Ces ports sont-ils vraiment gratuits ?",
       "answer": "Oui ! Tous nos ports sont complètement gratuits et open source. Nous croyons en la préservation du jeu vidéo et à rendre ces classiques accessibles à tous. Les dons ne sont pas acceptés — nous faisons ça purement par passion pour ces jeux."
     },
+    "rebrand": {
+      "question": "Pourquoi avez-vous retiré le '64' de votre nom ?",
+      "answer": "Nous avons mis à niveau notre couche LibUltraShip (LUS) pour prendre en charge les jeux de l'ère GameCube, et plus seulement la Nintendo 64. Comme nous ne sommes plus un projet exclusivement N64, le '64' n'avait plus de raison d'être — nous sommes donc désormais simplement Harbour Masters. Mêmes projets, une équipe grandissante, et une ambition plus large."
+    },
+    "gamecubeSupport": {
+      "question": "Cela signifie-t-il que vous allez porter des jeux GameCube ?",
+      "answer": "Oui. Notre couche LUS mise à niveau prend désormais en charge les titres de l'ère GameCube aux côtés des jeux Nintendo 64. Nous élargissons notre focus pour couvrir les deux plateformes, et plusieurs projets GameCube sont déjà en préparation."
+    },
+    "linifadomra": {
+      "question": "Quelle est votre collaboration avec Linifadomra ?",
+      "answer": "Nous nous sommes associés à l'incroyable équipe de Linifadomra. Leur projet, Twilight Princess: Courage Reborn, est développé avec LUS, et nos équipes fusionnent — le Support et le Développement de Linifadomra ont désormais leur place dans le Discord Harbour Masters. Linifadomra conserve une totale liberté créative et continuera d'offrir ce que sa communauté attend ; Harbour Masters apporte son assistance au développement, un support à long terme et de la visibilité."
+    },
     "whichGames": {
       "question": "Quels jeux sont disponibles ?",
-      "answer": "Nous avons actuellement des ports pour : Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), Spaghetti Kart (Mario Kart 64) et Starship (Star Fox 64). D'autres projets sont toujours en développement."
+      "answer": "Nous avons actuellement des ports pour : Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), Spaghetti Kart (Mario Kart 64) et Starship (Star Fox 64). Nous nous étendons également aux titres GameCube — notamment Twilight Princess: Courage Reborn, en collaboration avec Linifadomra — et d'autres projets sont toujours en développement."
     },
     "controller": {
       "question": "Quelles manettes sont supportées ?",
