@@ -366,7 +366,7 @@ function LatestReleaseDownloads({ gameId }: { gameId: string }) {
       </div>
 
       {/* Changelog */}
-      {parsedChangelog && (parsedChangelog.whatsChanged.length > 0 || parsedChangelog.newContributors.length > 0) && (
+      {parsedChangelog && (parsedChangelog.whatsChanged.length > 0 || parsedChangelog.newContributors.length > 0 || parsedChangelog.sections.length > 0) && (
         <div className="mt-6">
           <button
             onClick={() => setShowChangelog(!showChangelog)}
