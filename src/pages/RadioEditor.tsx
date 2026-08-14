@@ -354,10 +354,10 @@ function RadioEditor() {
             </div>
 
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight opacity-0 animate-slide-up" style={{ animationDelay: '150ms', animationFillMode: 'both' }}>
-              Radio Message Editor
+              Space Communication
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-[var(--color-text-muted)] mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
-              Edit Star Fox 64 radio dialogue text directly from your sf64.o2r
+              Edit Star Fox 64 radio dialogue text and audio directly from your sf64.o2r
             </p>
           </div>
         </div>
