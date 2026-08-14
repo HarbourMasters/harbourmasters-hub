@@ -1,0 +1,17 @@
+{
+  "badge": "Discord",
+  "title": "Ban Appeal",
+  "subtitle": "Submit a ban appeal for the Harbour Masters Discord server.",
+  "discordUsername": "Discord Username",
+  "discordUsernamePlaceholder": "e.g. username or 123456789012345678",
+  "discordUsernameHelp": "Enter your Discord username exactly as it appears in your profile, or your Discord User ID.",
+  "discordUsernameHelpAlt": "Do not include any per-server nicknames.",
+  "reason": "Reason for Appeal",
+  "reasonPlaceholder": "Provide details as to why you believe an appeal should be considered...",
+  "reasonHelp": "Explain why you think the ban should be reviewed.",
+  "privacyNote": "Bans related to piracy are permanent and non-negotiable.",
+  "submitButton": "Submit Appeal",
+  "submitting": "Submitting...",
+  "successTitle": "Appeal Submitted",
+  "successMessage": "Thank you for your submission. Our team will review this during the next appeal review session and provide an update."
+}

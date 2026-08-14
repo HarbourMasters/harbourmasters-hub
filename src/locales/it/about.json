@@ -1,14 +1,14 @@
 {
   "badge": "La Nostra Storia",
   "title": "Chi Siamo",
-  "subtitle": "Scopri di più su Harbour Masters 64 e LibUltraShip",
+  "subtitle": "Scopri di più su Harbour Masters e LibUltraShip",
   "whatIsHM": {
-    "title": "Cos'è Harbour Masters 64?",
-    "content": "Harbour Masters 64 è un team di sviluppatori appassionati dedicati alla preservazione e al miglioramento dei classici del Nintendo 64 attraverso port PC nativi. Costruiamo su progetti di decompilazione una volta raggiunto il completamento, ricreando il codice del gioco originale in C++ moderno e migliorandolo con nuove funzionalità."
+    "title": "Cos'è Harbour Masters?",
+    "content": "Harbour Masters è un team di sviluppatori appassionati dedicati alla preservazione e al miglioramento dei classici del Nintendo 64 e GameCube attraverso port PC nativi. Costruiamo su progetti di decompilazione una volta raggiunto il completamento, ricreando il codice del gioco originale in C++ moderno e migliorandolo con nuove funzionalità."
   },
   "whatIsLUS": {
     "title": "Cos'è LibUltraShip (LUS)?",
-    "content": "LibUltraShip (LUS) è la nostra ricreazione moderna dell'SDK Nintendo 64, noto come LibUltra. Fornisce la base per tutti i nostri port, gestendo grafica, audio, input e i sistemi principali del gioco. LUS ci permette di portare giochi N64 su piattaforme moderne con funzionalità migliorate e supporto multipiattaforma.",
+    "content": "LibUltraShip (LUS) è la nostra ricreazione moderna dell'SDK Nintendo 64, noto come LibUltra. Fornisce la base per tutti i nostri port, gestendo grafica, audio, input e i sistemi principali del gioco. LUS ora ci permette di portare sia giochi N64 che GameCube su piattaforme moderne con funzionalità migliorate e supporto multipiattaforma.",
     "features": [
       "Backend grafici moderni (DirectX 11, OpenGL, Metal)",
       "Audio migliorato con suono posizionale",
@@ -30,7 +30,7 @@
   },
   "team": {
     "title": "Il Team",
-    "content": "Harbour Masters 64 è reso possibile dai contributi di sviluppatori, reverse engineer e membri della community di tutto il mondo. Unisciti al nostro Discord per connetterti con la community!"
+    "content": "Harbour Masters è reso possibile dai contributi di sviluppatori, reverse engineer e membri della community di tutto il mondo. Unisciti al nostro Discord per connetterti con la community!"
   },
   "legal": {
     "title": "Informazioni Legali",

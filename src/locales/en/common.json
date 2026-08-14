@@ -1,6 +1,6 @@
 {
-  "siteName": "Harbour Masters 64",
-  "tagline": "Native PC ports of classic N64 games",
+  "siteName": "Harbour Masters",
+  "tagline": "Native PC ports of classic N64 and GameCube games",
   "back": "Back",
   "forks": "Forks",
   "stars": "Stars",
@@ -21,7 +21,8 @@
     "tools.comingSoon": "Modding tools coming soon...",
     "changelog": "Changelog",
     "faq": "FAQ",
-    "about": "About"
+    "about": "About",
+    "banAppeal": "Ban Appeal"
   },
   "languageSwitcher": {
     "label": "Language",
@@ -71,7 +72,7 @@
     "copied": "Copied!"
   },
   "footer": {
-    "tagline": "Bringing classic N64 games to modern platforms",
+    "tagline": "Bringing classic N64 and GameCube games to modern platforms",
     "links": {
       "github": "GitHub Organization",
       "discord": "Discord",
@@ -82,7 +83,7 @@
       "terms": "Terms of Service",
       "disclaimer": "Disclaimer"
     },
-    "copyright": "© {{year}} Harbour Masters 64. All rights reserved.",
+    "copyright": "© {{year}} Harbour Masters. All rights reserved.",
     "quickLinks": "Quick Links",
     "connect": "Connect",
     "openSource": "Open Source",
@@ -91,8 +92,8 @@
     "freeOpenSourceBadge": "100% Free & Open Source",
     "builtByCommunity": "Built by the Community,\nFor the Community",
     "viewSourceOnGitHub": "View Source on GitHub",
-    "definitiveN64Ports": "Definitive N64 PC Ports",
-    "nativePortsDescription": "Native PC ports of classic Nintendo 64 games, rebuilt from scratch with modern enhancements.\nNo emulation required — pure, native performance.",
+    "definitiveN64Ports": "Definitive N64 & GameCube PC Ports",
+    "nativePortsDescription": "Native PC ports of classic Nintendo 64 and GameCube games, rebuilt from scratch with modern enhancements.\nNo emulation required — pure, native performance.",
     "githubStars": "GitHub Stars",
     "madeWithLove": "Made with ❤️ by the community",
     "mitLicense": "MIT License"
@@ -124,7 +125,9 @@
     "githubStars": "GitHub Stars",
     "totalDownloads": "Total Downloads",
     "activePorts": "Active Ports",
-    "viewAllOnGitHub": "View All on GitHub"
+    "viewAllOnGitHub": "View All on GitHub",
+    "inProgress": "In Progress",
+    "locked": "Locked — coming soon"
   },
   "romDatabase": {
     "format": "Format",

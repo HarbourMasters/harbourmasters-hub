@@ -74,4 +74,5 @@ export type ThemeId =
   | 'ghostship'
   | 'spaghetti'
   | 'starship'
+  | 'lighthouse'
   | 'lus';

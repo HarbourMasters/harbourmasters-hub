@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Github, MessageCircle, Heart, ArrowUp, Code2, Users, Star } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ORG_STATS } from '@/data/games'
+import { useInViewVideo } from '@/hooks/useInViewVideo'
 
 function Footer() {
   const { t } = useTranslation(['common'])
@@ -10,6 +11,8 @@ function Footer() {
   const currentYear = new Date().getFullYear()
   const [showScrollTop, setShowScrollTop] = useState(false)
   const showCommunityHero = location.pathname === '/' || location.pathname === '/about'
+  const brandVideoRef = useRef<HTMLVideoElement>(null)
+  useInViewVideo(brandVideoRef, { rootMargin: '300px' })
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 500)
@@ -107,13 +110,17 @@ function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-[var(--color-primary)]/20">
                 <video
-                  src="/videos/HM64.webm"
-                  autoPlay
-                  loop
+                  ref={brandVideoRef}
+                  poster="/videos/HM64-poster.webp"
                   muted
+                  loop
                   playsInline
+                  preload="none"
+                  aria-hidden="true"
                   className="w-full h-full object-cover"
-                />
+                >
+                  <source src="/videos/HM64.webm" type="video/webm" />
+                </video>
               </div>
               <div>
                 <h4 className="font-display text-2xl font-bold gradient-text">Harbour Masters</h4>

@@ -28,7 +28,8 @@ export function GameIcon({ game, className }: GameIconProps) {
           drop-shadow(0 0 24px rgba(255, 255, 255, 0.2))
           brightness(1.1) contrast(1.1)
         `,
-        mixBlendMode: 'normal'
+        mixBlendMode: 'normal',
+        objectFit: 'contain'
       }}
       loading="lazy"
     />

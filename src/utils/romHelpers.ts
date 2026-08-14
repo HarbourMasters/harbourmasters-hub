@@ -3,8 +3,6 @@
  * Region flags, format badges, and utility formatting
  */
 
-import 'flag-icons/css/flag-icons.min.css'
-
 export type RegionCode = 'NTSC-U' | 'NTSC-J' | 'PAL' | 'PAL (France)' | 'PAL (Germany)' | 'iQue' | string
 
 export type FormatType = 'cart' | 'optical' | 'digital' | 'debug' | 'beta' | 'kiosk' | 'hotel' | 'builtin' | string

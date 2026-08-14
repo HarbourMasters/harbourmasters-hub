@@ -1,6 +1,6 @@
 {
-  "siteName": "Harbour Masters 64",
-  "tagline": "Port PC nativi di giochi N64 classici",
+  "siteName": "Harbour Masters",
+  "tagline": "Port PC nativi di giochi N64 e GameCube classici",
   "back": "Indietro",
   "forks": "Forks",
   "stars": "Stelle",
@@ -20,7 +20,8 @@
     "tools.comingSoon": "Strumenti di modding in arrivo...",
     "changelog": "Novità",
     "faq": "FAQ",
-    "about": "Chi Siamo"
+    "about": "Chi Siamo",
+    "banAppeal": "Contestare un ban"
   },
   "languageSwitcher": {
     "label": "Lingua",
@@ -70,7 +71,7 @@
     "copied": "Copiato!"
   },
   "footer": {
-    "tagline": "Portando i giochi N64 classici su piattaforme moderne",
+    "tagline": "Portando i giochi N64 e GameCube classici su piattaforme moderne",
     "links": {
       "github": "Organizzazione GitHub",
       "discord": "Discord",
@@ -81,7 +82,7 @@
       "terms": "Termini di Servizio",
       "disclaimer": "Disclaimer"
     },
-    "copyright": "© {{year}} Harbour Masters 64. Tutti i diritti riservati.",
+    "copyright": "© {{year}} Harbour Masters. Tutti i diritti riservati.",
     "quickLinks": "Link Rapidi",
     "connect": "Connetti",
     "openSource": "Open Source",
@@ -90,8 +91,8 @@
     "freeOpenSourceBadge": "100% Gratuito e Open Source",
     "builtByCommunity": "Costruito dalla Comunità,\nPer la Comunità",
     "viewSourceOnGitHub": "Vedi Codice Su GitHub",
-    "definitiveN64Ports": "Port PC N64 Definitivi",
-    "nativePortsDescription": "Port PC nativi di classici giochi Nintendo 64, ricostruiti da zero con miglioramenti moderni.\nNessuna emulazione richiesta — prestazioni native pure.",
+    "definitiveN64Ports": "Port PC N64 e GameCube Definitivi",
+    "nativePortsDescription": "Port PC nativi di classici giochi Nintendo 64 e GameCube, ricostruiti da zero con miglioramenti moderni.\nNessuna emulazione richiesta — prestazioni native pure.",
     "githubStars": "Stelle GitHub",
     "madeWithLove": "Fatto con ❤️ dalla community",
     "mitLicense": "Licenza MIT"
@@ -123,7 +124,9 @@
     "githubStars": "Stelle GitHub",
     "totalDownloads": "Download Totali",
     "activePorts": "Port Attivi",
-    "viewAllOnGitHub": "Vedi Tutto su GitHub"
+    "viewAllOnGitHub": "Vedi Tutto su GitHub",
+    "inProgress": "In corso",
+    "locked": "Bloccato — in arrivo"
   },
   "romDatabase": {
     "format": "Formato",

@@ -17,7 +17,7 @@ export const commonTheme: Theme = {
     surface: 'oklch(0.20 0.03 195)',        // Lighter teal
     surfaceHover: 'oklch(0.25 0.04 190)',   // Surface hover
     text: 'oklch(0.97 0.005 200)',          // White text
-    textMuted: 'oklch(0.65 0.02 195)',      // Muted text
+    textMuted: 'oklch(0.72 0.02 195)',      // Muted text (bumped for AA on small captions)
     border: 'oklch(0.32 0.05 195)',         // Border color
     success: 'oklch(0.65 0.15 150)',        // Green
     warning: 'oklch(0.70 0.15 80)',         // Orange

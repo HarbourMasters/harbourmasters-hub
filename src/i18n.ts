@@ -12,6 +12,7 @@ import enGames from './locales/en/games.json';
 import enPress from './locales/en/press.json';
 import enTools from './locales/en/tools.json';
 import enGameDetail from './locales/en/gameDetail.json';
+import enBanAppeal from './locales/en/banAppeal.json';
 
 // Import French translations
 import frCommon from './locales/fr/common.json';
@@ -23,6 +24,7 @@ import frGames from './locales/fr/games.json';
 import frPress from './locales/fr/press.json';
 import frTools from './locales/fr/tools.json';
 import frGameDetail from './locales/fr/gameDetail.json';
+import frBanAppeal from './locales/fr/banAppeal.json';
 
 // Import German translations
 import deCommon from './locales/de/common.json';
@@ -34,6 +36,7 @@ import deGames from './locales/de/games.json';
 import dePress from './locales/de/press.json';
 import deTools from './locales/de/tools.json';
 import deGameDetail from './locales/de/gameDetail.json';
+import deBanAppeal from './locales/de/banAppeal.json';
 
 // Import Spanish translations
 import esCommon from './locales/es/common.json';
@@ -45,6 +48,7 @@ import esGames from './locales/es/games.json';
 import esPress from './locales/es/press.json';
 import esTools from './locales/es/tools.json';
 import esGameDetail from './locales/es/gameDetail.json';
+import esBanAppeal from './locales/es/banAppeal.json';
 
 // Import Italian translations
 import itCommon from './locales/it/common.json';
@@ -56,6 +60,7 @@ import itGames from './locales/it/games.json';
 import itPress from './locales/it/press.json';
 import itTools from './locales/it/tools.json';
 import itGameDetail from './locales/it/gameDetail.json';
+import itBanAppeal from './locales/it/banAppeal.json';
 
 const resources = {
   en: {
@@ -67,7 +72,8 @@ const resources = {
     games: enGames,
     press: enPress,
     tools: enTools,
-    gameDetail: enGameDetail
+    gameDetail: enGameDetail,
+    banAppeal: enBanAppeal
   },
   fr: {
     common: frCommon,
@@ -78,7 +84,8 @@ const resources = {
     games: frGames,
     press: frPress,
     tools: frTools,
-    gameDetail: frGameDetail
+    gameDetail: frGameDetail,
+    banAppeal: frBanAppeal
   },
   de: {
     common: deCommon,
@@ -89,7 +96,8 @@ const resources = {
     games: deGames,
     press: dePress,
     tools: deTools,
-    gameDetail: deGameDetail
+    gameDetail: deGameDetail,
+    banAppeal: deBanAppeal
   },
   es: {
     common: esCommon,
@@ -100,7 +108,8 @@ const resources = {
     games: esGames,
     press: esPress,
     tools: esTools,
-    gameDetail: esGameDetail
+    gameDetail: esGameDetail,
+    banAppeal: esBanAppeal
   },
   it: {
     common: itCommon,
@@ -111,7 +120,8 @@ const resources = {
     games: itGames,
     press: itPress,
     tools: itTools,
-    gameDetail: itGameDetail
+    gameDetail: itGameDetail,
+    banAppeal: itBanAppeal
   }
 };
 
@@ -122,7 +132,7 @@ i18n
     resources,
     fallbackLng: 'en',
     supportedLngs: ['en', 'fr', 'de', 'es', 'it'],
-    ns: ['common', 'home', 'downloads', 'faq', 'about', 'games', 'press', 'tools', 'gameDetail'],
+    ns: ['common', 'home', 'downloads', 'faq', 'about', 'games', 'press', 'tools', 'gameDetail', 'banAppeal'],
     defaultNS: 'common',
     debug: import.meta.env.DEV,
     interpolation: {

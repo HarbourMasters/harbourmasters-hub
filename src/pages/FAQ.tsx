@@ -17,7 +17,7 @@ function FAQ() {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
 
   const categories = [
-    { id: 'general', label: t('categories.general'), questions: ['whatIs', 'whatIsLUS', 'whichGames', 'free'] },
+    { id: 'general', label: t('categories.general'), questions: ['whatIs', 'whatIsLUS', 'whichGames', 'free', 'rebrand', 'gamecubeSupport', 'linifadomra'] },
     { id: 'gettingStarted', label: t('categories.gettingStarted'), questions: ['romRequired', 'whereToGetRom', 'controller', 'updates', 'saves'] },
     { id: 'technical', label: t('categories.technical'), questions: ['graphics', 'multiplayer', 'mods', 'bugs', 'contribute', 'translation'] },
     { id: 'legal', label: t('categories.legal'), questions: ['legal'] }

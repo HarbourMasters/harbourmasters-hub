@@ -15,7 +15,7 @@
     "description": "El primer paso de Mario en 3D como nunca lo has visto."
   },
   "spaghetti": {
-    "name": "SpaghettiKart",
+    "name": "Spaghetti Kart",
     "tagline": "Port de PC de Mario Kart 64",
     "description": "Revive el clásico Mario Kart 64 en PC con multijugador local, gráficos mejorados y rendimiento fluido."
   },
@@ -23,6 +23,11 @@
     "name": "Starship",
     "tagline": "Port de PC de Star Fox 64",
     "description": "¡Vuela a través de las esquinas del sistema Lylat en HD!"
+  },
+  "lighthouse": {
+    "name": "Lighthouse",
+    "tagline": "Port de PC de Banjo-Kazooie",
+    "description": "Un port para PC del amado plataformas de Rare, con mejoras modernas, altas tasas de fotogramas y soporte para mods."
   },
   "lus": {
     "name": "LibUltraShip",

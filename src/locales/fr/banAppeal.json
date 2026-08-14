@@ -1,0 +1,17 @@
+{
+  "badge": "Discord",
+  "title": "Contester un bannissement",
+  "subtitle": "Soumettez une demande de débannissement pour le serveur Discord Harbour Masters.",
+  "discordUsername": "Nom d'utilisateur Discord",
+  "discordUsernamePlaceholder": "ex. nomutilisateur ou 123456789012345678",
+  "discordUsernameHelp": "Entrez votre nom d'utilisateur Discord exactement tel qu'il apparaît dans votre profil, ou votre identifiant Discord.",
+  "discordUsernameHelpAlt": "N'incluez pas les pseudonymes propres à chaque serveur.",
+  "reason": "Raison de votre demande",
+  "reasonPlaceholder": "Expliquez pourquoi vous pensez que votre bannissement devrait être reconsidéré...",
+  "reasonHelp": "Développez les raisons pour lesquelles vous souhaitez contester cette décision.",
+  "privacyNote": "Les bannissements liés à la piraterie sont définitifs et non négociables.",
+  "submitButton": "Envoyer ma demande",
+  "submitting": "Envoi en cours...",
+  "successTitle": "Demande envoyée",
+  "successMessage": "Merci pour votre demande. Notre équipe l'examinera lors de la prochaine session de révision et vous tiendra informé."
+}

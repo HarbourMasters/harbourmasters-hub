@@ -1,6 +1,6 @@
 {
-  "siteName": "Harbour Masters 64",
-  "tagline": "Ports PC natifs de jeux N64 classiques",
+  "siteName": "Harbour Masters",
+  "tagline": "Ports PC natifs de jeux N64 et GameCube classiques",
   "back": "Retour",
   "forks": "Forks",
   "stars": "Étoiles",
@@ -20,7 +20,8 @@
     "tools.comingSoon": "Outils de modding bientôt...",
     "changelog": "Notes de mise à jour",
     "faq": "FAQ",
-    "about": "À propos"
+    "about": "À propos",
+    "banAppeal": "Contester un bannissement"
   },
   "languageSwitcher": {
     "label": "Langue",
@@ -70,7 +71,7 @@
     "copied": "Copié !"
   },
   "footer": {
-    "tagline": "Les classiques N64 sur des plateformes modernes",
+    "tagline": "Les classiques N64 et GameCube sur des plateformes modernes",
     "links": {
       "github": "Organisation GitHub",
       "discord": "Discord",
@@ -81,7 +82,7 @@
       "terms": "Conditions d'utilisation",
       "disclaimer": "Avertissement"
     },
-    "copyright": "© {{year}} Harbour Masters 64. Tous droits réservés.",
+    "copyright": "© {{year}} Harbour Masters. Tous droits réservés.",
     "quickLinks": "Liens rapides",
     "connect": "Communauté",
     "openSource": "Open Source",
@@ -90,8 +91,8 @@
     "freeOpenSourceBadge": "100% gratuit et open source",
     "builtByCommunity": "Créé par la communauté,\npour la communauté",
     "viewSourceOnGitHub": "Voir le code source sur GitHub",
-    "definitiveN64Ports": "Les ports PC N64 de référence",
-    "nativePortsDescription": "Ports PC natifs de jeux Nintendo 64 classiques, reconstruits à partir de zéro avec des améliorations modernes.\nPas d'émulation — performances natives pures.",
+    "definitiveN64Ports": "Les ports PC N64 et GameCube de référence",
+    "nativePortsDescription": "Ports PC natifs de jeux Nintendo 64 et GameCube classiques, reconstruits à partir de zéro avec des améliorations modernes.\nPas d'émulation — performances natives pures.",
     "githubStars": "Étoiles GitHub",
     "madeWithLove": "Fait avec ❤️ par la communauté",
     "mitLicense": "Licence MIT"
@@ -123,7 +124,9 @@
     "githubStars": "Étoiles GitHub",
     "totalDownloads": "Total des téléchargements",
     "activePorts": "Ports actifs",
-    "viewAllOnGitHub": "Voir tout sur GitHub"
+    "viewAllOnGitHub": "Voir tout sur GitHub",
+    "inProgress": "En cours",
+    "locked": "Verrouillé — bientôt disponible"
   },
   "romDatabase": {
     "format": "Format",

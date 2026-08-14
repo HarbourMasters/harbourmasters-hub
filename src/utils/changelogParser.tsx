@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 export interface ParsedChangelog {
   whatsChanged: ChangelogEntry[]
   newContributors: NewContributor[]
+  sections: ChangelogSection[]
   fullChangelogUrl: string
 }
 
@@ -18,6 +19,13 @@ export interface NewContributor {
   username: string
   prUrl: string
   prNumber: string
+}
+
+// Hand-written release notes (e.g. Starship) that have no PR attributions are
+// surfaced as plain labelled bullet groups instead.
+export interface ChangelogSection {
+  label: string
+  items: string[]
 }
 
 /**
@@ -35,35 +43,23 @@ export function parseChangelog(markdown: string, repoUrl: string): ParsedChangel
   const owner = repoMatch?.[1] || 'HarbourMasters'
   const repo = repoMatch?.[2] || 'Shipwright'
 
-  // Split by lines
+  // Match by line shape rather than section heading, so PRs and contributors
+  // are picked up no matter what the release author titled the section.
   const lines = markdown.split('\n')
-  let currentSection: 'whatsChanged' | 'newContributors' | null = null
+  const seenPR = new Set<string>()
+  const seenContributor = new Set<string>()
 
   for (let i = 0; i < lines.length; i++) {
-    let line = lines[i].trim()
+    const line = lines[i].trim()
 
-    // Skip empty lines
     if (!line) continue
 
-    // Detect "What's Changed" section (case-insensitive, with/without apostrophe)
-    if (line.match(/^##+\s+What'?s?\s+Changed/i)) {
-      currentSection = 'whatsChanged'
-      continue
-    }
-
-    // Detect "New Contributors" section
-    if (line.match(/^##+\s+New\s+Contributors/i)) {
-      currentSection = 'newContributors'
-      continue
-    }
-
-    // Detect "Full Changelog" link (various formats)
+    // "Full Changelog" link may sit inside a <details> block
     if (line.match(/^__?Full\s+Changelog__:?\s*/i) || line.match(/^\*\*Full\s+Changelog\*\*:/i)) {
       const urlMatch = line.match(/(https:\/\/github\.com\/[^\/\s]+\/[^\/\s]+\/compare\/[^\s\)]+)/)
       if (urlMatch) {
         fullChangelogUrl = urlMatch[1]
       } else {
-        // Extract version range if URL is not present
         const versionMatch = line.match(/\d+\.\d+\.\d+\.\.\.(\d+\.\d+\.\d+)/)
         if (versionMatch) {
           fullChangelogUrl = `${repoUrl}/compare/${versionMatch[0]}`
@@ -72,62 +68,79 @@ export function parseChangelog(markdown: string, repoUrl: string): ParsedChangel
       continue
     }
 
-    // Skip lines outside our sections or that are headers
-    if (!currentSection || line.startsWith('#')) {
+    if (/^<\/?(?:details|summary)\b/i.test(line) || line.startsWith('#')) continue
+
+    const content = line.replace(/^[-*•]\s*/, '').trim()
+    if (!content) continue
+
+    const contribMatch = content.match(/^@([\w-]+)(?:\s+made their first contribution\s+(?:in|at))?\s*(?:https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/)?#?(\d+)?/)
+    if (contribMatch) {
+      const username = contribMatch[1]
+      const prNumber = contribMatch[2] || ''
+      if (username && !seenContributor.has(username)) {
+        seenContributor.add(username)
+        newContributors.push({
+          username,
+          prNumber,
+          prUrl: prNumber ? `https://github.com/${owner}/${repo}/pull/${prNumber}` : ''
+        })
+      }
       continue
     }
 
-    // Remove leading list markers (-, *, •)
-    line = line.replace(/^[-*•]\s*/, '').trim()
-
-    // Parse PR entries in "What's Changed"
-    if (currentSection === 'whatsChanged') {
-      // Format 1: "description by @author in https://github.com/org/repo/pull/123"
-      // Format 2: "description by @author in #123"
-      // Format 3: "description by @author (https://github.com/org/repo/pull/123)"
-      // Handle various prepositions: "in", "at", "via"
-
-      let prMatch = line.match(/^(.+?)\s+by\s+@(\w+)(?:\s+(?:in|at|via)\s+(?:https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/)?#?(\d+))?/)
-
-      if (prMatch) {
-        const title = prMatch[1].trim()
-        const author = prMatch[2]
-        const prNumber = prMatch[3]
-        const url = prMatch[3]
-          ? `https://github.com/${owner}/${repo}/pull/${prMatch[3]}`
-          : `https://github.com/${owner}/${repo}/pull/${prNumber || ''}`
-
-        if (title && author) {
-          whatsChanged.push({ title, author, url, prNumber: prNumber || '' })
-        }
+    const prMatch = content.match(/^(.+?)\s+by\s+@([\w-]+)(?:\s+(?:in|at|via)\s+(?:https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/)?#?(\d+))?/)
+    if (prMatch) {
+      const title = prMatch[1].trim()
+      const author = prMatch[2]
+      const prNumber = prMatch[3] || ''
+      const dedupeKey = prNumber || `${author}:${title}`
+      if (title && author && !seenPR.has(dedupeKey)) {
+        seenPR.add(dedupeKey)
+        whatsChanged.push({
+          title,
+          author,
+          prNumber,
+          url: prNumber ? `https://github.com/${owner}/${repo}/pull/${prNumber}` : ''
+        })
       }
     }
+  }
 
-    // Parse contributor entries in "New Contributors"
-    if (currentSection === 'newContributors') {
-      // Format 1: "@username made their first contribution in https://github.com/org/repo/pull/123"
-      // Format 2: "@username made their first contribution in #123"
-      // Format 3: "@username in #123" (shortened format)
-
-      let contribMatch = line.match(/^@(\w+)(?:\s+made their first contribution\s+(?:in|at))?\s*(?:https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/)?#?(\d+)?/)
-
-      if (contribMatch) {
-        const username = contribMatch[1]
-        const prNumber = contribMatch[2]
-        const prUrl = contribMatch[2]
-          ? `https://github.com/${owner}/${repo}/pull/${contribMatch[2]}`
-          : ''
-
-        if (username) {
-          newContributors.push({ username, prUrl, prNumber: prNumber || '' })
-        }
-      }
+  // Fallback for hand-written notes: if we found no PRs or contributors, lift
+  // the bullet lists out of the body grouped by the heading/label above them.
+  const sections: ChangelogSection[] = []
+  if (whatsChanged.length === 0 && newContributors.length === 0) {
+    let label = ''
+    let items: string[] = []
+    const flush = () => {
+      if (items.length > 0) sections.push({ label, items: items })
+      label = ''
+      items = []
     }
+    for (const raw of lines) {
+      const line = raw.trim()
+      if (!line) continue
+      if (/^<\/?(?:details|summary)\b/i.test(line)) continue
+      if (/^(?:<a\b|<\/a>|<picture|<\/picture>|<img\b|<source\b|!\[)/i.test(line)) continue
+      if (/^__?Full\s+Changelog__:?\s*/i.test(line) || /^\*\*Full\s+Changelog\*\*:/.test(line)) { flush(); continue }
+      if (/^#+\s*Download\b/i.test(line)) { flush(); continue }
+
+      const bullet = line.match(/^[-*•]\s+(.+)/)
+      if (bullet) {
+        items.push(bullet[1].trim())
+        continue
+      }
+
+      flush()
+      label = line.replace(/^#+\s*/, '').replace(/[:：]\s*$/, '').trim()
+    }
+    flush()
   }
 
   return {
     whatsChanged,
     newContributors,
+    sections,
     fullChangelogUrl
   }
 }
@@ -215,6 +228,27 @@ export function ChangelogContent({ parsed, repoUrl: _repoUrl }: { parsed: Parsed
         </div>
       )}
 
+      {/* Manual notes (hand-written release bodies without PR attributions) */}
+      {parsed.sections.length > 0 && (
+        <div className="space-y-6">
+          {parsed.sections.map((section, index) => (
+            <div key={index}>
+              {section.label && (
+                <h4 className="font-semibold text-lg text-[var(--color-text)] mb-4">{section.label}</h4>
+              )}
+              <div className="space-y-2">
+                {section.items.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3 text-base leading-relaxed">
+                    <span className="text-[var(--color-text-muted)] shrink-0 mt-0.5">•</span>
+                    <span className="flex-1 min-w-0 text-[var(--color-text)]">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Full Changelog Link */}
       {parsed.fullChangelogUrl && (
         <div className="pt-4 border-t border-[var(--color-border)]">
@@ -231,7 +265,7 @@ export function ChangelogContent({ parsed, repoUrl: _repoUrl }: { parsed: Parsed
       )}
 
       {/* Fallback if nothing was parsed */}
-      {parsed.whatsChanged.length === 0 && parsed.newContributors.length === 0 && (
+      {parsed.whatsChanged.length === 0 && parsed.newContributors.length === 0 && parsed.sections.length === 0 && (
         <p className="text-[var(--color-text-muted)] italic">
           {t('gameDetail:noChangelog')}
         </p>

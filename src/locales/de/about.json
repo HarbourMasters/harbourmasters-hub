@@ -1,14 +1,14 @@
 {
   "badge": "Unsere Geschichte",
   "title": "Über Uns",
-  "subtitle": "Erfahren Sie mehr über Harbour Masters 64 und LibUltraShip",
+  "subtitle": "Erfahren Sie mehr über Harbour Masters und LibUltraShip",
   "whatIsHM": {
-    "title": "Was ist Harbour Masters 64?",
-    "content": "Harbour Masters 64 ist ein Team leidenschaftlicher Entwickler, die der Erhaltung und Verbesserung von klassischen Nintendo 64-Spielen durch native PC-Ports gewidmet sind. Wir bauen auf Dekompilierungsprojekten auf, sobald diese abgeschlossen sind, und erstellen den originalen Spielcode in modernem C++ neu und verbessern ihn mit neuen Funktionen."
+    "title": "Was ist Harbour Masters?",
+    "content": "Harbour Masters ist ein Team leidenschaftlicher Entwickler, die der Erhaltung und Verbesserung von klassischen Nintendo 64- und GameCube-Spielen durch native PC-Ports gewidmet sind. Wir bauen auf Dekompilierungsprojekten auf, sobald diese abgeschlossen sind, und erstellen den originalen Spielcode in modernem C++ neu und verbessern ihn mit neuen Funktionen."
   },
   "whatIsLUS": {
     "title": "Was ist LibUltraShip (LUS)?",
-    "content": "LibUltraShip (LUS) ist unsere moderne Neuimplementierung des Nintendo 64 SDK, bekannt als LibUltra. Es bietet die Grundlage für alle unsere Ports und verarbeitet Grafik, Audio, Eingabe und Kern-Spiel-Systeme. LUS ermöglicht es uns, N64-Spiele auf moderne Plattformen zu bringen mit erweiterten Funktionen und Cross-Plattform-Support.",
+    "content": "LibUltraShip (LUS) ist unsere moderne Neuimplementierung des Nintendo 64 SDK, bekannt als LibUltra. Es bietet die Grundlage für alle unsere Ports und verarbeitet Grafik, Audio, Eingabe und Kern-Spiel-Systeme. LUS unterstützt mittlerweile sowohl Nintendo 64- als auch GameCube-Spiele und ermöglicht es uns, diese auf moderne Plattformen zu bringen mit erweiterten Funktionen und Cross-Plattform-Support.",
     "features": [
       "Moderne Grafik-Backends (DirectX 11, OpenGL, Metal)",
       "Verbessertes Audio mit positionalem Sound",
@@ -30,7 +30,7 @@
   },
   "team": {
     "title": "Das Team",
-    "content": "Harbour Masters 64 ist möglich durch Beiträge von Entwicklern, Reverse-Engineers und Community-Mitgliedern auf der ganzen Welt. Treten Sie unserem Discord bei, um sich mit der Community zu verbinden!"
+    "content": "Harbour Masters ist möglich durch Beiträge von Entwicklern, Reverse-Engineers und Community-Mitgliedern auf der ganzen Welt. Treten Sie unserem Discord bei, um sich mit der Community zu verbinden!"
   },
   "legal": {
     "title": "Rechtliche Informationen",

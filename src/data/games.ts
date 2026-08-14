@@ -1,15 +1,15 @@
 import { Game, GameId } from '@/types/game';
 
 export const GAMES: Record<GameId, Game> = {
-  shipwright: {
-    id: 'shipwright',
+  shipofharkinian: {
+    id: 'shipofharkinian',
     name: 'Ship of Harkinian',
     fullName: 'Ship of Harkinian',
     tagline: 'The Legend of Zelda: Ocarina of Time',
     description: 'A native PC port of the N64 classic, featuring enhanced graphics, mod support, and modern controls.',
     themeId: 'shipwright',
     gradient: 'from-emerald-600/30 to-green-400/20',
-    icon: '/icons/games/ShipOfHarkinian.png',
+    icon: '/icons/games/ShipOfHarkinian.webp',
     stars: '4638',
     latestVersion: '9.2.3',
     repo: {
@@ -35,15 +35,15 @@ export const GAMES: Record<GameId, Game> = {
       slug: 'soh'
     }
   },
-  '2ship': {
-    id: '2ship',
+  '2ship2harkinian': {
+    id: '2ship2harkinian',
     name: '2ship2Harkinian',
     fullName: '2ship2Hakinian',
     tagline: 'The Legend of Zelda: Majora\'s Mask',
     description: 'Experience the temporal adventure with modern enhancements and quality-of-life improvements.',
     themeId: '2ship',
     gradient: 'from-purple-600/30 to-pink-400/20',
-    icon: '/icons/games/2Ship2Hakinian.png',
+    icon: '/icons/games/2Ship2Hakinian.webp',
     stars: '1856',
     latestVersion: '6.0.2',
     repo: {
@@ -77,7 +77,7 @@ export const GAMES: Record<GameId, Game> = {
     description: 'The iconic 3D platformer brought to modern PCs with enhanced features.',
     themeId: 'ghostship',
     gradient: 'from-red-500/30 to-blue-500/20',
-    icon: '/icons/games/Ghostship.png',
+    icon: '/icons/games/Ghostship.webp',
     stars: '484',
     latestVersion: '1.0.3',
     repo: {
@@ -103,15 +103,15 @@ export const GAMES: Record<GameId, Game> = {
       slug: 'ghostship'
     }
   },
-  spaghetti: {
-    id: 'spaghetti',
-    name: 'SpaghettiKart',
-    fullName: 'SpaghettiKart',
+  spaghettikart: {
+    id: 'spaghettikart',
+    name: 'Spaghetti Kart',
+    fullName: 'Spaghetti Kart',
     tagline: 'Mario Kart 64',
     description: 'Relive the classic Mario Kart 64 on PC with local multiplayer, enhanced graphics and smooth performance.',
     themeId: 'spaghetti',
     gradient: 'from-yellow-500/30 to-red-500/20',
-    icon: '/icons/games/SpaghettiKart.png',
+    icon: '/icons/games/SpaghettiKart.webp',
     stars: '2123',
     latestVersion: '2.1.0',
     repo: {
@@ -145,7 +145,7 @@ export const GAMES: Record<GameId, Game> = {
     description: 'Barrel roll through space in this faithful port with modern enhancements.',
     themeId: 'starship',
     gradient: 'from-blue-600/30 to-orange-500/20',
-    icon: '/icons/games/Starship.png',
+    icon: '/icons/games/Starship.webp',
     stars: '1809',
     latestVersion: '1.1.2',
     repo: {
@@ -170,6 +170,42 @@ export const GAMES: Record<GameId, Game> = {
       url: 'https://gamebanana.com/games/21612',
       slug: 'starship'
     }
+  },
+  lighthouse: {
+    id: 'lighthouse',
+    name: 'Lighthouse',
+    fullName: 'Lighthouse',
+    tagline: 'Banjo-Kazooie',
+    description: 'A native PC port of the beloved Rare platformer, with modern enhancements, high framerates, and mod support.',
+    themeId: 'lighthouse',
+    gradient: 'from-blue-500/30 to-red-500/20',
+    icon: '/icons/games/Lighthouse.webp',
+    stars: '34',
+    latestVersion: '1.0.0',
+    repo: {
+      owner: 'HarbourMasters',
+      name: 'Lighthouse'
+    },
+    features: [
+      'Native PC port with modern enhancements',
+      'High framerate support',
+      'Widescreen and enhanced graphics',
+      'Mod support',
+      'Modern controls',
+      'Online play',
+      'Romhack support',
+    ],
+    releases: [],
+    links: {
+      github: 'https://github.com/HarbourMasters/Lighthouse',
+      discord: 'https://discord.gg/harbourmasters',
+      wiki: 'https://wiki.harbourmasters.com'
+    },
+    gamebanana: {
+      gameId: 25172,
+      url: 'https://gamebanana.com/games/25172',
+      slug: 'lighthouse'
+    }
   }
 };
 
@@ -177,7 +213,7 @@ export const GAMES: Record<GameId, Game> = {
 export const ORG_STATS = {
   totalStars: 10910,
   totalForks: 1120,
-  totalPorts: 5,
+  totalPorts: 6,
   founded: 2022
 } as const;
 

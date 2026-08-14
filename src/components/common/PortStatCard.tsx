@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { GameIcon } from './GameIcon'
 import { detectOS, type DetectedOS } from '@/utils/platform'
+import { getTheme, getGameTheme } from '@/themes'
+import { formatNumber, formatNumberCompact } from '@/utils/formatters'
 
 interface GitHubRelease {
   tag_name: string
@@ -37,16 +39,29 @@ interface PortStatCardProps {
   index: number
 }
 
+/**
+ * Stat value: shows the full grouped number when the card is wide enough,
+ * and falls back to a compact 3.2K / 12.3K form when the card is narrow.
+ * The card root is a Tailwind `@container`, so the @min-[280px] variant
+ * tracks the card's own width — not the viewport.
+ */
+function StatValue({ value }: { value: number }) {
+  return (
+    <span className="font-bold tabular-nums">
+      <span className="hidden @min-[280px]:inline">{formatNumber(value)}</span>
+      <span className="@min-[280px]:hidden">{formatNumberCompact(value)}</span>
+    </span>
+  )
+}
+
 export const PortStatCard = React.memo(function PortStatCard({ game, index }: PortStatCardProps) {
   const { t } = useTranslation(['common', 'home'])
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M+`
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K+`
-    return num.toLocaleString()
-  }
-
   const userOS = detectOS()
+
+  // Resolve this card's own game theme so the hover gradient matches the logo
+  // background used on each game's detail page (primary -> accent).
+  const cardTheme = getTheme(getGameTheme(game.id))
 
   function getDownloadUrl(os: DetectedOS): { url: string | null; isAvailable: boolean } {
     if (!game.releaseData?.assets) {
@@ -90,24 +105,25 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
 
   return (
     <div
-      className="group relative flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-[var(--color-accent)]/15 animate-on-scroll"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className="group relative @container flex flex-col p-6 rounded-3xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--card-accent)] card-hover animate-on-scroll"
+      style={{ '--card-primary': cardTheme.colors.primary, '--card-accent': cardTheme.colors.accent, animationDelay: `${index * 100}ms` } as React.CSSProperties}
     >
       {/* Gradient Background Effect */}
-      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`} />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--card-primary)] to-[var(--card-accent)] opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10" />
 
       {/* Game Icon */}
-      <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${game.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-        <GameIcon game={{ id: game.id, name: game.name, icon: game.githubUrl.includes('Shipwright') ? '/icons/games/ShipOfHarkinian.png' :
-                                game.githubUrl.includes('2ship') ? '/icons/games/2Ship2Hakinian.png' :
-                                game.githubUrl.includes('Ghostship') ? '/icons/games/Ghostship.png' :
-                                game.githubUrl.includes('Spaghetti') ? '/icons/games/SpaghettiKart.png' :
-                                game.githubUrl.includes('Starship') ? '/icons/games/Starship.png' : undefined } as any} className="w-12 h-12" />
+      <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[var(--card-primary)] to-[var(--card-accent)] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+        <GameIcon game={{ id: game.id, name: game.name, icon: game.githubUrl.includes('Shipwright') ? '/icons/games/ShipOfHarkinian.webp' :
+                                game.githubUrl.includes('2ship') ? '/icons/games/2Ship2Hakinian.webp' :
+                                game.githubUrl.includes('Ghostship') ? '/icons/games/Ghostship.webp' :
+                                game.githubUrl.includes('Spaghetti') ? '/icons/games/SpaghettiKart.webp' :
+                                game.githubUrl.includes('Starship') ? '/icons/games/Starship.webp' :
+                                game.githubUrl.includes('Lighthouse') ? '/icons/games/Lighthouse.webp' : undefined } as any} className="w-16 h-16" />
       </div>
 
       {/* Game Name & Tagline */}
       <div className="text-center mb-6">
-        <h3 className="font-display font-bold text-lg mb-1 group-hover:text-[var(--color-accent)] transition-colors">
+        <h3 className="font-display font-bold text-lg mb-1 group-hover:text-[var(--card-accent)] transition-colors">
           {game.name}
         </h3>
         <p className="text-xs text-[var(--color-text-muted)] line-clamp-2">{game.tagline}</p>
@@ -120,7 +136,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
             <Star size={16} />
             <span className="text-[var(--color-text-muted)]">{t('common:stars')}</span>
           </div>
-          <span className="font-bold">{formatNumber(game.stats.stars)}</span>
+          <StatValue value={game.stats.stars} />
         </div>
 
         <div className="flex items-center justify-between text-sm p-2 rounded-xl bg-[var(--color-background)]/50">
@@ -128,7 +144,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
             <Download size={16} />
             <span className="text-[var(--color-text-muted)]">{t('common:downloads')}</span>
           </div>
-          <span className="font-bold">{formatNumber(game.stats.totalDownloads)}</span>
+          <StatValue value={game.stats.totalDownloads} />
         </div>
 
         {game.stats.forks > 0 && (
@@ -137,7 +153,7 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
               <GitFork size={16} />
               <span className="text-[var(--color-text-muted)]">{t('common:forks')}</span>
             </div>
-            <span className="font-bold">{formatNumber(game.stats.forks)}</span>
+            <StatValue value={game.stats.forks} />
           </div>
         )}
 
@@ -191,20 +207,22 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
             href={game.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={t('common:ariaLabels.viewOnGitHub')}
             className="flex items-center justify-center gap-1 py-2.5 bg-[var(--color-background)] hover:bg-[var(--color-surface-hover)] border border-[var(--color-border)] hover:border-[var(--color-primary)] font-semibold text-sm rounded-xl transition-all duration-300"
             title={t('common:ariaLabels.viewOnGitHub')}
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
           </a>
 
           <Link
             to={`/game/${game.id}`}
+            aria-label={t('common:ariaLabels.viewDetails')}
             className="flex items-center justify-center gap-1 py-2.5 bg-[var(--color-background)] hover:bg-[var(--color-surface-hover)] border border-[var(--color-border)] hover:border-[var(--color-accent)] font-semibold text-sm rounded-xl transition-all duration-300"
             title={t('common:ariaLabels.viewDetails')}
           >
-            <ArrowRight size={16} />
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>

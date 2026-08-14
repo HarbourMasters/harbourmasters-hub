@@ -1,6 +1,6 @@
 {
   "title": "Domande Frequenti",
-  "subtitle": "Tutto quello che devi sapere sui nostri port PC N64",
+  "subtitle": "Tutto quello che devi sapere sui nostri port PC N64 e GameCube",
   "badge": "Base di Conoscenza",
   "search": "Cerca domande...",
   "searchResults": "Trovate {{count}} domande corrispondenti",
@@ -17,11 +17,11 @@
   "questions": {
     "whatIs": {
       "question": "Cos'è Harbour Masters?",
-      "answer": "Harbour Masters è una comunità di sviluppatori che crea port PC nativi di giochi Nintendo 64. Facciamo reverse engineering di giochi classici da zero utilizzando il nostro motore personalizzato LibUltraShip, ricostruendoli per funzionare nativamente su sistemi operativi moderni con funzionalità migliorate."
+      "answer": "Harbour Masters è una comunità di sviluppatori che crea port PC nativi di giochi Nintendo 64 e GameCube. Facciamo reverse engineering di giochi classici da zero utilizzando il nostro motore personalizzato LibUltraShip, ricostruendoli per funzionare nativamente su sistemi operativi moderni con funzionalità migliorate."
     },
     "whatIsLUS": {
       "question": "Cos'è LibUltraShip?",
-      "answer": "LibUltraShip (LUS) è la nostra reimplementazione personalizzata del sistema operativo e delle librerie Nintendo 64. Permette ai giochi N64 di funzionare nativamente su PC senza emulazione, abilitando funzionalità come risoluzioni più elevate, controlli moderni e supporto per le mod."
+      "answer": "LibUltraShip (LUS) è la nostra reimplementazione personalizzata del sistema operativo e delle librerie Nintendo 64. Ora permette sia ai giochi N64 che GameCube di funzionare nativamente su PC senza emulazione, abilitando funzionalità come risoluzioni più elevate, controlli moderni e supporto per le mod."
     },
     "romRequired": {
       "question": "Mi serve un file ROM?",
@@ -39,9 +39,21 @@
       "question": "Questi port sono davvero gratuiti?",
       "answer": "Sì! Tutti i nostri port sono completamente gratuiti e open source. Crediamo nella preservazione della storia dei videogiochi e nel rendere questi classici accessibili a tutti. Non accettiamo donazioni - facciamo questo puramente per amore verso questi giochi."
     },
+    "rebrand": {
+      "question": "Perché avete tolto il '64' dal nome?",
+      "answer": "Abbiamo aggiornato il nostro livello LibUltraShip (LUS) per supportare i giochi dell'era GameCube, non solo il Nintendo 64. Poiché non siamo più un progetto esclusivamente N64, il '64' non aveva più senso — quindi ora siamo semplicemente Harbour Masters. Stessi progetti, un team in crescita e un focus più ampio."
+    },
+    "gamecubeSupport": {
+      "question": "Significa che porterete anche giochi GameCube?",
+      "answer": "Sì. Il nostro livello LUS aggiornato supporta ora i titoli dell'era GameCube insieme ai giochi Nintendo 64. Stiamo ampliando il nostro focus per coprire entrambe le piattaforme, e diversi progetti GameCube sono già in lavorazione."
+    },
+    "linifadomra": {
+      "question": "In cosa consiste la vostra collaborazione con Linifadomra?",
+      "answer": "Ci siamo uniti all'incredibile team di Linifadomra. Il loro progetto, Twilight Princess: Courage Reborn, è sviluppato utilizzando LUS, e i nostri team si stanno fondendo — Supporto e Sviluppo di Linifadomra hanno ora casa nel Discord di Harbour Masters. Linifadomra mantiene la totale libertà creativa e continuerà a offrire i risultati che la sua community si aspetta; Harbour Masters fornisce assistenza allo sviluppo, supporto a lungo termine e visibilità."
+    },
     "whichGames": {
       "question": "Quali giochi sono disponibili?",
-      "answer": "Attualmente abbiamo port per: Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), SpaghettiKart (Mario Kart 64), e Starship (Star Fox 64). Altri progetti sono sempre in sviluppo."
+      "answer": "Attualmente abbiamo port per: Ship of Harkinian (Ocarina of Time), 2ship2Harkinian (Majora's Mask), Ghostship (Super Mario 64), Spaghetti Kart (Mario Kart 64), e Starship (Star Fox 64). Ci stiamo anche espandendo ai titoli GameCube — tra cui Twilight Princess: Courage Reborn, in collaborazione con Linifadomra — e altri progetti sono sempre in sviluppo."
     },
     "controller": {
       "question": "Quali controller sono supportati?",

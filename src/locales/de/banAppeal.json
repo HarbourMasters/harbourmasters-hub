@@ -1,0 +1,17 @@
+{
+  "badge": "Discord",
+  "title": "Einspruch gegen Bann",
+  "subtitle": "Reiche einen Einspruch gegen deinen Bann auf dem Harbour Masters Discord-Server ein.",
+  "discordUsername": "Discord-Benutzername",
+  "discordUsernamePlaceholder": "z.B. benutzername oder 123456789012345678",
+  "discordUsernameHelp": "Gib deinen Discord-Benutzernamen genau so ein, wie er in deinem Profil steht, oder deine Discord-ID.",
+  "discordUsernameHelpAlt": "Ohne server-spezifische Spitznamen.",
+  "reason": "Begründung des Einspruchs",
+  "reasonPlaceholder": "Erkläre, warum der Bann deiner Meinung nach überprüft werden sollte...",
+  "reasonHelp": "Gehe möglichst ausführlich auf die Gründe für deinen Einspruch ein.",
+  "privacyNote": "Bans wegen Piraterie sind dauerhaft und werden nicht verhandelt.",
+  "submitButton": "Einspruch einreichen",
+  "submitting": "Wird gesendet...",
+  "successTitle": "Einspruch eingereicht",
+  "successMessage": "Vielen Dank für deinen Einspruch. Unser Team wird ihn bei der nächsten Prüfungsrunde bewerten und dich auf dem Laufenden halten."
+}

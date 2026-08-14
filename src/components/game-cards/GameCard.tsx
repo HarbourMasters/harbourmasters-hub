@@ -9,6 +9,7 @@ import { Calendar, Download, ExternalLink } from 'lucide-react'
 import { PlatformIcon } from '@/utils/platformIcons'
 import { GameIcon } from '@/components/common/GameIcon'
 import { detectOS, type DetectedOS } from '@/utils/platform'
+import { getTheme, getGameTheme } from '@/themes'
 
 interface GameCardProps {
   game: Game
@@ -20,6 +21,10 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
   const { release, loading } = useLatestRelease(game.id as GameId)
 
   const userOS = detectOS()
+
+  // Resolve this card's own game theme so the hover gradient matches the logo
+  // background used on each game's detail page (primary -> accent).
+  const cardTheme = getTheme(getGameTheme(game.id))
 
   function getDownloadUrl(os: DetectedOS): string | null {
     if (!release?.assets) return null
@@ -76,16 +81,17 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
     <Link
       to={`/game/${game.id}`}
       className={`group relative overflow-hidden rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] card-hover ${className}`}
+      style={{ '--card-primary': cardTheme.colors.primary, '--card-accent': cardTheme.colors.accent } as React.CSSProperties}
     >
       {/* Theme Background */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--card-primary)] to-[var(--card-accent)]" />
       </div>
 
       <div className="relative p-6">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
-          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--card-primary)] to-[var(--card-accent)] flex items-center justify-center">
             <GameIcon game={game} className="w-10 h-10" />
           </div>
           {loading ? (
@@ -98,7 +104,7 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
         </div>
 
         {/* Content */}
-        <h3 className="font-display text-xl font-bold mb-1 group-hover:text-[var(--color-primary)] transition-colors">
+        <h3 className="font-display text-xl font-bold mb-1 group-hover:text-[var(--card-accent)] transition-colors">
           {game.name}
         </h3>
         <p className="text-sm text-[var(--color-text-muted)] mb-4">
@@ -183,7 +189,7 @@ const GameCard = React.memo(function GameCard({ game, className = '' }: GameCard
               <Download size={16} />
             </div>
           )}
-          <ExternalLink size={14} className="text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)] transition-colors" />
+          <ExternalLink size={14} className="text-[var(--color-text-muted)] group-hover:text-[var(--card-accent)] transition-colors" />
         </div>
       </div>
     </Link>

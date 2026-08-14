@@ -96,12 +96,22 @@ export function formatFileSize(bytes: number, locale = 'en-US'): string {
 }
 
 /**
- * Format download counts with K/M suffixes
+ * Full number with locale grouping (follows the browser/OS locale).
+ * 0 → zeroDisplay (default '—').
  */
-export function formatDownloadCount(count: number, zeroDisplay = '—'): string {
+export function formatNumber(count: number, zeroDisplay = '—'): string {
   if (count === 0) return zeroDisplay
-  if (count >= 1000000) return `${(count / 1000000).toFixed(1)}M`
-  if (count >= 1000) return `${(count / 1000).toFixed(0)}K`
+  return count.toLocaleString()
+}
+
+/**
+ * Compact number with K/M suffix; decimal separator follows the browser locale.
+ * Used only where horizontal space is tight (e.g. narrow port cards).
+ * 1000 → 1K, 3200 → 3.2K (or 3,2K), 1,234,567 → 1.2M.
+ */
+export function formatNumberCompact(count: number): string {
+  if (count >= 1_000_000) return `${(count / 1_000_000).toLocaleString(undefined, { maximumFractionDigits: 1 })}M`
+  if (count >= 1000) return `${(count / 1000).toLocaleString(undefined, { maximumFractionDigits: 1 })}K`
   return count.toLocaleString()
 }
 
