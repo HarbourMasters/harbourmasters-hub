@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Menu, X, Anchor, ChevronDown, FileSearch, Library, MessageSquare, Music } from 'lucide-react'
+import { Menu, X, Anchor, ChevronDown, FileSearch, Library, MessageSquare, Music, Radio } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -22,7 +22,8 @@ function Header() {
     { path: '/tools/rom-checker', label: t('nav.tools.romChecker'), icon: FileSearch, disabled: false },
     { path: '/tools/mods', label: t('nav.tools.modLibrary'), icon: Library, disabled: false },
     { path: '/tools/message-editor', label: t('nav.tools.messageEditor'), icon: MessageSquare, disabled: true },
-    { path: '/tools/audio', label: t('nav.tools.audioTool'), icon: Music, disabled: true }
+    { path: '/tools/audio', label: t('nav.tools.audioTool'), icon: Music, disabled: true },
+    { path: '/tools/radio-editor', label: 'Radio Editor', icon: Radio, disabled: false }
   ]
 
   const isActive = (path: string) => {
