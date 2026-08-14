@@ -23,7 +23,7 @@ function Header() {
     { path: '/tools/mods', label: t('nav.tools.modLibrary'), icon: Library, disabled: false },
     { path: '/tools/message-editor', label: t('nav.tools.messageEditor'), icon: MessageSquare, disabled: true },
     { path: '/tools/audio', label: t('nav.tools.audioTool'), icon: Music, disabled: true },
-    { path: '/tools/radio-editor', label: 'Radio Editor', icon: Radio, disabled: false }
+    { path: '/tools/radio-editor', label: 'Space Communication', icon: Radio, disabled: false }
   ]
 
   const isActive = (path: string) => {
