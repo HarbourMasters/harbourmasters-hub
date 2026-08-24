@@ -298,7 +298,7 @@ export function GitHubStats() {
   const totalStars = gameStats.reduce((sum, g) => sum + g.stats.stars, 0)
 
   return (
-    <section className="py-20 bg-[var(--color-surface)]/30">
+    <section id="ports" className="scroll-mt-20 py-20 bg-[var(--color-surface)]/30">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16">

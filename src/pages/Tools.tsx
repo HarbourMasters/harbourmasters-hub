@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { useHashSpy } from '@/hooks/useHashSpy'
 import { Sparkles, FileSearch, Library, Radio, MessageSquare, Music, Wrench } from 'lucide-react'
 import { GAMES } from '@/data/games'
 import { DOCS_SUMMARY } from '@/data/docs'
@@ -28,6 +29,7 @@ function GameSectionHeader({ game, icon: Icon }: { game: Game; icon?: LucideIcon
 
 function Tools({ }: ToolsProps) {
   const { t } = useTranslation(['common', 'tools'])
+  useHashSpy(['general', 'shipofharkinian', '2ship2harkinian', 'starship'])
 
   const starship = GAMES.starship
   const soh = GAMES.shipofharkinian
@@ -76,7 +78,7 @@ function Tools({ }: ToolsProps) {
       <div className="py-16">
         <div className="container max-w-6xl space-y-16">
           {/* General */}
-          <section>
+          <section id="general" className="scroll-mt-20">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-500/40 to-slate-400/30 flex items-center justify-center shadow-lg">
                 <Wrench size={18} className="text-white" />
@@ -106,7 +108,7 @@ function Tools({ }: ToolsProps) {
           </section>
 
           {/* Ship of Harkinian (2022) — docs first, then tools */}
-          <section>
+          <section id="shipofharkinian" className="scroll-mt-20">
             <GameSectionHeader game={soh} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {docsSummary('shipofharkinian') && (
@@ -138,7 +140,7 @@ function Tools({ }: ToolsProps) {
           </section>
 
           {/* 2ship2Harkinian (2024) — docs first, then tools */}
-          <section>
+          <section id="2ship2harkinian" className="scroll-mt-20">
             <GameSectionHeader game={ship2} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {docsSummary('2ship2harkinian') && (
@@ -162,7 +164,7 @@ function Tools({ }: ToolsProps) {
           </section>
 
           {/* Starship (2025) — docs first, then tools */}
-          <section>
+          <section id="starship" className="scroll-mt-20">
             <GameSectionHeader game={starship} />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {docsSummary('starship') && (

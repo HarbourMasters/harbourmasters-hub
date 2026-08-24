@@ -1,6 +1,7 @@
 import { Download, Monitor, Gamepad2, Globe, Zap, Settings, Shield, Heart, Github as GitHubIcon, ExternalLink, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useHashSpy } from '@/hooks/useHashSpy'
 import { DiscordWidget } from '@/components/home/DiscordWidget'
 import { GitHubStats } from '@/components/home/GitHubStats'
 import { QuickStartGuide } from '@/components/home/QuickStartGuide'
@@ -34,6 +35,7 @@ const aboutIconMap: Record<string, React.ReactNode> = {
 
 function Home() {
   const { t } = useTranslation(['home', 'common'])
+  useHashSpy(['features', 'stats', 'about', 'community', 'legal'])
 
   // Get features from translations
   const featuresList = t('home:whatWeOffer.features', { returnObjects: true }) as FeatureItem[]
@@ -111,7 +113,7 @@ function Home() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section className="py-24 bg-[var(--color-surface)]/30">
+      <section id="features" className="scroll-mt-20 py-24 bg-[var(--color-surface)]/30">
         <div className="container">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -153,7 +155,7 @@ function Home() {
       <GitHubStats />
 
       {/* ABOUT SECTION */}
-      <section className="py-24">
+      <section id="about" className="scroll-mt-20 py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
@@ -195,7 +197,7 @@ function Home() {
       </section>
 
       {/* DISCORD & GAMES SECTION */}
-      <section className="py-24 bg-[var(--color-surface)]/30">
+      <section id="community" className="scroll-mt-20 py-24 bg-[var(--color-surface)]/30">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start stagger-children">
             {/* Discord Widget */}
@@ -220,7 +222,7 @@ function Home() {
       </section>
 
       {/* LEGAL NOTICE */}
-      <section className="py-16 border-t border-[var(--color-border)]">
+      <section id="legal" className="scroll-mt-20 py-16 border-t border-[var(--color-border)]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="p-8 rounded-2xl bg-yellow-500/5 border border-yellow-500/20">

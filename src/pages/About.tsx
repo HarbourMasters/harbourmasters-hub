@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Code, Users, Scale, Github, Sparkles } from 'lucide-react'
+import { useHashSpy } from '@/hooks/useHashSpy'
 import { DiscordWidget } from '@/components/home/DiscordWidget'
 
 function About() {
   const { t } = useTranslation('about')
+  useHashSpy(['whatIsHM', 'whatIsLUS', 'ourPorts', 'team', 'legal'])
 
   const sections = [
     {
@@ -104,7 +106,7 @@ function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-[var(--color-surface)]/50">
+      <section id="team" className="scroll-mt-20 py-16 bg-[var(--color-surface)]/50">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
@@ -126,7 +128,7 @@ function About() {
       </section>
 
       {/* Legal Section */}
-      <section className="py-16">
+      <section id="legal" className="scroll-mt-20 py-16">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-6">

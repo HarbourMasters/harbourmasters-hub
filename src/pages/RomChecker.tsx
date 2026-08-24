@@ -5,10 +5,12 @@ import { AlertCircle, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BackToTools } from '@/components/tools/BackToTools'
+import { useHashSpy } from '@/hooks/useHashSpy'
 
 function RomChecker() {
   const { t } = useTranslation(['common', 'tools'])
   const [verifiedHash, setVerifiedHash] = useState<string | undefined>()
+  useHashSpy(['database', 'help'])
 
   return (
     <div className="min-h-screen">
@@ -48,14 +50,14 @@ function RomChecker() {
           <RomVerifier onHashVerified={setVerifiedHash} />
 
           {/* Full ROM Database Table */}
-          <div className="mt-16">
+          <div id="database" className="scroll-mt-20 mt-16">
             <RomDatabaseTable highlightedHash={verifiedHash} />
           </div>
         </div>
       </section>
 
       {/* FAQ Link */}
-      <section className="py-12">
+      <section id="help" className="scroll-mt-20 py-12">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <div className="flex items-start gap-4 p-6 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20">

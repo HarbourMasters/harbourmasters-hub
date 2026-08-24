@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, ChevronUp, Search, BookOpen, Code, Shield, Rocket } from 'lucide-react'
+import { useHashSpy } from '@/hooks/useHashSpy'
 import { DiscordWidget } from '@/components/home/DiscordWidget'
 
 // Category icons mapping
@@ -22,6 +23,8 @@ function FAQ() {
     { id: 'technical', label: t('categories.technical'), questions: ['graphics', 'multiplayer', 'mods', 'bugs', 'contribute', 'translation'] },
     { id: 'legal', label: t('categories.legal'), questions: ['legal'] }
   ]
+
+  useHashSpy(categories.map(c => c.id))
 
   const toggleExpand = (key: string) => {
     setExpandedItems(prev => {
@@ -109,7 +112,7 @@ function FAQ() {
               if (filteredQuestions.length === 0) return null
 
               return (
-                <div key={category.id} className="animate-on-scroll">
+                <div key={category.id} id={category.id} className="scroll-mt-20 animate-on-scroll">
                   {/* Category Header */}
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-accent)]">

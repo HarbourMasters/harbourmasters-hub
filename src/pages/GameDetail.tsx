@@ -2,6 +2,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/hooks/useTheme'
+import { useHashSpy } from '@/hooks/useHashSpy'
 import { getGame, GAMES } from '@/data/games'
 import { useReleases } from '@/hooks/useGitHub'
 import type { GameId } from '@/types/game'
@@ -50,6 +51,7 @@ function GameDetail() {
   const navigate = useNavigate()
   const { t } = useTranslation(['common', 'gameDetail'])
   const { setGameTheme, setTheme } = useTheme()
+  useHashSpy(['downloads', 'older-versions', 'other-games'])
 
   const game = getGame(gameId || '')
 
@@ -121,7 +123,7 @@ function GameDetail() {
       </section>
 
       {/* Latest Release */}
-      <section className="py-12">
+      <section id="downloads" className="scroll-mt-20 py-12">
         <div className="container">
           <h2 className="font-display text-2xl font-bold mb-6">{t('gameDetail:sections.latestRelease')}</h2>
           <LatestReleaseDownloads gameId={game.id} />
@@ -129,7 +131,7 @@ function GameDetail() {
       </section>
 
       {/* Older Versions */}
-      <section className="py-12 bg-[var(--color-surface)]/50">
+      <section id="older-versions" className="scroll-mt-20 py-12 bg-[var(--color-surface)]/50">
         <div className="container">
           <h2 className="font-display text-2xl font-bold mb-6">{t('gameDetail:sections.olderVersions')}</h2>
           <OlderVersionsList gameId={game.id} repoUrl={game.links.github} />
@@ -137,7 +139,7 @@ function GameDetail() {
       </section>
 
       {/* Other Games */}
-      <section className="py-12">
+      <section id="other-games" className="scroll-mt-20 py-12">
         <div className="container">
           <h2 className="font-display text-2xl font-bold mb-6">{t('gameDetail:sections.otherPorts')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
