@@ -102,5 +102,60 @@
     "helpStep4": "Previsualiza la muestra original (del O2R) y la tuya una al lado de la otra.",
     "helpStep5": "Ajusta los puntos de loop usando el visualizador de forma de onda.",
     "helpStep6": "Convierte y descarga los archivos .sohsample."
+  },
+  "landing": {
+    "badge": "Herramientas & Mods",
+    "title": "Herramientas & Modding",
+    "subtitle": "Todo lo que necesitas para modificar tus ports de Harbour Masters.",
+    "description": "Verifica tus ROMs, explora los mods de la comunidad y adéntrate en la documentación de assets de cada juego — con más herramientas en camino para cada port.",
+    "sections": {
+      "general": "General",
+      "community": "Comunidad"
+    },
+    "openTool": "Abrir herramienta",
+    "comingSoon": "Próximamente",
+    "docsBadge": "Documentación",
+    "docsMeta": "{{tables}} tablas · {{entries}} entradas",
+    "tools": {
+      "spaceCommunication": "Space Communication",
+      "spaceCommunicationDesc": "Edita los mensajes de radio de Starship directamente en tu navegador."
+    },
+    "lockedToolsCard": {
+      "title": "Herramientas de modding",
+      "description": "Herramientas de modding dedicadas a este port están en desarrollo."
+    },
+    "docsTitle": "Tabla de assets de {{game}}"
+  },
+  "docs": {
+    "badge": "Documentación de assets",
+    "subtitle": "Tablas de referencia que relacionan los assets del decomp con este port, sincronizadas desde la hoja de cálculo de documentación del equipo.",
+    "searchPlaceholder": "Buscar entradas...",
+    "openInSheets": "Abrir en Google Sheets",
+    "backToTools": "Volver a las herramientas",
+    "entries": "{{count}} entradas",
+    "showingOf": "Mostrando {{shown}} de {{total}} entradas",
+    "noResults": "No hay entradas coincidentes",
+    "noResultsHint": "Prueba con otro término de búsqueda.",
+    "loadError": "No se pudieron cargar los datos de documentación.",
+    "loadErrorCta": "Reintentar",
+    "lastUpdated": "Última actualización {{date}}",
+    "notFoundTitle": "Documentación no encontrada",
+    "notFoundDescription": "Aún no hay documentación de assets para este juego.",
+    "tables": {
+      "gameplay-dls": "Display Lists de juego",
+      "overlay-ui-dls": "Display Lists de overlays e interfaz",
+      "custom-dls": "Display Lists personalizadas",
+      "custom-equipment-dls": "Equipamiento personalizado",
+      "skeletons": "Esqueletos",
+      "link-models": "Modelos de Link",
+      "bone-names": "Nombres de huesos",
+      "animations": "Animaciones",
+      "audio-samples": "Muestras de audio",
+      "scene-dls": "Display Lists de escenas",
+      "dls": "Display Lists",
+      "import-tracking": "Seguimiento de importación",
+      "player-animations": "Animaciones del jugador",
+      "models": "Modelos y Display Lists"
+    }
   }
 }

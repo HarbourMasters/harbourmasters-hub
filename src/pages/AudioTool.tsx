@@ -9,6 +9,7 @@ import { SampleTable } from '@/tools/audio-tool/components/SampleTable';
 import { ConvertButton } from '@/tools/audio-tool/components/ConvertButton';
 import { WaveformVisualizer } from '@/tools/audio-tool/components/WaveformVisualizer';
 import { useAudioSamples } from '@/tools/audio-tool/hooks/useAudioSamples';
+import { BackToTools } from '@/components/tools/BackToTools';
 import { useConversion } from '@/tools/audio-tool/hooks/useConversion';
 import type { SampleMetaEntry } from '@/tools/audio-tool/data/sample-meta-types';
 
@@ -73,6 +74,7 @@ function AudioTool() {
       {/* Hero */}
       <section className="relative pt-[var(--header-height)] pb-10 md:pb-14 bg-[var(--color-surface)]/30 overflow-hidden">
         <div className="container relative z-10">
+          <BackToTools />
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Music size={16} className="text-[var(--color-accent)]" />

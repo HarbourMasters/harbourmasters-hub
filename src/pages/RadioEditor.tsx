@@ -6,6 +6,7 @@ import { radioMessageToBlob, generatePreview, type RadioMessageEntry } from '@/t
 import { SF64TextureCache } from '@/tools/radio-editor/lib/sf64-texture-cache';
 import { SF64VoicePlayer } from '@/tools/radio-editor/lib/sf64-voice-player';
 import { RadioFileUpload } from '@/tools/radio-editor/components/RadioFileUpload';
+import { BackToTools } from '@/components/tools/BackToTools';
 import { RadioMessageList } from '@/tools/radio-editor/components/RadioMessageList';
 import { RadioMessageEditor } from '@/tools/radio-editor/components/RadioMessageEditor';
 
@@ -345,6 +346,7 @@ function RadioEditor() {
       {/* Hero */}
       <section className="relative pt-[var(--header-height)] pb-10 md:pb-14 bg-[var(--color-surface)]/30 overflow-hidden">
         <div className="container relative z-10">
+          <BackToTools />
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Radio size={16} className="text-[var(--color-accent)]" />

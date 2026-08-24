@@ -51,6 +51,26 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://harbourmasters.com/tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://harbourmasters.com/tools/docs/shipofharkinian</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://harbourmasters.com/tools/docs/2ship2harkinian</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://harbourmasters.com/tools/docs/starship</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://harbourmasters.com/tools/rom-checker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -1,0 +1,121 @@
+{
+  "games": {
+    "shipofharkinian": {
+      "spreadsheetId": "1rOTt_7Wr0OGfMR9tHom8dDOooM3rUocz9xi7axpR0sY",
+      "tables": [
+        {
+          "id": "gameplay-dls",
+          "gid": 0,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "SoH Directory", "SoH Name (For Export)"],
+          "booleanHeaders": ["Out of Range?", "PRed ?"]
+        },
+        {
+          "id": "overlay-ui-dls",
+          "gid": 951353687,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "SoH Directory", "SoH Name (For Export)"],
+          "booleanHeaders": ["PRed?"]
+        },
+        {
+          "id": "custom-dls",
+          "gid": 987430605,
+          "monoHeaders": ["Directory", "DL Name"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "custom-equipment-dls",
+          "gid": 556482990,
+          "monoHeaders": ["Directory", "DL Name", "Matches"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "skeletons",
+          "gid": 1609438228,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "SoH Directory", "SoH Name (For Export)"],
+          "booleanHeaders": ["PRed?"]
+        },
+        {
+          "id": "link-models",
+          "gid": 932738326,
+          "monoHeaders": ["Directory", "DL Name", "Matches"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "bone-names",
+          "gid": 1876119429,
+          "monoHeaders": ["Decomp Skel Name", "SoH Skel Name", "Bone Name"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "animations",
+          "gid": 1203459525,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "SoH Directory", "SoH Name (For Export)", "Continues From", "Continues To"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "audio-samples",
+          "gid": 646444424,
+          "monoHeaders": ["File Name", "Sample Rate"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "scene-dls",
+          "gid": 1051942098,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "SoH Directory", "SoH Name (For Export)"],
+          "booleanHeaders": []
+        }
+      ]
+    },
+    "2ship2harkinian": {
+      "spreadsheetId": "1Ke2OSwFBqpn7HG9bWQHS0eeyEOFukItEraZSbJdCFsE",
+      "tables": [
+        {
+          "id": "dls",
+          "gid": 0,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "import-tracking",
+          "gid": 179828382,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "2S2H Directory", "2S2H Name (For Export)"],
+          "booleanHeaders": ["Out of Range?"]
+        },
+        {
+          "id": "custom-dls",
+          "gid": 121620523,
+          "monoHeaders": ["Directory", "DL Name", "Matches"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "skeletons",
+          "gid": 1565535820,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "2S2H Directory", "2S2H Name (For Export)"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "player-animations",
+          "gid": 1105174728,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "2S2H Directory", "2S2H Name (For Export)"],
+          "booleanHeaders": []
+        },
+        {
+          "id": "scene-dls",
+          "gid": 1362373407,
+          "monoHeaders": ["Decomp Directory", "Decomp File Name (For Import)", "2S2H Directory", "2S2H Name (For Export)"],
+          "booleanHeaders": []
+        }
+      ]
+    },
+    "starship": {
+      "spreadsheetId": "1_QBxBQ7Fjup4uwSDlKGx1Bl_BsikCxQar1nkwwt5Ndk",
+      "tables": [
+        {
+          "id": "models",
+          "gid": 1534607151,
+          "monoHeaders": ["Directory", "Dlist"],
+          "booleanHeaders": []
+        }
+      ]
+    }
+  }
+}

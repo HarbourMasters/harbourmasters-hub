@@ -102,5 +102,60 @@
     "helpStep4": "Vergleichen Sie das Original-Sample (aus O2R) mit Ihrem eigenen.",
     "helpStep5": "Passen Sie die Loop-Punkte im Wellenform-Visualizer an.",
     "helpStep6": "Konvertieren und laden Sie die .sohsample-Dateien herunter."
+  },
+  "landing": {
+    "badge": "Tools & Modding",
+    "title": "Tools & Modding",
+    "subtitle": "Alles, was du zum Modden deiner Harbour-Masters-Ports brauchst.",
+    "description": "Prüfe deine ROMs, stöbere in Community-Mods und tauche in die Asset-Dokumentation der einzelnen Spiele ein — weitere Tools sind in Arbeit.",
+    "sections": {
+      "general": "Allgemein",
+      "community": "Community"
+    },
+    "openTool": "Tool öffnen",
+    "comingSoon": "Demnächst verfügbar",
+    "docsBadge": "Dokumentation",
+    "docsMeta": "{{tables}} Tabellen · {{entries}} Einträge",
+    "tools": {
+      "spaceCommunication": "Space Communication",
+      "spaceCommunicationDesc": "Bearbeite Starship-Funknachrichten direkt im Browser."
+    },
+    "lockedToolsCard": {
+      "title": "Modding-Tools",
+      "description": "Spezielle Modding-Tools für diesen Port sind in Entwicklung."
+    },
+    "docsTitle": "{{game}} Assets-Tabelle"
+  },
+  "docs": {
+    "badge": "Asset-Dokumentation",
+    "subtitle": "Referenztabellen, die Decomp-Assets diesem Port zuordnen — synchronisiert aus dem Dokumentations-Tabellenblatt des Teams.",
+    "searchPlaceholder": "Einträge durchsuchen...",
+    "openInSheets": "In Google Sheets öffnen",
+    "backToTools": "Zurück zu den Tools",
+    "entries": "{{count}} Einträge",
+    "showingOf": "{{shown}} von {{total}} Einträgen",
+    "noResults": "Keine passenden Einträge",
+    "noResultsHint": "Versuche einen anderen Suchbegriff.",
+    "loadError": "Dokumentationsdaten konnten nicht geladen werden.",
+    "loadErrorCta": "Erneut versuchen",
+    "lastUpdated": "Zuletzt aktualisiert {{date}}",
+    "notFoundTitle": "Dokumentation nicht gefunden",
+    "notFoundDescription": "Für dieses Spiel gibt es (noch) keine Asset-Dokumentation.",
+    "tables": {
+      "gameplay-dls": "Gameplay-Display-Lists",
+      "overlay-ui-dls": "Overlay- & UI-Display-Lists",
+      "custom-dls": "Benutzerdefinierte Display-Lists",
+      "custom-equipment-dls": "Benutzerdefinierte Ausrüstung",
+      "skeletons": "Skelette",
+      "link-models": "Link-Modelle",
+      "bone-names": "Knochennamen",
+      "animations": "Animationen",
+      "audio-samples": "Audio-Samples",
+      "scene-dls": "Szenen-Display-Lists",
+      "dls": "Display-Lists",
+      "import-tracking": "Import-Verfolgung",
+      "player-animations": "Spieler-Animationen",
+      "models": "Modelle & Display-Lists"
+    }
   }
 }

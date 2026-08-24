@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
+    "sync:docs": "node scripts/sync-docs.mjs",
     "lighthouse": "node scripts/lh.mjs"
   },
   "dependencies": {

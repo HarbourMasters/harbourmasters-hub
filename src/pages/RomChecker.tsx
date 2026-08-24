@@ -4,6 +4,7 @@ import { RomDatabaseTable } from '@/components/downloads/RomDatabaseTable'
 import { AlertCircle, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BackToTools } from '@/components/tools/BackToTools'
 
 function RomChecker() {
   const { t } = useTranslation(['common', 'tools'])
@@ -19,6 +20,7 @@ function RomChecker() {
         </div>
 
         <div className="container relative z-10">
+          <BackToTools />
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Sparkles size={16} className="text-[var(--color-accent)]" />

@@ -3,6 +3,7 @@ import { GAMES } from '@/data/games'
 import { fetchModCount } from '@/utils/gamebanana'
 import { ExternalLink, Sparkles, Loader2 } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { BackToTools } from '@/components/tools/BackToTools'
 
 type ModCountState = { count: number } | 'loading' | 'error'
 
@@ -48,6 +49,7 @@ function ModLibrary() {
         </div>
 
         <div className="container relative z-10">
+          <BackToTools />
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Sparkles size={16} className="text-[var(--color-accent)]" />

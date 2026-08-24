@@ -102,5 +102,60 @@
     "helpStep4": "Anteprima del campione originale (dall'O2R) e del tuo affiancati.",
     "helpStep5": "Regola i punti di loop usando il visualizzatore di forme d'onda.",
     "helpStep6": "Converti e scarica i file .sohsample."
+  },
+  "landing": {
+    "badge": "Strumenti & Modding",
+    "title": "Strumenti & Modding",
+    "subtitle": "Tutto ciò che serve per moddare le tue port Harbour Masters.",
+    "description": "Verifica le tue ROM, esplora i mod della community e tuffati nella documentazione degli asset di ogni gioco — con altri strumenti in arrivo per ogni port.",
+    "sections": {
+      "general": "Generale",
+      "community": "Community"
+    },
+    "openTool": "Apri strumento",
+    "comingSoon": "In arrivo",
+    "docsBadge": "Documentazione",
+    "docsMeta": "{{tables}} tabelle · {{entries}} voci",
+    "tools": {
+      "spaceCommunication": "Space Communication",
+      "spaceCommunicationDesc": "Modifica i messaggi radio di Starship direttamente nel browser."
+    },
+    "lockedToolsCard": {
+      "title": "Strumenti di modding",
+      "description": "Strumenti di modding dedicati a questa port sono in sviluppo."
+    },
+    "docsTitle": "Tabella degli asset di {{game}}"
+  },
+  "docs": {
+    "badge": "Documentazione degli asset",
+    "subtitle": "Tabelle di riferimento che collegano gli asset del decomp a questa port, sincronizzate dal foglio di calcolo della documentazione del team.",
+    "searchPlaceholder": "Cerca voci...",
+    "openInSheets": "Apri in Google Sheets",
+    "backToTools": "Torna agli strumenti",
+    "entries": "{{count}} voci",
+    "showingOf": "{{shown}} di {{total}} voci",
+    "noResults": "Nessuna voce corrispondente",
+    "noResultsHint": "Prova con un altro termine di ricerca.",
+    "loadError": "Caricamento della documentazione non riuscito.",
+    "loadErrorCta": "Riprova",
+    "lastUpdated": "Ultimo aggiornamento {{date}}",
+    "notFoundTitle": "Documentazione non trovata",
+    "notFoundDescription": "Non c'è (ancora) documentazione degli asset per questo gioco.",
+    "tables": {
+      "gameplay-dls": "Display Lists di gioco",
+      "overlay-ui-dls": "Display Lists di overlay e interfaccia",
+      "custom-dls": "Display Lists personalizzate",
+      "custom-equipment-dls": "Equipaggiamento personalizzato",
+      "skeletons": "Scheletri",
+      "link-models": "Modelli di Link",
+      "bone-names": "Nomi delle ossa",
+      "animations": "Animazioni",
+      "audio-samples": "Campioni audio",
+      "scene-dls": "Display Lists delle scene",
+      "dls": "Display Lists",
+      "import-tracking": "Tracciamento importazioni",
+      "player-animations": "Animazioni del giocatore",
+      "models": "Modelli e Display Lists"
+    }
   }
 }

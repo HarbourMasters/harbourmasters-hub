@@ -10,6 +10,7 @@ import { SFXPlayer } from '@/lib/audio/sfx-player';
 import { PlaySimulator, type SimulationState } from '@/tools/message-editor/lib/play-simulator';
 import { TextureCache } from '@/tools/message-editor/lib/texture-cache';
 import { FontRenderer } from '@/tools/message-editor/lib/font-renderer';
+import { BackToTools } from '@/components/tools/BackToTools';
 import { MessageEditorFileUpload } from '@/tools/message-editor/components/FileUpload';
 import { MessageList } from '@/tools/message-editor/components/MessageList';
 import { MessageEditorPanel } from '@/tools/message-editor/components/MessageEditor';
@@ -225,6 +226,7 @@ function MessageEditor() {
       {/* Hero */}
       <section className="relative pt-[var(--header-height)] pb-10 md:pb-14 bg-[var(--color-surface)]/30 overflow-hidden">
         <div className="container relative z-10">
+          <BackToTools />
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
               <Sparkles size={16} className="text-[var(--color-accent)]" />

@@ -1,6 +1,77 @@
 {
   "title": "Tools & Modding",
   "badge": "Utilities",
+  "landing": {
+    "badge": "Tools & Modding",
+    "title": "Tools & Modding",
+    "subtitle": "Everything you need to mod your Harbour Masters ports.",
+    "description": "Verify your ROMs, browse community mods, and dive into per-game asset documentation — with more tools on the way for each port.",
+    "sections": {
+      "general": "General",
+      "community": "Community"
+    },
+    "openTool": "Open Tool",
+    "comingSoon": "Coming Soon",
+    "docsBadge": "Documentation",
+    "docsMeta": "{{tables}} tables · {{entries}} entries",
+    "tools": {
+      "spaceCommunication": "Space Communication",
+      "spaceCommunicationDesc": "Edit Starship radio messages and communications directly in your browser."
+    },
+    "lockedToolsCard": {
+      "title": "Modding Tools",
+      "description": "Dedicated modding tools for this port are in development."
+    },
+    "docsTitle": "{{game}} Assets Table"
+  },
+  "docs": {
+    "badge": "Asset Documentation",
+    "subtitle": "Reference tables mapping decomp assets to this port, synced from the team's documentation spreadsheet.",
+    "searchPlaceholder": "Search entries...",
+    "openInSheets": "Open in Google Sheets",
+    "backToTools": "Back to Tools",
+    "entries": "{{count}} entries",
+    "showingOf": "Showing {{shown}} of {{total}} entries",
+    "noResults": "No matching entries",
+    "noResultsHint": "Try a different search term.",
+    "loadError": "Failed to load the documentation data.",
+    "loadErrorCta": "Try again",
+    "lastUpdated": "Last updated {{date}}",
+    "notFoundTitle": "Documentation not found",
+    "notFoundDescription": "There is no asset documentation for this game (yet).",
+    "tables": {
+      "gameplay-dls": "Gameplay Display Lists",
+      "overlay-ui-dls": "Overlay & UI Display Lists",
+      "custom-dls": "Custom Display Lists",
+      "custom-equipment-dls": "Custom Equipment Display Lists",
+      "skeletons": "Skeletons",
+      "link-models": "Link Models",
+      "bone-names": "Bone Names",
+      "animations": "Animations",
+      "audio-samples": "Audio Samples",
+      "scene-dls": "Scene Display Lists",
+      "dls": "Display Lists",
+      "import-tracking": "Import Tracking",
+      "player-animations": "Player Animations",
+      "models": "Models & Display Lists"
+    },
+    "tableDescriptions": {
+      "gameplay-dls": "Display lists for gameplay objects and actors, mapped between the decomp project and the port.",
+      "overlay-ui-dls": "Display lists for overlays (arrows, magic, ocarina effects) and UI elements.",
+      "custom-dls": "Custom display lists added by the port itself, with their source model files.",
+      "custom-equipment-dls": "Custom equipment display lists and the vanilla entries they replace.",
+      "skeletons": "Skeleton assets mapped between the decomp project and the port.",
+      "link-models": "Link model variants — implemented entries and proposals.",
+      "bone-names": "Bone names for each skeleton, as used by the port's model system.",
+      "animations": "Animation assets with frame counts, mapped between the decomp project and the port.",
+      "audio-samples": "Audio samples with sample rates, as stored by the port.",
+      "scene-dls": "Display lists for scene and room geometry.",
+      "dls": "Display lists for objects and actors, ready for import.",
+      "import-tracking": "Assets already imported into the port, tracked during the import process.",
+      "player-animations": "Player animation assets ready for import.",
+      "models": "Star Fox 64 display lists — vehicles, characters, levels, and UI models."
+    }
+  },
   "romChecker": {
     "title": "ROM Compatibility Checker",
     "subtitle": "Verify your ROM files against our compatibility database.",

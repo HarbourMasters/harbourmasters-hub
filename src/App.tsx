@@ -18,6 +18,8 @@ const MessageEditor = lazy(() => import('./pages/MessageEditor'))
 const AudioTool = lazy(() => import('./pages/AudioTool'))
 const RadioEditor = lazy(() => import('./pages/RadioEditor'))
 const BanAppeal = lazy(() => import('./pages/BanAppeal'))
+const Tools = lazy(() => import('./pages/Tools'))
+const GameDocs = lazy(() => import('./pages/GameDocs'))
 
 function App() {
   return (
@@ -42,6 +44,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/downloads" element={<Downloads />} />
+                <Route path="/tools" element={<Tools />} />
+                <Route path="/tools/docs/:gameId" element={<GameDocs />} />
+                <Route path="/tools/docs/:gameId/:tableId" element={<GameDocs />} />
                 <Route path="/tools/rom-checker" element={<RomChecker />} />
                 <Route path="/tools/mods" element={<ModLibrary />} />
                 <Route path="/tools/message-editor" element={<MessageEditor />} />

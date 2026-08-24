@@ -21,3 +21,15 @@ This is the **Harbour Masters HUB** — a one-stop website where users can find 
 - **Mod library** — browse and discover community mods via GameBanana integration
 - **FAQ** — frequently asked questions and guides
 - **Tools & modding tools** — progressively added as they're completed (message editor, audio tool, and more coming soon)
+- **Asset documentation** — per-game reference tables (display lists, skeletons, animations, audio samples…) synced from the team's Google Sheets and rendered in-site at `/tools/docs/<game>`
+
+### Syncing asset documentation
+
+The docs pages read committed JSON snapshots under `src/data/docs/` — the site never talks to Google at runtime. When a spreadsheet changes, re-run:
+
+```bash
+npm run sync:docs              # all games
+npm run sync:docs -- --game=starship   # one game
+```
+
+Spreadsheet IDs and per-table config live in `src/data/docs/docs.config.json` (single source of truth shared by the sync script and the site).
