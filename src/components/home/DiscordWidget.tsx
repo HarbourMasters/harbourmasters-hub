@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { MessageSquare, Users, Crown, ExternalLink, Shield, Sparkles } from 'lucide-react'
+import { formatNumber, formatNumberCompact } from '@/utils/formatters'
+
+// Single source of truth for the invite: the join links and the stats fetch must use the
+// same code, otherwise Discord answers 404 and the widget silently renders empty.
+const DISCORD_INVITE_CODE = 'harbourmasters'
+const DISCORD_INVITE_URL = `https://discord.gg/${DISCORD_INVITE_CODE}`
+const DISCORD_INVITE_API_URL = `https://discord.com/api/v9/invites/${DISCORD_INVITE_CODE}?with_counts=true`
 
 interface DiscordData {
   name: string
@@ -16,14 +23,26 @@ interface DiscordData {
   nsfwLevel: number
 }
 
+function StatValue({ value }: { value: number }) {
+  return (
+    <span className="tabular-nums">
+      <span className="hidden @min-[140px]:inline">{formatNumber(value)}</span>
+      <span className="@min-[140px]:hidden">{formatNumberCompact(value, 0)}</span>
+    </span>
+  )
+}
+
 export function DiscordWidget() {
   const { t } = useTranslation(['common'])
   const [data, setData] = useState<DiscordData | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('https://discord.com/api/v9/invites/shipofharkinian?with_counts=true')
-      .then(res => res.json())
+    fetch(DISCORD_INVITE_API_URL)
+      .then(res => {
+        if (!res.ok) throw new Error(`Discord invite lookup failed: ${res.status}`)
+        return res.json()
+      })
       .then(json => {
         setData({
           name: json.guild?.name || 'Harbour Masters',
@@ -52,12 +71,6 @@ export function DiscordWidget() {
     )
   }
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K`
-    return num.toString()
-  }
-
   const iconUrl = data?.icon
     ? `https://cdn.discordapp.com/icons/808039310850130000/${data.icon}.gif`
     : null
@@ -74,7 +87,7 @@ export function DiscordWidget() {
 
   return (
     <a
-      href="https://discord.gg/harbourmasters"
+      href={DISCORD_INVITE_URL}
       target="_blank"
       rel="noopener noreferrer"
       className="group relative block min-w-0"
@@ -162,26 +175,26 @@ export function DiscordWidget() {
         <div className="p-4 sm:p-6">
           {/* Main Stats Row */}
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+            <div className="@container flex items-center gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-indigo-500/20 flex items-center justify-center">
                 <Users size={24} className="text-indigo-400" />
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-bold leading-none text-indigo-300">
-                  {formatNumber(data?.memberCount || 0)}
+                  {data ? <StatValue value={data.memberCount} /> : '—'}
                 </div>
                 <div className="text-xs text-[var(--color-text-muted)]">{t('common:discord.totalMembers')}</div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
+            <div className="@container flex items-center gap-2.5 p-3 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-green-500/20 flex items-center justify-center relative">
                 <div className="w-4 h-4 rounded-full bg-green-500 animate-pulse" />
                 <div className="absolute inset-0 rounded-full bg-green-500/20 animate-ping" />
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-bold leading-none text-green-300">
-                  {formatNumber(data?.onlineCount || 0)}
+                  {data ? <StatValue value={data.onlineCount} /> : '—'}
                 </div>
                 <div className="text-xs text-[var(--color-text-muted)]">{t('common:discord.onlineNow')}</div>
               </div>
@@ -220,21 +233,25 @@ export function DiscordWidgetCompact() {
   const [data, setData] = useState<{ memberCount: number; onlineCount: number } | null>(null)
 
   useEffect(() => {
-    fetch('https://discord.com/api/v9/invites/shipofharkinian?with_counts=true')
-      .then(res => res.json())
+    fetch(DISCORD_INVITE_API_URL)
+      .then(res => {
+        if (!res.ok) throw new Error(`Discord invite lookup failed: ${res.status}`)
+        return res.json()
+      })
       .then(json => {
         setData({
           memberCount: json.approximate_member_count || 0,
           onlineCount: json.approximate_presence_count || 0
         })
       })
+      .catch(() => setData(null))
   }, [])
 
   if (!data) return null
 
   return (
     <a
-      href="https://discord.gg/harbourmasters"
+      href={DISCORD_INVITE_URL}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-3 px-4 py-2 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 transition-colors"
@@ -244,7 +261,7 @@ export function DiscordWidgetCompact() {
         <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[var(--color-background)]" />
       </div>
       <div className="text-sm">
-        <span className="font-bold text-indigo-400">{data.onlineCount.toLocaleString()}</span>
+        <span className="font-bold text-indigo-400">{formatNumber(data.onlineCount)}</span>
         <span className="text-[var(--color-text-muted)]"> {t('common:discord.online')}</span>
       </div>
     </a>

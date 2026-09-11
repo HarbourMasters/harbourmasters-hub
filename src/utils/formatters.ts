@@ -108,10 +108,11 @@ export function formatNumber(count: number, zeroDisplay = '—'): string {
  * Compact number with K/M suffix; decimal separator follows the browser locale.
  * Used only where horizontal space is tight (e.g. narrow port cards).
  * 1000 → 1K, 3200 → 3.2K (or 3,2K), 1,234,567 → 1.2M.
+ * Pass maximumFractionDigits = 0 where even the decimal does not fit (3200 → 3K).
  */
-export function formatNumberCompact(count: number): string {
-  if (count >= 1_000_000) return `${(count / 1_000_000).toLocaleString(undefined, { maximumFractionDigits: 1 })}M`
-  if (count >= 1000) return `${(count / 1000).toLocaleString(undefined, { maximumFractionDigits: 1 })}K`
+export function formatNumberCompact(count: number, maximumFractionDigits = 1): string {
+  if (count >= 1_000_000) return `${(count / 1_000_000).toLocaleString(undefined, { maximumFractionDigits })}M`
+  if (count >= 1000) return `${(count / 1000).toLocaleString(undefined, { maximumFractionDigits })}K`
   return count.toLocaleString()
 }
 
