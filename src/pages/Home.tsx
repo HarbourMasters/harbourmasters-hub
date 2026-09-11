@@ -35,7 +35,8 @@ const aboutIconMap: Record<string, React.ReactNode> = {
 
 function Home() {
   const { t } = useTranslation(['home', 'common'])
-  useHashSpy(['features', 'ports', 'about', 'community', 'legal'])
+  // Keep this in DOM order: the spy activates the last section whose top has scrolled past.
+  useHashSpy(['community', 'features', 'ports', 'about', 'legal'])
 
   // Get features from translations
   const featuresList = t('home:whatWeOffer.features', { returnObjects: true }) as FeatureItem[]
@@ -108,6 +109,31 @@ function Home() {
                 <span className="group-hover:text-[var(--color-accent)] transition-colors">{game.name}</span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DISCORD & GAMES SECTION */}
+      <section id="community" className="scroll-mt-20 py-24 bg-[var(--color-surface)]/30">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-start stagger-children">
+            {/* Discord Widget */}
+            <div className="animate-on-scroll min-w-0">
+              <h2 className="font-display text-3xl font-bold mb-4">{t('home:community.title')}</h2>
+              <p className="text-[var(--color-text-muted)] mb-8">
+                {t('home:community.subtitle')}
+              </p>
+              <DiscordWidget />
+            </div>
+
+            {/* Quick Start Guide */}
+            <div className="animate-on-scroll min-w-0">
+              <h2 className="font-display text-3xl font-bold mb-4">{t('home:quickStart.title')}</h2>
+              <p className="text-[var(--color-text-muted)] mb-8">
+                {t('home:quickStart.subtitle')}
+              </p>
+              <QuickStartGuide />
+            </div>
           </div>
         </div>
       </section>
@@ -191,31 +217,6 @@ function Home() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DISCORD & GAMES SECTION */}
-      <section id="community" className="scroll-mt-20 py-24 bg-[var(--color-surface)]/30">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-start stagger-children">
-            {/* Discord Widget */}
-            <div className="animate-on-scroll min-w-0">
-              <h2 className="font-display text-3xl font-bold mb-4">{t('home:community.title')}</h2>
-              <p className="text-[var(--color-text-muted)] mb-8">
-                {t('home:community.subtitle')}
-              </p>
-              <DiscordWidget />
-            </div>
-
-            {/* Quick Start Guide */}
-            <div className="animate-on-scroll min-w-0">
-              <h2 className="font-display text-3xl font-bold mb-4">{t('home:quickStart.title')}</h2>
-              <p className="text-[var(--color-text-muted)] mb-8">
-                {t('home:quickStart.subtitle')}
-              </p>
-              <QuickStartGuide />
             </div>
           </div>
         </div>

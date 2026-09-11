@@ -5,9 +5,14 @@ import { useLocation } from 'react-router-dom'
  Scroll manager: returns to the top on path changes, and jumps to the
  `#hash` target once it exists in the DOM (the browser's native jump
  fires before React has rendered lazy pages, so we do it ourselves).
+
+ `key` changes on every navigation, so clicking the same in-page link
+ twice (e.g. "Browse Ports" → /#ports after scrolling back up) jumps
+ again even though pathname and hash are unchanged. The scroll-spy only
+ rewrites the URL with replaceState, which never touches the router.
  */
 export function ScrollToTop() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
 
   useEffect(() => {
     if (!hash) {
@@ -34,7 +39,7 @@ export function ScrollToTop() {
     tryScroll()
 
     return () => cancelAnimationFrame(raf)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
 
   return null
 }

@@ -8,7 +8,8 @@ const stepIcons = [
   <Gamepad2 size={20} />
 ]
 
-const stepLinks = ['/downloads', '/faq', '/faq']
+// Step 1 points at the ports section of the home page (the widget only renders there).
+const stepLinks = ['/#ports', '/faq', '/faq']
 
 export function QuickStartGuide() {
   const { t } = useTranslation('home')
