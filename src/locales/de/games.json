@@ -29,6 +29,11 @@
     "tagline": "PC-Port von Banjo-Kazooie",
     "description": "Ein nativer PC-Port des beliebten Jump-'n'-Runs von Rare mit modernen Verbesserungen, hohen Bildwiederholraten und Mod-Support."
   },
+  "paperboat": {
+    "name": "Paperboat",
+    "tagline": "PC-Port von Paper Mario 64",
+    "description": "Ein nativer PC-Port des Bilderbuch-RPG-Klassikers, der sich auf modernen PCs mit hohen Bildwiederholraten, schärferer Grafik und Mod-Support entfaltet."
+  },
   "lus": {
     "name": "LibUltraShip",
     "tagline": "Das Framework",

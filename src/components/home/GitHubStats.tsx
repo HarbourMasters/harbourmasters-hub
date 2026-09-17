@@ -62,7 +62,7 @@ interface CacheData {
   etags: Record<string, string>
 }
 
-const CACHE_KEY = 'github_stats_cache_v3'
+const CACHE_KEY = 'github_stats_cache_v4'
 const CACHE_TTL = 30 * 60 * 1000 // 30 minutes
 
 const DEFAULT_GRADIENT = 'from-[var(--color-primary)]/30 to-[var(--color-accent)]/20'

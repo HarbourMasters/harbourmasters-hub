@@ -50,4 +50,4 @@ export interface Game {
   version?: string;
 }
 
-export type GameId = 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse';
+export type GameId = 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse' | 'paperboat';

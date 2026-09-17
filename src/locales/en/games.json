@@ -70,5 +70,17 @@
       "Mod support",
       "Modern controls"
     ]
+  },
+  "paperboat": {
+    "name": "Paperboat",
+    "tagline": "Paper Mario 64",
+    "description": "A native PC port of the storybook RPG classic, unfolding on modern PCs with high framerates, sharper visuals, and mod support.",
+    "features": [
+      "High framerate support",
+      "Internal resolution scaling and anti-aliasing",
+      "HD texture packs and custom asset mods",
+      "Fully remappable controls",
+      "Built-in cheats menu"
+    ]
   }
 }

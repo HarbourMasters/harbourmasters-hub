@@ -206,6 +206,35 @@ export const GAMES: Record<GameId, Game> = {
       url: 'https://gamebanana.com/games/25172',
       slug: 'lighthouse'
     }
+  },
+  paperboat: {
+    id: 'paperboat',
+    name: 'Paperboat',
+    fullName: 'Paperboat',
+    tagline: 'Paper Mario 64',
+    description: 'A native PC port of the storybook RPG classic, unfolding on modern PCs with high framerates, sharper visuals, and mod support.',
+    themeId: 'paperboat',
+    gradient: 'from-amber-600/30 to-sky-500/20',
+    icon: '/icons/games/Paperboat.webp',
+    stars: '85',
+    latestVersion: '1.0.0',
+    repo: {
+      owner: 'HarbourMasters',
+      name: 'PaperBoat'
+    },
+    features: [
+      'High framerate support',
+      'Internal resolution scaling and anti-aliasing',
+      'HD texture packs and custom asset mods',
+      'Fully remappable controls',
+      'Built-in cheats menu'
+    ],
+    releases: [],
+    links: {
+      github: 'https://github.com/HarbourMasters/PaperBoat',
+      discord: 'https://discord.gg/harbourmasters',
+      wiki: 'https://wiki.harbourmasters.com'
+    }
   }
 };
 
@@ -213,7 +242,7 @@ export const GAMES: Record<GameId, Game> = {
 export const ORG_STATS = {
   totalStars: 10910,
   totalForks: 1120,
-  totalPorts: 6,
+  totalPorts: 7,
   founded: 2022
 } as const;
 

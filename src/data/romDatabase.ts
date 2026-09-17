@@ -5,7 +5,7 @@
 
 export interface RomDatabaseEntry {
   sha1: string
-  game: 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse'
+  game: 'shipofharkinian' | '2ship2harkinian' | 'ghostship' | 'spaghettikart' | 'starship' | 'lighthouse' | 'paperboat'
   version: string
   fullName: string
   region: string
@@ -418,6 +418,19 @@ export const ROM_DATABASE: RomDatabaseEntry[] = [
     supported: true,
     formats: ['cart']
   },
+
+  // ============================================================================
+  // PAPERBOAT (Paper Mario 64) - 1 version from PaperBoat README
+  // ============================================================================
+  {
+    sha1: '3837F44CDA784B466C9A2D99DF70D77C322B97A0',
+    game: 'paperboat',
+    version: 'US',
+    fullName: 'Paper Mario (USA)',
+    region: 'NTSC-U',
+    supported: true,
+    formats: ['cart']
+  },
 ]
 
 /**
@@ -458,4 +471,5 @@ export const GAME_DISPLAY_NAMES: Record<string, string> = {
   'spaghettikart': 'Spaghetti Kart',
   'starship': 'Starship',
   'lighthouse': 'Lighthouse',
+  'paperboat': 'Paperboat',
 }

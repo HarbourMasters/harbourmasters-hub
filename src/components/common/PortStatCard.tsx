@@ -118,7 +118,8 @@ export const PortStatCard = React.memo(function PortStatCard({ game, index }: Po
                                 game.githubUrl.includes('Ghostship') ? '/icons/games/Ghostship.webp' :
                                 game.githubUrl.includes('Spaghetti') ? '/icons/games/SpaghettiKart.webp' :
                                 game.githubUrl.includes('Starship') ? '/icons/games/Starship.webp' :
-                                game.githubUrl.includes('Lighthouse') ? '/icons/games/Lighthouse.webp' : undefined } as any} className="w-16 h-16" />
+                                game.githubUrl.includes('Lighthouse') ? '/icons/games/Lighthouse.webp' :
+                                game.githubUrl.includes('PaperBoat') ? '/icons/games/Paperboat.webp' : undefined } as any} className="w-16 h-16" />
       </div>
 
       {/* Game Name & Tagline */}

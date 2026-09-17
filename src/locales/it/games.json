@@ -29,6 +29,11 @@
     "tagline": "Port PC di Banjo-Kazooie",
     "description": "Un port per PC dell'amato platform di Rare, con miglioramenti moderni, alti framerate e supporto per le mod."
   },
+  "paperboat": {
+    "name": "Paperboat",
+    "tagline": "Port PC di Paper Mario 64",
+    "description": "Un port nativo per PC del classico GDR da libro di fiabe, che si dispiega sui PC moderni con alti framerate, grafica più nitida e supporto per le mod."
+  },
   "lus": {
     "name": "LibUltraShip",
     "tagline": "Il Framework",

@@ -6,6 +6,7 @@ import { ghostshipTheme } from './ghostship';
 import { spaghettiTheme } from './spaghetti';
 import { starshipTheme } from './starship';
 import { lighthouseTheme } from './lighthouse';
+import { paperboatTheme } from './paperboat';
 import { lusTheme } from './lus';
 
 export const themes: Record<ThemeId, Theme> = {
@@ -16,6 +17,7 @@ export const themes: Record<ThemeId, Theme> = {
   spaghetti: spaghettiTheme,
   starship: starshipTheme,
   lighthouse: lighthouseTheme,
+  paperboat: paperboatTheme,
   lus: lusTheme
 };
 
@@ -25,7 +27,8 @@ export const gameThemes: Record<string, ThemeId> = {
   ghostship: 'ghostship',
   spaghettikart: 'spaghetti',
   starship: 'starship',
-  lighthouse: 'lighthouse'
+  lighthouse: 'lighthouse',
+  paperboat: 'paperboat'
 };
 
 export function getTheme(id: ThemeId): Theme {

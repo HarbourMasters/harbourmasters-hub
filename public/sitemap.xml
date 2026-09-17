@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://harbourmasters.com/game/paperboat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://harbourmasters.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

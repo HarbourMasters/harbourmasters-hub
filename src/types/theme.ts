@@ -75,4 +75,5 @@ export type ThemeId =
   | 'spaghetti'
   | 'starship'
   | 'lighthouse'
+  | 'paperboat'
   | 'lus';
